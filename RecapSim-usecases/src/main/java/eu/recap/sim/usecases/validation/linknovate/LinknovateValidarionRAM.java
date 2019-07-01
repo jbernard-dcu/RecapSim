@@ -43,7 +43,9 @@ public class LinknovateValidarionRAM {
 	 */
 	public static ApplicationLandscape GenerateLinknovateValidationApplication(int applicationQty, Infrastructure rim) {
 		
-		
+		/*TODO
+		 * Put all the useful parameters in the Parameter model
+		 */
 		
 		//All VMs are the same
 		int vmCores = 8;
@@ -246,6 +248,9 @@ public class LinknovateValidarionRAM {
 			
 			
 			//#### COMPONENTS 3-8 ####### Each with single API
+			/*TODO
+			 * Shard modelisation at this level
+			 */
 			//Shard 1 (VM3)
 			Component.Builder shard1 = Component.newBuilder();
 			shard1.setComponentName("Shard_1 (2A17)");

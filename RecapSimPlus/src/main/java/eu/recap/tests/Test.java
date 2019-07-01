@@ -13,6 +13,7 @@ import eu.recap.sim.models.LocationModel.Location;
 
 public class Test {
 	
+	
 	/**
 	 * Creates test Infrastructure model for tieto usecase
 	 * @ ExoerimentHelpers for original method
