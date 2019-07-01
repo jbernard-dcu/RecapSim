@@ -1,0 +1,7 @@
+/target/
+/DB/
+/TietoDemoWorkloadUmeaNormal.rwm
+/TietoDemoWorkloadUmeaNormal_small.rwm
+/TietoDemoWorkloadUmeaNormal_tiny.rwm
+/out.txt
+/traceUe_full.log

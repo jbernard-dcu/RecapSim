@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package models;
+
+option java_package = "eu.recap.sim.models";
+option java_outer_classname = "LocationModel";
+
+message Location {
+	int64 time = 1; //java long
+	double latitude = 2;
+	double longitude = 3;
+}

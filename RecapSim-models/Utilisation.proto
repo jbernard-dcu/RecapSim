@@ -1,0 +1,60 @@
+syntax = "proto3";
+
+package models;
+
+option java_package = "eu.recap.sim.models";
+option java_outer_classname = "Utilisation";
+message Infrastructure {
+	string ExperimentId = 2;
+	repeated DataCentre dataCentres = 1;
+	message DataCentre {
+		string Name = 3;
+		string ID = 4;
+		repeated Node nodes = 1;
+		repeated Switch switches = 2;
+		message Switch {
+			repeated Link links = 1;
+			message Link {
+				string Name = 1;
+			}
+
+		}
+
+		message Node {
+			repeated Cpu cpu = 1;
+			repeated MemoryUtil memoryUtil = 2;
+			repeated StorageUtil storageUtil = 3;
+			message Cpu {
+				string Name = 1;
+				string ID = 2;
+				repeated Core cores = 3;
+				message Core {
+					string ID = 2;
+					string Name = 3;
+					repeated CoreUtil utilisation = 1;
+					message CoreUtil {
+						string time = 1;
+						float utilisation = 2;
+					}
+
+				}
+
+			}
+
+			message MemoryUtil {
+				string Name = 1;
+				string ID = 2;
+				int32 ram = 3;
+			}
+
+			message StorageUtil {
+				string Name = 1;
+				string ID = 2;
+				int32 storage = 3;
+			}
+
+		}
+
+	}
+
+}

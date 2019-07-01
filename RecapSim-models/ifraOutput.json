@@ -1,0 +1,74 @@
+{
+  "dataCentres": [{
+    "nodes": [{
+      "cpu": [{
+        "Name": "Name:node1",
+        "ID": "ID:123",
+        "cores": [{
+          "utilisation": [{
+            "time": "10",
+            "utilisation": 10.0
+          }, {
+            "time": "22",
+            "utilisation": 21.0
+          }, {
+            "time": "22",
+            "utilisation": 21.0
+          }, {
+            "time": "22",
+            "utilisation": 21.0
+          }, {
+            "time": "22",
+            "utilisation": 21.0
+          }, {
+            "time": "22",
+            "utilisation": 21.0
+          }, {
+            "time": "22",
+            "utilisation": 21.0
+          }, {
+            "time": "22",
+            "utilisation": 21.0
+          }, {
+            "time": "22",
+            "utilisation": 21.0
+          }, {
+            "time": "22",
+            "utilisation": 21.0
+          }, {
+            "time": "22",
+            "utilisation": 21.0
+          }, {
+            "time": "22",
+            "utilisation": 21.0
+          }, {
+            "time": "22",
+            "utilisation": 21.0
+          }, {
+            "time": "22",
+            "utilisation": 21.0
+          }, {
+            "time": "22",
+            "utilisation": 21.0
+          }, {
+            "time": "22",
+            "utilisation": 21.0
+          }, {
+            "time": "22",
+            "utilisation": 21.0
+          }, {
+            "time": "22",
+            "utilisation": 21.0
+          }, {
+            "time": "22",
+            "utilisation": 21.0
+          }],
+          "ID": "123",
+          "Name": "core1"
+        }]
+      }]
+    }],
+    "Name": "dc1"
+  }],
+  "ExperimentId": "experimentID:123"
+}

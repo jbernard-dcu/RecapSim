@@ -1,0 +1,76 @@
+syntax = "proto3";
+
+package models;
+
+option java_package = "eu.recap.sim.models";
+option java_outer_classname = "ApplicationModel";
+
+
+message ApplicationLandscape{
+	repeated Application applications = 1;
+	string notes = 2;
+}
+
+
+message Application {
+	string applicationName = 3;
+	string applicationId = 2;
+	repeated Component components = 1;
+	message Component {
+		string componentName = 3;
+		string componentId = 2;
+		string vmIdDeployedOn = 6;
+		bool isLoadbalanced = 4;
+		ComponentTypes componentType = 5;
+		VeFlavour flavour = 7;
+		Deployment deployment =8;
+		repeated Api apis = 1;
+		message Api {
+			string apiName = 2;
+			string apiId = 1;
+			//resource demand
+			int32 mips = 3;
+			int32 iops = 4;
+            int32 ram = 5; // updated By Malika
+            int32 noSplittedApis = 6; // added by malika: How many Apis are doing the same task (used to collect results from data nodes)
+			//link to next
+			int64 dataToTransfer = 7; //send data over the network to another component or back to user
+			repeated string nextComponentId = 8;  // updated By Malika 
+			repeated string nextApiId = 9;  // updated By Malika
+		}
+
+		enum ComponentTypes {
+			WebService = 0;
+			CDNStorage = 1;
+			VNF = 2;
+		}
+
+	}
+
+}
+
+message VeFlavourRepository{
+	repeated VeFlavour flavours =1;
+}
+
+message VeFlavour{
+	int32 cores =1;
+	int64 memory = 2;
+	int64 storage =3;
+
+}
+
+message Deployment{
+	int64 time = 3;//TO-DO: deployments
+	string nodeId = 1;
+	string siteId = 4;
+	SiteLevel tier =2;
+
+	enum SiteLevel {
+		Edge = 0;
+		Core = 1;
+		Metro = 2;
+		Cloud = 3;
+	}
+
+}

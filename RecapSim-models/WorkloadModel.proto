@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package models;
+
+import "LocationModel.proto";
+
+option java_package = "eu.recap.sim.models";
+option java_outer_classname = "WorkloadModel";
+
+message Workload{
+	repeated Device devices =1;
+	string notes = 2;
+}
+
+message Device {
+	string deviceId = 3;
+	string deviceName = 4;
+	repeated Location locations = 2;
+	repeated Request requests = 1;
+}
+
+message Request {
+	int64 time = 1;  // starting time of request
+	string applicationId = 2;
+	string componentId = 3;
+	string apiId = 4;
+	int64 dataToTransfer = 6;
+    int32 mipsDataNodes = 5; // added By Malika: to adapt the execution time at data nodes
+    int32 requestId = 7; // added By Malika: the id of the request (will identify the cloudlets)
+    int32 expectedDuration = 8; // added By Malika: time ine second that request took in real life
+    repeated int32 dataNodes = 9; // added By Malika: what data nodes to use for this request
+}

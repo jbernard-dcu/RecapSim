@@ -1,0 +1,472 @@
+{
+  "Name": "Test-Config",
+  "Duration": 2.0,
+  "infrastructure": {
+    "links": [{
+      "bandwith": 1000000,
+      "id": "0",
+      "connectedSites": [{
+        "name": "Site_0",
+        "id": "0",
+        "location": {
+        },
+        "nodes": [{
+          "name": "Node_0_0",
+          "id": "0_0",
+          "processingUnits": [{
+            "cpuCores": [{
+              "id": "0_0_0"
+            }, {
+              "id": "0_0_1"
+            }, {
+              "id": "0_0_2"
+            }, {
+              "id": "0_0_3"
+            }, {
+              "id": "0_0_4"
+            }, {
+              "id": "0_0_5"
+            }, {
+              "id": "0_0_6"
+            }, {
+              "id": "0_0_7"
+            }, {
+              "id": "0_0_8"
+            }, {
+              "id": "0_0_9"
+            }, {
+              "id": "0_0_10"
+            }, {
+              "id": "0_0_11"
+            }, {
+              "id": "0_0_12"
+            }, {
+              "id": "0_0_13"
+            }, {
+              "id": "0_0_14"
+            }, {
+              "id": "0_0_15"
+            }, {
+              "id": "0_0_16"
+            }, {
+              "id": "0_0_17"
+            }, {
+              "id": "0_0_18"
+            }, {
+              "id": "0_0_19"
+            }, {
+              "id": "0_0_20"
+            }, {
+              "id": "0_0_21"
+            }, {
+              "id": "0_0_22"
+            }, {
+              "id": "0_0_23"
+            }],
+            "name": "Xeon_0_0",
+            "make": "Intel",
+            "id": "0_0",
+            "rating": "12345",
+            "frequency": 2000
+          }],
+          "memoryUnits": [{
+            "id": "0_0",
+            "capacity": 2048
+          }],
+          "storageUnits": [{
+            "id": "0_0",
+            "size": 1000000
+          }]
+        }]
+      }]
+    }, {
+      "bandwith": 1000000,
+      "id": "0",
+      "connectedSites": [{
+        "name": "Site_0",
+        "id": "0",
+        "location": {
+        },
+        "nodes": [{
+          "name": "Node_0_0",
+          "id": "0_0",
+          "processingUnits": [{
+            "cpuCores": [{
+              "id": "0_0_0"
+            }, {
+              "id": "0_0_1"
+            }, {
+              "id": "0_0_2"
+            }, {
+              "id": "0_0_3"
+            }, {
+              "id": "0_0_4"
+            }, {
+              "id": "0_0_5"
+            }, {
+              "id": "0_0_6"
+            }, {
+              "id": "0_0_7"
+            }, {
+              "id": "0_0_8"
+            }, {
+              "id": "0_0_9"
+            }, {
+              "id": "0_0_10"
+            }, {
+              "id": "0_0_11"
+            }, {
+              "id": "0_0_12"
+            }, {
+              "id": "0_0_13"
+            }, {
+              "id": "0_0_14"
+            }, {
+              "id": "0_0_15"
+            }, {
+              "id": "0_0_16"
+            }, {
+              "id": "0_0_17"
+            }, {
+              "id": "0_0_18"
+            }, {
+              "id": "0_0_19"
+            }, {
+              "id": "0_0_20"
+            }, {
+              "id": "0_0_21"
+            }, {
+              "id": "0_0_22"
+            }, {
+              "id": "0_0_23"
+            }],
+            "name": "Xeon_0_0",
+            "make": "Intel",
+            "id": "0_0",
+            "rating": "12345",
+            "frequency": 2000
+          }],
+          "memoryUnits": [{
+            "id": "0_0",
+            "capacity": 2048
+          }],
+          "storageUnits": [{
+            "id": "0_0",
+            "size": 1000000
+          }]
+        }]
+      }, {
+        "name": "Site_1",
+        "id": "1",
+        "location": {
+          "latitude": 1.0,
+          "longitude": 1.0
+        },
+        "nodes": [{
+          "name": "Node_1_0",
+          "id": "1_0",
+          "processingUnits": [{
+            "cpuCores": [{
+              "id": "1_0_0"
+            }, {
+              "id": "1_0_1"
+            }, {
+              "id": "1_0_2"
+            }, {
+              "id": "1_0_3"
+            }, {
+              "id": "1_0_4"
+            }, {
+              "id": "1_0_5"
+            }, {
+              "id": "1_0_6"
+            }, {
+              "id": "1_0_7"
+            }, {
+              "id": "1_0_8"
+            }, {
+              "id": "1_0_9"
+            }, {
+              "id": "1_0_10"
+            }, {
+              "id": "1_0_11"
+            }, {
+              "id": "1_0_12"
+            }, {
+              "id": "1_0_13"
+            }, {
+              "id": "1_0_14"
+            }, {
+              "id": "1_0_15"
+            }, {
+              "id": "1_0_16"
+            }, {
+              "id": "1_0_17"
+            }, {
+              "id": "1_0_18"
+            }, {
+              "id": "1_0_19"
+            }, {
+              "id": "1_0_20"
+            }, {
+              "id": "1_0_21"
+            }, {
+              "id": "1_0_22"
+            }, {
+              "id": "1_0_23"
+            }],
+            "name": "Xeon_1_0",
+            "make": "Intel",
+            "id": "1_0",
+            "rating": "12345",
+            "frequency": 2000
+          }],
+          "memoryUnits": [{
+            "id": "1_0",
+            "capacity": 2048
+          }],
+          "storageUnits": [{
+            "id": "1_0",
+            "size": 1000000
+          }]
+        }]
+      }]
+    }],
+    "sites": [{
+      "name": "Site_0",
+      "id": "0",
+      "location": {
+      },
+      "nodes": [{
+        "name": "Node_0_0",
+        "id": "0_0",
+        "processingUnits": [{
+          "cpuCores": [{
+            "id": "0_0_0"
+          }, {
+            "id": "0_0_1"
+          }, {
+            "id": "0_0_2"
+          }, {
+            "id": "0_0_3"
+          }, {
+            "id": "0_0_4"
+          }, {
+            "id": "0_0_5"
+          }, {
+            "id": "0_0_6"
+          }, {
+            "id": "0_0_7"
+          }, {
+            "id": "0_0_8"
+          }, {
+            "id": "0_0_9"
+          }, {
+            "id": "0_0_10"
+          }, {
+            "id": "0_0_11"
+          }, {
+            "id": "0_0_12"
+          }, {
+            "id": "0_0_13"
+          }, {
+            "id": "0_0_14"
+          }, {
+            "id": "0_0_15"
+          }, {
+            "id": "0_0_16"
+          }, {
+            "id": "0_0_17"
+          }, {
+            "id": "0_0_18"
+          }, {
+            "id": "0_0_19"
+          }, {
+            "id": "0_0_20"
+          }, {
+            "id": "0_0_21"
+          }, {
+            "id": "0_0_22"
+          }, {
+            "id": "0_0_23"
+          }],
+          "name": "Xeon_0_0",
+          "make": "Intel",
+          "id": "0_0",
+          "rating": "12345",
+          "frequency": 2000
+        }],
+        "memoryUnits": [{
+          "id": "0_0",
+          "capacity": 2048
+        }],
+        "storageUnits": [{
+          "id": "0_0",
+          "size": 1000000
+        }]
+      }]
+    }, {
+      "name": "Site_1",
+      "id": "1",
+      "location": {
+        "latitude": 1.0,
+        "longitude": 1.0
+      },
+      "nodes": [{
+        "name": "Node_1_0",
+        "id": "1_0",
+        "processingUnits": [{
+          "cpuCores": [{
+            "id": "1_0_0"
+          }, {
+            "id": "1_0_1"
+          }, {
+            "id": "1_0_2"
+          }, {
+            "id": "1_0_3"
+          }, {
+            "id": "1_0_4"
+          }, {
+            "id": "1_0_5"
+          }, {
+            "id": "1_0_6"
+          }, {
+            "id": "1_0_7"
+          }, {
+            "id": "1_0_8"
+          }, {
+            "id": "1_0_9"
+          }, {
+            "id": "1_0_10"
+          }, {
+            "id": "1_0_11"
+          }, {
+            "id": "1_0_12"
+          }, {
+            "id": "1_0_13"
+          }, {
+            "id": "1_0_14"
+          }, {
+            "id": "1_0_15"
+          }, {
+            "id": "1_0_16"
+          }, {
+            "id": "1_0_17"
+          }, {
+            "id": "1_0_18"
+          }, {
+            "id": "1_0_19"
+          }, {
+            "id": "1_0_20"
+          }, {
+            "id": "1_0_21"
+          }, {
+            "id": "1_0_22"
+          }, {
+            "id": "1_0_23"
+          }],
+          "name": "Xeon_1_0",
+          "make": "Intel",
+          "id": "1_0",
+          "rating": "12345",
+          "frequency": 2000
+        }],
+        "memoryUnits": [{
+          "id": "1_0",
+          "capacity": 2048
+        }],
+        "storageUnits": [{
+          "id": "1_0",
+          "size": 1000000
+        }]
+      }]
+    }],
+    "name": "Test-Infrastructure"
+  },
+  "applicationLandscape": {
+    "applications": [{
+      "components": [{
+        "apis": [{
+          "apiId": "1",
+          "apiName": "Component1",
+          "mips": 1000,
+          "iops": 1000,
+          "dataToTransfer": "100"
+        }],
+        "componentId": "1",
+        "componentName": "1",
+        "flavour": {
+          "cores": 2,
+          "memory": "512",
+          "storage": "2000"
+        },
+        "deployment": {
+          "nodeId": "0_0"
+        }
+      }],
+      "applicationId": "1",
+      "applicationName": "1"
+    }, {
+      "components": [{
+        "apis": [{
+          "apiId": "1",
+          "apiName": "Component1",
+          "mips": 1000,
+          "iops": 1000,
+          "dataToTransfer": "100"
+        }],
+        "componentId": "1",
+        "componentName": "1",
+        "flavour": {
+          "cores": 2,
+          "memory": "512",
+          "storage": "2000"
+        },
+        "deployment": {
+          "nodeId": "1_0"
+        }
+      }],
+      "applicationId": "2",
+      "applicationName": "2"
+    }]
+  },
+  "workload": {
+    "devices": [{
+      "requests": [{
+        "time": "1",
+        "applicationId": "1",
+        "componentId": "1",
+        "apiId": "1",
+        "dataToTransfer": "100"
+      }],
+      "deviceId": "Smartphone_4"
+    }, {
+      "requests": [{
+        "time": "1",
+        "applicationId": "2",
+        "componentId": "1",
+        "apiId": "1",
+        "dataToTransfer": "100"
+      }],
+      "deviceId": "Smartphone_3"
+    }, {
+      "requests": [{
+        "time": "1",
+        "applicationId": "1",
+        "componentId": "1",
+        "apiId": "1",
+        "dataToTransfer": "100"
+      }],
+      "deviceId": "Smartphone_2"
+    }, {
+      "requests": [{
+        "time": "1",
+        "applicationId": "2",
+        "componentId": "1",
+        "apiId": "1",
+        "dataToTransfer": "100"
+      }],
+      "deviceId": "Smartphone_1"
+    }]
+  }
+}

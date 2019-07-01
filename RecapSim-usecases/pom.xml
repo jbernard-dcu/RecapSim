@@ -1,0 +1,51 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>RecapSim</groupId>
+		<artifactId>RecapSim-package</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<groupId>RecapSim-usecases</groupId>
+	<artifactId>RecapSim-usecases</artifactId>
+	<dependencies>
+		<dependency>
+			<groupId>RecapSim</groupId>
+			<artifactId>RecapSimPlus</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>RecapSim</groupId>
+			<artifactId>RecapSim-models</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.xerial/sqlite-jdbc -->
+<dependency>
+    <groupId>org.xerial</groupId>
+    <artifactId>sqlite-jdbc</artifactId>
+    <version>3.23.1</version>
+</dependency>
+		
+<dependency>
+    <groupId>net.sf.supercsv</groupId>
+    <artifactId>super-csv</artifactId>
+    <version>2.4.0</version>
+</dependency>
+
+	</dependencies>
+	
+	<repositories>
+            <repository>
+                <id>jspresso-repository</id>
+                <url>http://repository.jspresso.org/maven4</url>
+                <releases>
+                    <enabled>true</enabled>
+                </releases>
+                <snapshots>
+                    <enabled>false</enabled>
+                </snapshots>
+            </repository>
+   </repositories>
+
+	
+</project>

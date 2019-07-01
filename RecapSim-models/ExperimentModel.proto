@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package models;
+
+import "InfrastructureModel.proto";
+import "ApplicationModel.proto";
+import "WorkloadModel.proto";
+
+option java_package = "eu.recap.sim.models";
+option java_outer_classname = "ExperimentModel";
+
+message Experiment {
+  string Name = 1;
+  double Duration = 2;
+  string PlacementPolicy=3;
+  string ConsolidationPolicy=4;
+  string AutoScalinigPolicy=5;
+  string RequestRoutingPolicy=6;
+  Infrastructure infrastructure =7;
+  ApplicationLandscape applicationLandscape=8;
+  Workload workload = 9;
+
+}

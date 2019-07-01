@@ -1,0 +1,43 @@
+{
+  "componentRepository": [{
+    "apiRepository": [{
+      "apiId": "read-1",
+      "apiName": "read",
+      "mips": 1000,
+      "iops": 1000,
+      "dataToTransfer": "10000"
+    }, {
+      "apiId": "write-1",
+      "apiName": "write",
+      "mips": 1000,
+      "iops": 10000,
+      "dataToTransfer": "10000"
+    }],
+    "componentId": "Mysql_v6-1",
+    "componentName": "Mysql_v6",
+    "isLoadbalanced": true
+  }, {
+    "apiRepository": [{
+      "apiId": "get-1",
+      "apiName": "get",
+      "mips": 1000,
+      "iops": 1000,
+      "nextApiId": "read-1",
+      "nextComponentId": "Mysql_v6-1",
+      "dataToTransfer": "10000"
+    }, {
+      "apiId": "post-1",
+      "apiName": "post",
+      "mips": 1000,
+      "iops": 10000,
+      "nextApiId": "write-1",
+      "nextComponentId": "Mysql_v6-1",
+      "dataToTransfer": "10000"
+    }],
+    "componentId": "Apache_v10-1",
+    "componentName": "Apache_v10",
+    "isLoadbalanced": true
+  }],
+  "applicationId": "Web-1",
+  "applicationName": "Website"
+}

@@ -1,0 +1,15 @@
+Starting model generation
+############
+nSites:2
+nNodesPerSite:2
+nApps:2
+nComponentsPerApp:2
+nDevices:2
+nRequestsPerDevice:2
+############
+Model generation took: 106ms
+Starting model conversion...
+Model cloudsim model creation took: 80ms
+Simulation started...
+Simulation took: 77ms real time for 4.21s simtime.
+Simulation is:FINISHED

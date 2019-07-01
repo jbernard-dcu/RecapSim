@@ -1,0 +1,76 @@
+syntax = "proto3";
+
+package models;
+
+import "LocationModel.proto";
+
+option java_package = "eu.recap.sim.models";
+option java_outer_classname = "InfrastructureModel";
+
+
+message Infrastructure{
+	string name = 3;
+	repeated Link links = 1;
+	repeated ResourceSite sites = 2;
+
+	}
+
+message ResourceSite{
+	string name = 1;
+	string id = 2;
+	Location location = 3;
+	repeated Node nodes = 4;
+	SiteLevel hierarchyLevel = 5;
+
+	enum SiteLevel {
+		Edge = 0;
+		Core = 1;
+		Metro = 2;
+		Cloud = 3;
+	}
+
+}
+
+
+message Node{
+	string name = 2;
+	string id = 3;
+	repeated CPU processingUnits = 4;
+	repeated Memory memoryUnits = 5;
+	repeated Storage storageUnits = 6;
+
+		message CPU{
+		string id =4;
+		string name =2;
+		string make =3;
+		int32 frequency = 6;
+		repeated Core cpuCores =1;
+		string rating = 5;//benchmark rating to estimate relative processing power to other CPUs
+	}
+		message Core{
+			string id =1;
+
+		}
+
+
+	message Memory{
+		string id =1;
+		int32 capacity =2;//MB
+
+	}
+
+	message Storage{
+		string id =1;
+		int32 size =2;//MB
+	}
+
+}
+
+
+message Link{
+	string id = 2;
+	int32 bandwith=1; //Mbps Megabits/s
+	repeated ResourceSite connectedSites = 4;
+
+
+}
