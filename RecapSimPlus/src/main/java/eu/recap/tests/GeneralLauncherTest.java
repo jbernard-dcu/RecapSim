@@ -10,7 +10,7 @@ import Classes.Query;
 import Classes.Word;
 import Classes.WorkloadGen;
 
-public class GeneralLaucherTest {
+public class GeneralLauncherTest {
 	
 	/* TODO
 	 * Define parameters
