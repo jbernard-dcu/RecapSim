@@ -3,6 +3,8 @@
 
 package eu.recap.sim.models;
 
+import java.util.List;
+
 public final class WorkloadModel {
   private WorkloadModel() {}
   public static void registerAllExtensions(
@@ -2459,6 +2461,7 @@ public final class WorkloadModel {
      * <code>repeated int32 dataNodes = 9;</code>
      */
     int getDataNodes(int index);
+    //TODO : add methods getSearchContent and setSearchContent to interface
   }
   /**
    * Protobuf type {@code models.Request}
@@ -3752,6 +3755,23 @@ public final class WorkloadModel {
         onChanged();
         return this;
       }
+      /**
+       * <pre>
+       * added by Joseph
+       * </pre>
+       * 
+       * <code> List<Long> searchContent = 10;</code>
+       */
+      private List<Long> searchContent;
+      public List<Long> getSearchContent() {
+    	  return searchContent;
+      }
+      public Builder setSearchContent(List<Long> value) {
+    	  searchContent=value;
+    	  onChanged();
+    	  return this;
+      }
+      
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -3802,6 +3822,7 @@ public final class WorkloadModel {
     public eu.recap.sim.models.WorkloadModel.Request getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
+    
 
   }
 
