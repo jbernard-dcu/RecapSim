@@ -6,3896 +6,3890 @@ package eu.recap.sim.models;
 import java.util.List;
 
 public final class WorkloadModel {
-  private WorkloadModel() {}
-  public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistryLite registry) {
-  }
-
-  public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
-    registerAllExtensions(
-        (com.google.protobuf.ExtensionRegistryLite) registry);
-  }
-  public interface WorkloadOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:models.Workload)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>repeated .models.Device devices = 1;</code>
-     */
-    java.util.List<eu.recap.sim.models.WorkloadModel.Device> 
-        getDevicesList();
-    /**
-     * <code>repeated .models.Device devices = 1;</code>
-     */
-    eu.recap.sim.models.WorkloadModel.Device getDevices(int index);
-    /**
-     * <code>repeated .models.Device devices = 1;</code>
-     */
-    int getDevicesCount();
-    /**
-     * <code>repeated .models.Device devices = 1;</code>
-     */
-    java.util.List<? extends eu.recap.sim.models.WorkloadModel.DeviceOrBuilder> 
-        getDevicesOrBuilderList();
-    /**
-     * <code>repeated .models.Device devices = 1;</code>
-     */
-    eu.recap.sim.models.WorkloadModel.DeviceOrBuilder getDevicesOrBuilder(
-        int index);
-
-    /**
-     * <code>string notes = 2;</code>
-     */
-    java.lang.String getNotes();
-    /**
-     * <code>string notes = 2;</code>
-     */
-    com.google.protobuf.ByteString
-        getNotesBytes();
-  }
-  /**
-   * Protobuf type {@code models.Workload}
-   */
-  public  static final class Workload extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:models.Workload)
-      WorkloadOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use Workload.newBuilder() to construct.
-    private Workload(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private Workload() {
-      devices_ = java.util.Collections.emptyList();
-      notes_ = "";
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private Workload(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                devices_ = new java.util.ArrayList<eu.recap.sim.models.WorkloadModel.Device>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              devices_.add(
-                  input.readMessage(eu.recap.sim.models.WorkloadModel.Device.parser(), extensionRegistry));
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              notes_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          devices_ = java.util.Collections.unmodifiableList(devices_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return eu.recap.sim.models.WorkloadModel.internal_static_models_Workload_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return eu.recap.sim.models.WorkloadModel.internal_static_models_Workload_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              eu.recap.sim.models.WorkloadModel.Workload.class, eu.recap.sim.models.WorkloadModel.Workload.Builder.class);
-    }
-
-    private int bitField0_;
-    public static final int DEVICES_FIELD_NUMBER = 1;
-    private java.util.List<eu.recap.sim.models.WorkloadModel.Device> devices_;
-    /**
-     * <code>repeated .models.Device devices = 1;</code>
-     */
-    public java.util.List<eu.recap.sim.models.WorkloadModel.Device> getDevicesList() {
-      return devices_;
-    }
-    /**
-     * <code>repeated .models.Device devices = 1;</code>
-     */
-    public java.util.List<? extends eu.recap.sim.models.WorkloadModel.DeviceOrBuilder> 
-        getDevicesOrBuilderList() {
-      return devices_;
-    }
-    /**
-     * <code>repeated .models.Device devices = 1;</code>
-     */
-    public int getDevicesCount() {
-      return devices_.size();
-    }
-    /**
-     * <code>repeated .models.Device devices = 1;</code>
-     */
-    public eu.recap.sim.models.WorkloadModel.Device getDevices(int index) {
-      return devices_.get(index);
-    }
-    /**
-     * <code>repeated .models.Device devices = 1;</code>
-     */
-    public eu.recap.sim.models.WorkloadModel.DeviceOrBuilder getDevicesOrBuilder(
-        int index) {
-      return devices_.get(index);
-    }
-
-    public static final int NOTES_FIELD_NUMBER = 2;
-    private volatile java.lang.Object notes_;
-    /**
-     * <code>string notes = 2;</code>
-     */
-    public java.lang.String getNotes() {
-      java.lang.Object ref = notes_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        notes_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string notes = 2;</code>
-     */
-    public com.google.protobuf.ByteString
-        getNotesBytes() {
-      java.lang.Object ref = notes_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        notes_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      for (int i = 0; i < devices_.size(); i++) {
-        output.writeMessage(1, devices_.get(i));
-      }
-      if (!getNotesBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, notes_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      for (int i = 0; i < devices_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, devices_.get(i));
-      }
-      if (!getNotesBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, notes_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof eu.recap.sim.models.WorkloadModel.Workload)) {
-        return super.equals(obj);
-      }
-      eu.recap.sim.models.WorkloadModel.Workload other = (eu.recap.sim.models.WorkloadModel.Workload) obj;
-
-      if (!getDevicesList()
-          .equals(other.getDevicesList())) return false;
-      if (!getNotes()
-          .equals(other.getNotes())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (getDevicesCount() > 0) {
-        hash = (37 * hash) + DEVICES_FIELD_NUMBER;
-        hash = (53 * hash) + getDevicesList().hashCode();
-      }
-      hash = (37 * hash) + NOTES_FIELD_NUMBER;
-      hash = (53 * hash) + getNotes().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static eu.recap.sim.models.WorkloadModel.Workload parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static eu.recap.sim.models.WorkloadModel.Workload parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static eu.recap.sim.models.WorkloadModel.Workload parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static eu.recap.sim.models.WorkloadModel.Workload parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static eu.recap.sim.models.WorkloadModel.Workload parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static eu.recap.sim.models.WorkloadModel.Workload parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static eu.recap.sim.models.WorkloadModel.Workload parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static eu.recap.sim.models.WorkloadModel.Workload parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static eu.recap.sim.models.WorkloadModel.Workload parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static eu.recap.sim.models.WorkloadModel.Workload parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static eu.recap.sim.models.WorkloadModel.Workload parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static eu.recap.sim.models.WorkloadModel.Workload parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(eu.recap.sim.models.WorkloadModel.Workload prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code models.Workload}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:models.Workload)
-        eu.recap.sim.models.WorkloadModel.WorkloadOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return eu.recap.sim.models.WorkloadModel.internal_static_models_Workload_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return eu.recap.sim.models.WorkloadModel.internal_static_models_Workload_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                eu.recap.sim.models.WorkloadModel.Workload.class, eu.recap.sim.models.WorkloadModel.Workload.Builder.class);
-      }
-
-      // Construct using eu.recap.sim.models.WorkloadModel.Workload.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getDevicesFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        if (devicesBuilder_ == null) {
-          devices_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        } else {
-          devicesBuilder_.clear();
-        }
-        notes_ = "";
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return eu.recap.sim.models.WorkloadModel.internal_static_models_Workload_descriptor;
-      }
-
-      @java.lang.Override
-      public eu.recap.sim.models.WorkloadModel.Workload getDefaultInstanceForType() {
-        return eu.recap.sim.models.WorkloadModel.Workload.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public eu.recap.sim.models.WorkloadModel.Workload build() {
-        eu.recap.sim.models.WorkloadModel.Workload result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public eu.recap.sim.models.WorkloadModel.Workload buildPartial() {
-        eu.recap.sim.models.WorkloadModel.Workload result = new eu.recap.sim.models.WorkloadModel.Workload(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (devicesBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
-            devices_ = java.util.Collections.unmodifiableList(devices_);
-            bitField0_ = (bitField0_ & ~0x00000001);
-          }
-          result.devices_ = devices_;
-        } else {
-          result.devices_ = devicesBuilder_.build();
-        }
-        result.notes_ = notes_;
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof eu.recap.sim.models.WorkloadModel.Workload) {
-          return mergeFrom((eu.recap.sim.models.WorkloadModel.Workload)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(eu.recap.sim.models.WorkloadModel.Workload other) {
-        if (other == eu.recap.sim.models.WorkloadModel.Workload.getDefaultInstance()) return this;
-        if (devicesBuilder_ == null) {
-          if (!other.devices_.isEmpty()) {
-            if (devices_.isEmpty()) {
-              devices_ = other.devices_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-            } else {
-              ensureDevicesIsMutable();
-              devices_.addAll(other.devices_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.devices_.isEmpty()) {
-            if (devicesBuilder_.isEmpty()) {
-              devicesBuilder_.dispose();
-              devicesBuilder_ = null;
-              devices_ = other.devices_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-              devicesBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getDevicesFieldBuilder() : null;
-            } else {
-              devicesBuilder_.addAllMessages(other.devices_);
-            }
-          }
-        }
-        if (!other.getNotes().isEmpty()) {
-          notes_ = other.notes_;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        eu.recap.sim.models.WorkloadModel.Workload parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (eu.recap.sim.models.WorkloadModel.Workload) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private java.util.List<eu.recap.sim.models.WorkloadModel.Device> devices_ =
-        java.util.Collections.emptyList();
-      private void ensureDevicesIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          devices_ = new java.util.ArrayList<eu.recap.sim.models.WorkloadModel.Device>(devices_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          eu.recap.sim.models.WorkloadModel.Device, eu.recap.sim.models.WorkloadModel.Device.Builder, eu.recap.sim.models.WorkloadModel.DeviceOrBuilder> devicesBuilder_;
-
-      /**
-       * <code>repeated .models.Device devices = 1;</code>
-       */
-      public java.util.List<eu.recap.sim.models.WorkloadModel.Device> getDevicesList() {
-        if (devicesBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(devices_);
-        } else {
-          return devicesBuilder_.getMessageList();
-        }
-      }
-      /**
-       * <code>repeated .models.Device devices = 1;</code>
-       */
-      public int getDevicesCount() {
-        if (devicesBuilder_ == null) {
-          return devices_.size();
-        } else {
-          return devicesBuilder_.getCount();
-        }
-      }
-      /**
-       * <code>repeated .models.Device devices = 1;</code>
-       */
-      public eu.recap.sim.models.WorkloadModel.Device getDevices(int index) {
-        if (devicesBuilder_ == null) {
-          return devices_.get(index);
-        } else {
-          return devicesBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <code>repeated .models.Device devices = 1;</code>
-       */
-      public Builder setDevices(
-          int index, eu.recap.sim.models.WorkloadModel.Device value) {
-        if (devicesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureDevicesIsMutable();
-          devices_.set(index, value);
-          onChanged();
-        } else {
-          devicesBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .models.Device devices = 1;</code>
-       */
-      public Builder setDevices(
-          int index, eu.recap.sim.models.WorkloadModel.Device.Builder builderForValue) {
-        if (devicesBuilder_ == null) {
-          ensureDevicesIsMutable();
-          devices_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          devicesBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .models.Device devices = 1;</code>
-       */
-      public Builder addDevices(eu.recap.sim.models.WorkloadModel.Device value) {
-        if (devicesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureDevicesIsMutable();
-          devices_.add(value);
-          onChanged();
-        } else {
-          devicesBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .models.Device devices = 1;</code>
-       */
-      public Builder addDevices(
-          int index, eu.recap.sim.models.WorkloadModel.Device value) {
-        if (devicesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureDevicesIsMutable();
-          devices_.add(index, value);
-          onChanged();
-        } else {
-          devicesBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .models.Device devices = 1;</code>
-       */
-      public Builder addDevices(
-          eu.recap.sim.models.WorkloadModel.Device.Builder builderForValue) {
-        if (devicesBuilder_ == null) {
-          ensureDevicesIsMutable();
-          devices_.add(builderForValue.build());
-          onChanged();
-        } else {
-          devicesBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .models.Device devices = 1;</code>
-       */
-      public Builder addDevices(
-          int index, eu.recap.sim.models.WorkloadModel.Device.Builder builderForValue) {
-        if (devicesBuilder_ == null) {
-          ensureDevicesIsMutable();
-          devices_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          devicesBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .models.Device devices = 1;</code>
-       */
-      public Builder addAllDevices(
-          java.lang.Iterable<? extends eu.recap.sim.models.WorkloadModel.Device> values) {
-        if (devicesBuilder_ == null) {
-          ensureDevicesIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, devices_);
-          onChanged();
-        } else {
-          devicesBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .models.Device devices = 1;</code>
-       */
-      public Builder clearDevices() {
-        if (devicesBuilder_ == null) {
-          devices_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
-          onChanged();
-        } else {
-          devicesBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .models.Device devices = 1;</code>
-       */
-      public Builder removeDevices(int index) {
-        if (devicesBuilder_ == null) {
-          ensureDevicesIsMutable();
-          devices_.remove(index);
-          onChanged();
-        } else {
-          devicesBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .models.Device devices = 1;</code>
-       */
-      public eu.recap.sim.models.WorkloadModel.Device.Builder getDevicesBuilder(
-          int index) {
-        return getDevicesFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .models.Device devices = 1;</code>
-       */
-      public eu.recap.sim.models.WorkloadModel.DeviceOrBuilder getDevicesOrBuilder(
-          int index) {
-        if (devicesBuilder_ == null) {
-          return devices_.get(index);  } else {
-          return devicesBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .models.Device devices = 1;</code>
-       */
-      public java.util.List<? extends eu.recap.sim.models.WorkloadModel.DeviceOrBuilder> 
-           getDevicesOrBuilderList() {
-        if (devicesBuilder_ != null) {
-          return devicesBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(devices_);
-        }
-      }
-      /**
-       * <code>repeated .models.Device devices = 1;</code>
-       */
-      public eu.recap.sim.models.WorkloadModel.Device.Builder addDevicesBuilder() {
-        return getDevicesFieldBuilder().addBuilder(
-            eu.recap.sim.models.WorkloadModel.Device.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .models.Device devices = 1;</code>
-       */
-      public eu.recap.sim.models.WorkloadModel.Device.Builder addDevicesBuilder(
-          int index) {
-        return getDevicesFieldBuilder().addBuilder(
-            index, eu.recap.sim.models.WorkloadModel.Device.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .models.Device devices = 1;</code>
-       */
-      public java.util.List<eu.recap.sim.models.WorkloadModel.Device.Builder> 
-           getDevicesBuilderList() {
-        return getDevicesFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          eu.recap.sim.models.WorkloadModel.Device, eu.recap.sim.models.WorkloadModel.Device.Builder, eu.recap.sim.models.WorkloadModel.DeviceOrBuilder> 
-          getDevicesFieldBuilder() {
-        if (devicesBuilder_ == null) {
-          devicesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              eu.recap.sim.models.WorkloadModel.Device, eu.recap.sim.models.WorkloadModel.Device.Builder, eu.recap.sim.models.WorkloadModel.DeviceOrBuilder>(
-                  devices_,
-                  ((bitField0_ & 0x00000001) != 0),
-                  getParentForChildren(),
-                  isClean());
-          devices_ = null;
-        }
-        return devicesBuilder_;
-      }
-
-      private java.lang.Object notes_ = "";
-      /**
-       * <code>string notes = 2;</code>
-       */
-      public java.lang.String getNotes() {
-        java.lang.Object ref = notes_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          notes_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string notes = 2;</code>
-       */
-      public com.google.protobuf.ByteString
-          getNotesBytes() {
-        java.lang.Object ref = notes_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          notes_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string notes = 2;</code>
-       */
-      public Builder setNotes(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        notes_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string notes = 2;</code>
-       */
-      public Builder clearNotes() {
-        
-        notes_ = getDefaultInstance().getNotes();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string notes = 2;</code>
-       */
-      public Builder setNotesBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        notes_ = value;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:models.Workload)
-    }
-
-    // @@protoc_insertion_point(class_scope:models.Workload)
-    private static final eu.recap.sim.models.WorkloadModel.Workload DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new eu.recap.sim.models.WorkloadModel.Workload();
-    }
-
-    public static eu.recap.sim.models.WorkloadModel.Workload getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<Workload>
-        PARSER = new com.google.protobuf.AbstractParser<Workload>() {
-      @java.lang.Override
-      public Workload parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Workload(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<Workload> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Workload> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public eu.recap.sim.models.WorkloadModel.Workload getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface DeviceOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:models.Device)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>string deviceId = 3;</code>
-     */
-    java.lang.String getDeviceId();
-    /**
-     * <code>string deviceId = 3;</code>
-     */
-    com.google.protobuf.ByteString
-        getDeviceIdBytes();
-
-    /**
-     * <code>string deviceName = 4;</code>
-     */
-    java.lang.String getDeviceName();
-    /**
-     * <code>string deviceName = 4;</code>
-     */
-    com.google.protobuf.ByteString
-        getDeviceNameBytes();
-
-    /**
-     * <code>repeated .models.Location locations = 2;</code>
-     */
-    java.util.List<eu.recap.sim.models.LocationModel.Location> 
-        getLocationsList();
-    /**
-     * <code>repeated .models.Location locations = 2;</code>
-     */
-    eu.recap.sim.models.LocationModel.Location getLocations(int index);
-    /**
-     * <code>repeated .models.Location locations = 2;</code>
-     */
-    int getLocationsCount();
-    /**
-     * <code>repeated .models.Location locations = 2;</code>
-     */
-    java.util.List<? extends eu.recap.sim.models.LocationModel.LocationOrBuilder> 
-        getLocationsOrBuilderList();
-    /**
-     * <code>repeated .models.Location locations = 2;</code>
-     */
-    eu.recap.sim.models.LocationModel.LocationOrBuilder getLocationsOrBuilder(
-        int index);
-
-    /**
-     * <code>repeated .models.Request requests = 1;</code>
-     */
-    java.util.List<eu.recap.sim.models.WorkloadModel.Request> 
-        getRequestsList();
-    /**
-     * <code>repeated .models.Request requests = 1;</code>
-     */
-    eu.recap.sim.models.WorkloadModel.Request getRequests(int index);
-    /**
-     * <code>repeated .models.Request requests = 1;</code>
-     */
-    int getRequestsCount();
-    /**
-     * <code>repeated .models.Request requests = 1;</code>
-     */
-    java.util.List<? extends eu.recap.sim.models.WorkloadModel.RequestOrBuilder> 
-        getRequestsOrBuilderList();
-    /**
-     * <code>repeated .models.Request requests = 1;</code>
-     */
-    eu.recap.sim.models.WorkloadModel.RequestOrBuilder getRequestsOrBuilder(
-        int index);
-  }
-  /**
-   * Protobuf type {@code models.Device}
-   */
-  public  static final class Device extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:models.Device)
-      DeviceOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use Device.newBuilder() to construct.
-    private Device(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private Device() {
-      deviceId_ = "";
-      deviceName_ = "";
-      locations_ = java.util.Collections.emptyList();
-      requests_ = java.util.Collections.emptyList();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private Device(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
-                requests_ = new java.util.ArrayList<eu.recap.sim.models.WorkloadModel.Request>();
-                mutable_bitField0_ |= 0x00000008;
-              }
-              requests_.add(
-                  input.readMessage(eu.recap.sim.models.WorkloadModel.Request.parser(), extensionRegistry));
-              break;
-            }
-            case 18: {
-              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-                locations_ = new java.util.ArrayList<eu.recap.sim.models.LocationModel.Location>();
-                mutable_bitField0_ |= 0x00000004;
-              }
-              locations_.add(
-                  input.readMessage(eu.recap.sim.models.LocationModel.Location.parser(), extensionRegistry));
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              deviceId_ = s;
-              break;
-            }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              deviceName_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000008) != 0)) {
-          requests_ = java.util.Collections.unmodifiableList(requests_);
-        }
-        if (((mutable_bitField0_ & 0x00000004) != 0)) {
-          locations_ = java.util.Collections.unmodifiableList(locations_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return eu.recap.sim.models.WorkloadModel.internal_static_models_Device_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return eu.recap.sim.models.WorkloadModel.internal_static_models_Device_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              eu.recap.sim.models.WorkloadModel.Device.class, eu.recap.sim.models.WorkloadModel.Device.Builder.class);
-    }
-
-    private int bitField0_;
-    public static final int DEVICEID_FIELD_NUMBER = 3;
-    private volatile java.lang.Object deviceId_;
-    /**
-     * <code>string deviceId = 3;</code>
-     */
-    public java.lang.String getDeviceId() {
-      java.lang.Object ref = deviceId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        deviceId_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string deviceId = 3;</code>
-     */
-    public com.google.protobuf.ByteString
-        getDeviceIdBytes() {
-      java.lang.Object ref = deviceId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        deviceId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int DEVICENAME_FIELD_NUMBER = 4;
-    private volatile java.lang.Object deviceName_;
-    /**
-     * <code>string deviceName = 4;</code>
-     */
-    public java.lang.String getDeviceName() {
-      java.lang.Object ref = deviceName_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        deviceName_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string deviceName = 4;</code>
-     */
-    public com.google.protobuf.ByteString
-        getDeviceNameBytes() {
-      java.lang.Object ref = deviceName_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        deviceName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int LOCATIONS_FIELD_NUMBER = 2;
-    private java.util.List<eu.recap.sim.models.LocationModel.Location> locations_;
-    /**
-     * <code>repeated .models.Location locations = 2;</code>
-     */
-    public java.util.List<eu.recap.sim.models.LocationModel.Location> getLocationsList() {
-      return locations_;
-    }
-    /**
-     * <code>repeated .models.Location locations = 2;</code>
-     */
-    public java.util.List<? extends eu.recap.sim.models.LocationModel.LocationOrBuilder> 
-        getLocationsOrBuilderList() {
-      return locations_;
-    }
-    /**
-     * <code>repeated .models.Location locations = 2;</code>
-     */
-    public int getLocationsCount() {
-      return locations_.size();
-    }
-    /**
-     * <code>repeated .models.Location locations = 2;</code>
-     */
-    public eu.recap.sim.models.LocationModel.Location getLocations(int index) {
-      return locations_.get(index);
-    }
-    /**
-     * <code>repeated .models.Location locations = 2;</code>
-     */
-    public eu.recap.sim.models.LocationModel.LocationOrBuilder getLocationsOrBuilder(
-        int index) {
-      return locations_.get(index);
-    }
-
-    public static final int REQUESTS_FIELD_NUMBER = 1;
-    private java.util.List<eu.recap.sim.models.WorkloadModel.Request> requests_;
-    /**
-     * <code>repeated .models.Request requests = 1;</code>
-     */
-    public java.util.List<eu.recap.sim.models.WorkloadModel.Request> getRequestsList() {
-      return requests_;
-    }
-    /**
-     * <code>repeated .models.Request requests = 1;</code>
-     */
-    public java.util.List<? extends eu.recap.sim.models.WorkloadModel.RequestOrBuilder> 
-        getRequestsOrBuilderList() {
-      return requests_;
-    }
-    /**
-     * <code>repeated .models.Request requests = 1;</code>
-     */
-    public int getRequestsCount() {
-      return requests_.size();
-    }
-    /**
-     * <code>repeated .models.Request requests = 1;</code>
-     */
-    public eu.recap.sim.models.WorkloadModel.Request getRequests(int index) {
-      return requests_.get(index);
-    }
-    /**
-     * <code>repeated .models.Request requests = 1;</code>
-     */
-    public eu.recap.sim.models.WorkloadModel.RequestOrBuilder getRequestsOrBuilder(
-        int index) {
-      return requests_.get(index);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      for (int i = 0; i < requests_.size(); i++) {
-        output.writeMessage(1, requests_.get(i));
-      }
-      for (int i = 0; i < locations_.size(); i++) {
-        output.writeMessage(2, locations_.get(i));
-      }
-      if (!getDeviceIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, deviceId_);
-      }
-      if (!getDeviceNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, deviceName_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      for (int i = 0; i < requests_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, requests_.get(i));
-      }
-      for (int i = 0; i < locations_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, locations_.get(i));
-      }
-      if (!getDeviceIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, deviceId_);
-      }
-      if (!getDeviceNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, deviceName_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof eu.recap.sim.models.WorkloadModel.Device)) {
-        return super.equals(obj);
-      }
-      eu.recap.sim.models.WorkloadModel.Device other = (eu.recap.sim.models.WorkloadModel.Device) obj;
-
-      if (!getDeviceId()
-          .equals(other.getDeviceId())) return false;
-      if (!getDeviceName()
-          .equals(other.getDeviceName())) return false;
-      if (!getLocationsList()
-          .equals(other.getLocationsList())) return false;
-      if (!getRequestsList()
-          .equals(other.getRequestsList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + DEVICEID_FIELD_NUMBER;
-      hash = (53 * hash) + getDeviceId().hashCode();
-      hash = (37 * hash) + DEVICENAME_FIELD_NUMBER;
-      hash = (53 * hash) + getDeviceName().hashCode();
-      if (getLocationsCount() > 0) {
-        hash = (37 * hash) + LOCATIONS_FIELD_NUMBER;
-        hash = (53 * hash) + getLocationsList().hashCode();
-      }
-      if (getRequestsCount() > 0) {
-        hash = (37 * hash) + REQUESTS_FIELD_NUMBER;
-        hash = (53 * hash) + getRequestsList().hashCode();
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static eu.recap.sim.models.WorkloadModel.Device parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static eu.recap.sim.models.WorkloadModel.Device parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static eu.recap.sim.models.WorkloadModel.Device parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static eu.recap.sim.models.WorkloadModel.Device parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static eu.recap.sim.models.WorkloadModel.Device parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static eu.recap.sim.models.WorkloadModel.Device parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static eu.recap.sim.models.WorkloadModel.Device parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static eu.recap.sim.models.WorkloadModel.Device parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static eu.recap.sim.models.WorkloadModel.Device parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static eu.recap.sim.models.WorkloadModel.Device parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static eu.recap.sim.models.WorkloadModel.Device parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static eu.recap.sim.models.WorkloadModel.Device parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(eu.recap.sim.models.WorkloadModel.Device prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code models.Device}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:models.Device)
-        eu.recap.sim.models.WorkloadModel.DeviceOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return eu.recap.sim.models.WorkloadModel.internal_static_models_Device_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return eu.recap.sim.models.WorkloadModel.internal_static_models_Device_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                eu.recap.sim.models.WorkloadModel.Device.class, eu.recap.sim.models.WorkloadModel.Device.Builder.class);
-      }
-
-      // Construct using eu.recap.sim.models.WorkloadModel.Device.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getLocationsFieldBuilder();
-          getRequestsFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        deviceId_ = "";
-
-        deviceName_ = "";
-
-        if (locationsBuilder_ == null) {
-          locations_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
-        } else {
-          locationsBuilder_.clear();
-        }
-        if (requestsBuilder_ == null) {
-          requests_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
-        } else {
-          requestsBuilder_.clear();
-        }
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return eu.recap.sim.models.WorkloadModel.internal_static_models_Device_descriptor;
-      }
-
-      @java.lang.Override
-      public eu.recap.sim.models.WorkloadModel.Device getDefaultInstanceForType() {
-        return eu.recap.sim.models.WorkloadModel.Device.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public eu.recap.sim.models.WorkloadModel.Device build() {
-        eu.recap.sim.models.WorkloadModel.Device result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public eu.recap.sim.models.WorkloadModel.Device buildPartial() {
-        eu.recap.sim.models.WorkloadModel.Device result = new eu.recap.sim.models.WorkloadModel.Device(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        result.deviceId_ = deviceId_;
-        result.deviceName_ = deviceName_;
-        if (locationsBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0)) {
-            locations_ = java.util.Collections.unmodifiableList(locations_);
-            bitField0_ = (bitField0_ & ~0x00000004);
-          }
-          result.locations_ = locations_;
-        } else {
-          result.locations_ = locationsBuilder_.build();
-        }
-        if (requestsBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) != 0)) {
-            requests_ = java.util.Collections.unmodifiableList(requests_);
-            bitField0_ = (bitField0_ & ~0x00000008);
-          }
-          result.requests_ = requests_;
-        } else {
-          result.requests_ = requestsBuilder_.build();
-        }
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof eu.recap.sim.models.WorkloadModel.Device) {
-          return mergeFrom((eu.recap.sim.models.WorkloadModel.Device)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(eu.recap.sim.models.WorkloadModel.Device other) {
-        if (other == eu.recap.sim.models.WorkloadModel.Device.getDefaultInstance()) return this;
-        if (!other.getDeviceId().isEmpty()) {
-          deviceId_ = other.deviceId_;
-          onChanged();
-        }
-        if (!other.getDeviceName().isEmpty()) {
-          deviceName_ = other.deviceName_;
-          onChanged();
-        }
-        if (locationsBuilder_ == null) {
-          if (!other.locations_.isEmpty()) {
-            if (locations_.isEmpty()) {
-              locations_ = other.locations_;
-              bitField0_ = (bitField0_ & ~0x00000004);
-            } else {
-              ensureLocationsIsMutable();
-              locations_.addAll(other.locations_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.locations_.isEmpty()) {
-            if (locationsBuilder_.isEmpty()) {
-              locationsBuilder_.dispose();
-              locationsBuilder_ = null;
-              locations_ = other.locations_;
-              bitField0_ = (bitField0_ & ~0x00000004);
-              locationsBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getLocationsFieldBuilder() : null;
-            } else {
-              locationsBuilder_.addAllMessages(other.locations_);
-            }
-          }
-        }
-        if (requestsBuilder_ == null) {
-          if (!other.requests_.isEmpty()) {
-            if (requests_.isEmpty()) {
-              requests_ = other.requests_;
-              bitField0_ = (bitField0_ & ~0x00000008);
-            } else {
-              ensureRequestsIsMutable();
-              requests_.addAll(other.requests_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.requests_.isEmpty()) {
-            if (requestsBuilder_.isEmpty()) {
-              requestsBuilder_.dispose();
-              requestsBuilder_ = null;
-              requests_ = other.requests_;
-              bitField0_ = (bitField0_ & ~0x00000008);
-              requestsBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getRequestsFieldBuilder() : null;
-            } else {
-              requestsBuilder_.addAllMessages(other.requests_);
-            }
-          }
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        eu.recap.sim.models.WorkloadModel.Device parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (eu.recap.sim.models.WorkloadModel.Device) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object deviceId_ = "";
-      /**
-       * <code>string deviceId = 3;</code>
-       */
-      public java.lang.String getDeviceId() {
-        java.lang.Object ref = deviceId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          deviceId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string deviceId = 3;</code>
-       */
-      public com.google.protobuf.ByteString
-          getDeviceIdBytes() {
-        java.lang.Object ref = deviceId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          deviceId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string deviceId = 3;</code>
-       */
-      public Builder setDeviceId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        deviceId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string deviceId = 3;</code>
-       */
-      public Builder clearDeviceId() {
-        
-        deviceId_ = getDefaultInstance().getDeviceId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string deviceId = 3;</code>
-       */
-      public Builder setDeviceIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        deviceId_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object deviceName_ = "";
-      /**
-       * <code>string deviceName = 4;</code>
-       */
-      public java.lang.String getDeviceName() {
-        java.lang.Object ref = deviceName_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          deviceName_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string deviceName = 4;</code>
-       */
-      public com.google.protobuf.ByteString
-          getDeviceNameBytes() {
-        java.lang.Object ref = deviceName_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          deviceName_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string deviceName = 4;</code>
-       */
-      public Builder setDeviceName(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        deviceName_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string deviceName = 4;</code>
-       */
-      public Builder clearDeviceName() {
-        
-        deviceName_ = getDefaultInstance().getDeviceName();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string deviceName = 4;</code>
-       */
-      public Builder setDeviceNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        deviceName_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.util.List<eu.recap.sim.models.LocationModel.Location> locations_ =
-        java.util.Collections.emptyList();
-      private void ensureLocationsIsMutable() {
-        if (!((bitField0_ & 0x00000004) != 0)) {
-          locations_ = new java.util.ArrayList<eu.recap.sim.models.LocationModel.Location>(locations_);
-          bitField0_ |= 0x00000004;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          eu.recap.sim.models.LocationModel.Location, eu.recap.sim.models.LocationModel.Location.Builder, eu.recap.sim.models.LocationModel.LocationOrBuilder> locationsBuilder_;
-
-      /**
-       * <code>repeated .models.Location locations = 2;</code>
-       */
-      public java.util.List<eu.recap.sim.models.LocationModel.Location> getLocationsList() {
-        if (locationsBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(locations_);
-        } else {
-          return locationsBuilder_.getMessageList();
-        }
-      }
-      /**
-       * <code>repeated .models.Location locations = 2;</code>
-       */
-      public int getLocationsCount() {
-        if (locationsBuilder_ == null) {
-          return locations_.size();
-        } else {
-          return locationsBuilder_.getCount();
-        }
-      }
-      /**
-       * <code>repeated .models.Location locations = 2;</code>
-       */
-      public eu.recap.sim.models.LocationModel.Location getLocations(int index) {
-        if (locationsBuilder_ == null) {
-          return locations_.get(index);
-        } else {
-          return locationsBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <code>repeated .models.Location locations = 2;</code>
-       */
-      public Builder setLocations(
-          int index, eu.recap.sim.models.LocationModel.Location value) {
-        if (locationsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureLocationsIsMutable();
-          locations_.set(index, value);
-          onChanged();
-        } else {
-          locationsBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .models.Location locations = 2;</code>
-       */
-      public Builder setLocations(
-          int index, eu.recap.sim.models.LocationModel.Location.Builder builderForValue) {
-        if (locationsBuilder_ == null) {
-          ensureLocationsIsMutable();
-          locations_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          locationsBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .models.Location locations = 2;</code>
-       */
-      public Builder addLocations(eu.recap.sim.models.LocationModel.Location value) {
-        if (locationsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureLocationsIsMutable();
-          locations_.add(value);
-          onChanged();
-        } else {
-          locationsBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .models.Location locations = 2;</code>
-       */
-      public Builder addLocations(
-          int index, eu.recap.sim.models.LocationModel.Location value) {
-        if (locationsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureLocationsIsMutable();
-          locations_.add(index, value);
-          onChanged();
-        } else {
-          locationsBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .models.Location locations = 2;</code>
-       */
-      public Builder addLocations(
-          eu.recap.sim.models.LocationModel.Location.Builder builderForValue) {
-        if (locationsBuilder_ == null) {
-          ensureLocationsIsMutable();
-          locations_.add(builderForValue.build());
-          onChanged();
-        } else {
-          locationsBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .models.Location locations = 2;</code>
-       */
-      public Builder addLocations(
-          int index, eu.recap.sim.models.LocationModel.Location.Builder builderForValue) {
-        if (locationsBuilder_ == null) {
-          ensureLocationsIsMutable();
-          locations_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          locationsBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .models.Location locations = 2;</code>
-       */
-      public Builder addAllLocations(
-          java.lang.Iterable<? extends eu.recap.sim.models.LocationModel.Location> values) {
-        if (locationsBuilder_ == null) {
-          ensureLocationsIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, locations_);
-          onChanged();
-        } else {
-          locationsBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .models.Location locations = 2;</code>
-       */
-      public Builder clearLocations() {
-        if (locationsBuilder_ == null) {
-          locations_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
-          onChanged();
-        } else {
-          locationsBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .models.Location locations = 2;</code>
-       */
-      public Builder removeLocations(int index) {
-        if (locationsBuilder_ == null) {
-          ensureLocationsIsMutable();
-          locations_.remove(index);
-          onChanged();
-        } else {
-          locationsBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .models.Location locations = 2;</code>
-       */
-      public eu.recap.sim.models.LocationModel.Location.Builder getLocationsBuilder(
-          int index) {
-        return getLocationsFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .models.Location locations = 2;</code>
-       */
-      public eu.recap.sim.models.LocationModel.LocationOrBuilder getLocationsOrBuilder(
-          int index) {
-        if (locationsBuilder_ == null) {
-          return locations_.get(index);  } else {
-          return locationsBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .models.Location locations = 2;</code>
-       */
-      public java.util.List<? extends eu.recap.sim.models.LocationModel.LocationOrBuilder> 
-           getLocationsOrBuilderList() {
-        if (locationsBuilder_ != null) {
-          return locationsBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(locations_);
-        }
-      }
-      /**
-       * <code>repeated .models.Location locations = 2;</code>
-       */
-      public eu.recap.sim.models.LocationModel.Location.Builder addLocationsBuilder() {
-        return getLocationsFieldBuilder().addBuilder(
-            eu.recap.sim.models.LocationModel.Location.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .models.Location locations = 2;</code>
-       */
-      public eu.recap.sim.models.LocationModel.Location.Builder addLocationsBuilder(
-          int index) {
-        return getLocationsFieldBuilder().addBuilder(
-            index, eu.recap.sim.models.LocationModel.Location.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .models.Location locations = 2;</code>
-       */
-      public java.util.List<eu.recap.sim.models.LocationModel.Location.Builder> 
-           getLocationsBuilderList() {
-        return getLocationsFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          eu.recap.sim.models.LocationModel.Location, eu.recap.sim.models.LocationModel.Location.Builder, eu.recap.sim.models.LocationModel.LocationOrBuilder> 
-          getLocationsFieldBuilder() {
-        if (locationsBuilder_ == null) {
-          locationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              eu.recap.sim.models.LocationModel.Location, eu.recap.sim.models.LocationModel.Location.Builder, eu.recap.sim.models.LocationModel.LocationOrBuilder>(
-                  locations_,
-                  ((bitField0_ & 0x00000004) != 0),
-                  getParentForChildren(),
-                  isClean());
-          locations_ = null;
-        }
-        return locationsBuilder_;
-      }
-
-      private java.util.List<eu.recap.sim.models.WorkloadModel.Request> requests_ =
-        java.util.Collections.emptyList();
-      private void ensureRequestsIsMutable() {
-        if (!((bitField0_ & 0x00000008) != 0)) {
-          requests_ = new java.util.ArrayList<eu.recap.sim.models.WorkloadModel.Request>(requests_);
-          bitField0_ |= 0x00000008;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          eu.recap.sim.models.WorkloadModel.Request, eu.recap.sim.models.WorkloadModel.Request.Builder, eu.recap.sim.models.WorkloadModel.RequestOrBuilder> requestsBuilder_;
-
-      /**
-       * <code>repeated .models.Request requests = 1;</code>
-       */
-      public java.util.List<eu.recap.sim.models.WorkloadModel.Request> getRequestsList() {
-        if (requestsBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(requests_);
-        } else {
-          return requestsBuilder_.getMessageList();
-        }
-      }
-      /**
-       * <code>repeated .models.Request requests = 1;</code>
-       */
-      public int getRequestsCount() {
-        if (requestsBuilder_ == null) {
-          return requests_.size();
-        } else {
-          return requestsBuilder_.getCount();
-        }
-      }
-      /**
-       * <code>repeated .models.Request requests = 1;</code>
-       */
-      public eu.recap.sim.models.WorkloadModel.Request getRequests(int index) {
-        if (requestsBuilder_ == null) {
-          return requests_.get(index);
-        } else {
-          return requestsBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <code>repeated .models.Request requests = 1;</code>
-       */
-      public Builder setRequests(
-          int index, eu.recap.sim.models.WorkloadModel.Request value) {
-        if (requestsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureRequestsIsMutable();
-          requests_.set(index, value);
-          onChanged();
-        } else {
-          requestsBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .models.Request requests = 1;</code>
-       */
-      public Builder setRequests(
-          int index, eu.recap.sim.models.WorkloadModel.Request.Builder builderForValue) {
-        if (requestsBuilder_ == null) {
-          ensureRequestsIsMutable();
-          requests_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          requestsBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .models.Request requests = 1;</code>
-       */
-      public Builder addRequests(eu.recap.sim.models.WorkloadModel.Request value) {
-        if (requestsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureRequestsIsMutable();
-          requests_.add(value);
-          onChanged();
-        } else {
-          requestsBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .models.Request requests = 1;</code>
-       */
-      public Builder addRequests(
-          int index, eu.recap.sim.models.WorkloadModel.Request value) {
-        if (requestsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureRequestsIsMutable();
-          requests_.add(index, value);
-          onChanged();
-        } else {
-          requestsBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .models.Request requests = 1;</code>
-       */
-      public Builder addRequests(
-          eu.recap.sim.models.WorkloadModel.Request.Builder builderForValue) {
-        if (requestsBuilder_ == null) {
-          ensureRequestsIsMutable();
-          requests_.add(builderForValue.build());
-          onChanged();
-        } else {
-          requestsBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .models.Request requests = 1;</code>
-       */
-      public Builder addRequests(
-          int index, eu.recap.sim.models.WorkloadModel.Request.Builder builderForValue) {
-        if (requestsBuilder_ == null) {
-          ensureRequestsIsMutable();
-          requests_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          requestsBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .models.Request requests = 1;</code>
-       */
-      public Builder addAllRequests(
-          java.lang.Iterable<? extends eu.recap.sim.models.WorkloadModel.Request> values) {
-        if (requestsBuilder_ == null) {
-          ensureRequestsIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, requests_);
-          onChanged();
-        } else {
-          requestsBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .models.Request requests = 1;</code>
-       */
-      public Builder clearRequests() {
-        if (requestsBuilder_ == null) {
-          requests_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
-          onChanged();
-        } else {
-          requestsBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .models.Request requests = 1;</code>
-       */
-      public Builder removeRequests(int index) {
-        if (requestsBuilder_ == null) {
-          ensureRequestsIsMutable();
-          requests_.remove(index);
-          onChanged();
-        } else {
-          requestsBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .models.Request requests = 1;</code>
-       */
-      public eu.recap.sim.models.WorkloadModel.Request.Builder getRequestsBuilder(
-          int index) {
-        return getRequestsFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .models.Request requests = 1;</code>
-       */
-      public eu.recap.sim.models.WorkloadModel.RequestOrBuilder getRequestsOrBuilder(
-          int index) {
-        if (requestsBuilder_ == null) {
-          return requests_.get(index);  } else {
-          return requestsBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .models.Request requests = 1;</code>
-       */
-      public java.util.List<? extends eu.recap.sim.models.WorkloadModel.RequestOrBuilder> 
-           getRequestsOrBuilderList() {
-        if (requestsBuilder_ != null) {
-          return requestsBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(requests_);
-        }
-      }
-      /**
-       * <code>repeated .models.Request requests = 1;</code>
-       */
-      public eu.recap.sim.models.WorkloadModel.Request.Builder addRequestsBuilder() {
-        return getRequestsFieldBuilder().addBuilder(
-            eu.recap.sim.models.WorkloadModel.Request.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .models.Request requests = 1;</code>
-       */
-      public eu.recap.sim.models.WorkloadModel.Request.Builder addRequestsBuilder(
-          int index) {
-        return getRequestsFieldBuilder().addBuilder(
-            index, eu.recap.sim.models.WorkloadModel.Request.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .models.Request requests = 1;</code>
-       */
-      public java.util.List<eu.recap.sim.models.WorkloadModel.Request.Builder> 
-           getRequestsBuilderList() {
-        return getRequestsFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          eu.recap.sim.models.WorkloadModel.Request, eu.recap.sim.models.WorkloadModel.Request.Builder, eu.recap.sim.models.WorkloadModel.RequestOrBuilder> 
-          getRequestsFieldBuilder() {
-        if (requestsBuilder_ == null) {
-          requestsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              eu.recap.sim.models.WorkloadModel.Request, eu.recap.sim.models.WorkloadModel.Request.Builder, eu.recap.sim.models.WorkloadModel.RequestOrBuilder>(
-                  requests_,
-                  ((bitField0_ & 0x00000008) != 0),
-                  getParentForChildren(),
-                  isClean());
-          requests_ = null;
-        }
-        return requestsBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:models.Device)
-    }
-
-    // @@protoc_insertion_point(class_scope:models.Device)
-    private static final eu.recap.sim.models.WorkloadModel.Device DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new eu.recap.sim.models.WorkloadModel.Device();
-    }
-
-    public static eu.recap.sim.models.WorkloadModel.Device getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<Device>
-        PARSER = new com.google.protobuf.AbstractParser<Device>() {
-      @java.lang.Override
-      public Device parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Device(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<Device> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Device> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public eu.recap.sim.models.WorkloadModel.Device getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface RequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:models.Request)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     * starting time of request
-     * </pre>
-     *
-     * <code>int64 time = 1;</code>
-     */
-    long getTime();
-
-    /**
-     * <code>string applicationId = 2;</code>
-     */
-    java.lang.String getApplicationId();
-    /**
-     * <code>string applicationId = 2;</code>
-     */
-    com.google.protobuf.ByteString
-        getApplicationIdBytes();
-
-    /**
-     * <code>string componentId = 3;</code>
-     */
-    java.lang.String getComponentId();
-    /**
-     * <code>string componentId = 3;</code>
-     */
-    com.google.protobuf.ByteString
-        getComponentIdBytes();
-
-    /**
-     * <code>string apiId = 4;</code>
-     */
-    java.lang.String getApiId();
-    /**
-     * <code>string apiId = 4;</code>
-     */
-    com.google.protobuf.ByteString
-        getApiIdBytes();
-
-    /**
-     * <code>int64 dataToTransfer = 6;</code>
-     */
-    long getDataToTransfer();
-
-    /**
-     * <pre>
-     * added By Malika: to adapt the execution time at data nodes
-     * </pre>
-     *
-     * <code>int32 mipsDataNodes = 5;</code>
-     */
-    int getMipsDataNodes();
-
-    /**
-     * <pre>
-     * added By Malika: the id of the request (will identify the cloudlets)
-     * </pre>
-     *
-     * <code>int32 requestId = 7;</code>
-     */
-    int getRequestId();
-
-    /**
-     * <pre>
-     * added By Malika: time ine second that request took in real life
-     * </pre>
-     *
-     * <code>int32 expectedDuration = 8;</code>
-     */
-    int getExpectedDuration();
-
-    /**
-     * <pre>
-     * added By Malika: what data nodes to use for this request
-     * </pre>
-     *
-     * <code>repeated int32 dataNodes = 9;</code>
-     */
-    java.util.List<java.lang.Integer> getDataNodesList();
-    /**
-     * <pre>
-     * added By Malika: what data nodes to use for this request
-     * </pre>
-     *
-     * <code>repeated int32 dataNodes = 9;</code>
-     */
-    int getDataNodesCount();
-    /**
-     * <pre>
-     * added By Malika: what data nodes to use for this request
-     * </pre>
-     *
-     * <code>repeated int32 dataNodes = 9;</code>
-     */
-    int getDataNodes(int index);
-    //TODO : add methods getSearchContent and setSearchContent to interface
-  }
-  /**
-   * Protobuf type {@code models.Request}
-   */
-  public static final class Request extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:models.Request)
-      RequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use Request.newBuilder() to construct.
-    private Request(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private Request() {
-      applicationId_ = "";
-      componentId_ = "";
-      apiId_ = "";
-      dataNodes_ = emptyIntList();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private Request(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-
-              time_ = input.readInt64();
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              applicationId_ = s;
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              componentId_ = s;
-              break;
-            }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              apiId_ = s;
-              break;
-            }
-            case 40: {
-
-              mipsDataNodes_ = input.readInt32();
-              break;
-            }
-            case 48: {
-
-              dataToTransfer_ = input.readInt64();
-              break;
-            }
-            case 56: {
-
-              requestId_ = input.readInt32();
-              break;
-            }
-            case 64: {
-
-              expectedDuration_ = input.readInt32();
-              break;
-            }
-            case 72: {
-              if (!((mutable_bitField0_ & 0x00000100) != 0)) {
-                dataNodes_ = newIntList();
-                mutable_bitField0_ |= 0x00000100;
-              }
-              dataNodes_.addInt(input.readInt32());
-              break;
-            }
-            case 74: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000100) != 0) && input.getBytesUntilLimit() > 0) {
-                dataNodes_ = newIntList();
-                mutable_bitField0_ |= 0x00000100;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                dataNodes_.addInt(input.readInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000100) != 0)) {
-          dataNodes_.makeImmutable(); // C
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return eu.recap.sim.models.WorkloadModel.internal_static_models_Request_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return eu.recap.sim.models.WorkloadModel.internal_static_models_Request_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              eu.recap.sim.models.WorkloadModel.Request.class, eu.recap.sim.models.WorkloadModel.Request.Builder.class);
-    }
-
-    private int bitField0_;
-    public static final int TIME_FIELD_NUMBER = 1;
-    private long time_;
-    /**
-     * <pre>
-     * starting time of request
-     * </pre>
-     *
-     * <code>int64 time = 1;</code>
-     */
-    public long getTime() {
-      return time_;
-    }
-
-    public static final int APPLICATIONID_FIELD_NUMBER = 2;
-    private volatile java.lang.Object applicationId_;
-    /**
-     * <code>string applicationId = 2;</code>
-     */
-    public java.lang.String getApplicationId() {
-      java.lang.Object ref = applicationId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        applicationId_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string applicationId = 2;</code>
-     */
-    public com.google.protobuf.ByteString
-        getApplicationIdBytes() {
-      java.lang.Object ref = applicationId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        applicationId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int COMPONENTID_FIELD_NUMBER = 3;
-    private volatile java.lang.Object componentId_;
-    /**
-     * <code>string componentId = 3;</code>
-     */
-    public java.lang.String getComponentId() {
-      java.lang.Object ref = componentId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        componentId_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string componentId = 3;</code>
-     */
-    public com.google.protobuf.ByteString
-        getComponentIdBytes() {
-      java.lang.Object ref = componentId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        componentId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int APIID_FIELD_NUMBER = 4;
-    private volatile java.lang.Object apiId_;
-    /**
-     * <code>string apiId = 4;</code>
-     */
-    public java.lang.String getApiId() {
-      java.lang.Object ref = apiId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        apiId_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string apiId = 4;</code>
-     */
-    public com.google.protobuf.ByteString
-        getApiIdBytes() {
-      java.lang.Object ref = apiId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        apiId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int DATATOTRANSFER_FIELD_NUMBER = 6;
-    private long dataToTransfer_;
-    /**
-     * <code>int64 dataToTransfer = 6;</code>
-     */
-    public long getDataToTransfer() {
-      return dataToTransfer_;
-    }
-
-    public static final int MIPSDATANODES_FIELD_NUMBER = 5;
-    private int mipsDataNodes_;
-    /**
-     * <pre>
-     * added By Malika: to adapt the execution time at data nodes
-     * </pre>
-     *
-     * <code>int32 mipsDataNodes = 5;</code>
-     */
-    public int getMipsDataNodes() {
-      return mipsDataNodes_;
-    }
-
-    public static final int REQUESTID_FIELD_NUMBER = 7;
-    private int requestId_;
-    /**
-     * <pre>
-     * added By Malika: the id of the request (will identify the cloudlets)
-     * </pre>
-     *
-     * <code>int32 requestId = 7;</code>
-     */
-    public int getRequestId() {
-      return requestId_;
-    }
-
-    public static final int EXPECTEDDURATION_FIELD_NUMBER = 8;
-    private int expectedDuration_;
-    /**
-     * <pre>
-     * added By Malika: time ine second that request took in real life
-     * </pre>
-     *
-     * <code>int32 expectedDuration = 8;</code>
-     */
-    public int getExpectedDuration() {
-      return expectedDuration_;
-    }
-
-    public static final int DATANODES_FIELD_NUMBER = 9;
-    private com.google.protobuf.Internal.IntList dataNodes_;
-    /**
-     * <pre>
-     * added By Malika: what data nodes to use for this request
-     * </pre>
-     *
-     * <code>repeated int32 dataNodes = 9;</code>
-     */
-    public java.util.List<java.lang.Integer>
-        getDataNodesList() {
-      return dataNodes_;
-    }
-    /**
-     * <pre>
-     * added By Malika: what data nodes to use for this request
-     * </pre>
-     *
-     * <code>repeated int32 dataNodes = 9;</code>
-     */
-    public int getDataNodesCount() {
-      return dataNodes_.size();
-    }
-    /**
-     * <pre>
-     * added By Malika: what data nodes to use for this request
-     * </pre>
-     *
-     * <code>repeated int32 dataNodes = 9;</code>
-     */
-    public int getDataNodes(int index) {
-      return dataNodes_.getInt(index);
-    }
-    private int dataNodesMemoizedSerializedSize = -1;
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getSerializedSize();
-      if (time_ != 0L) {
-        output.writeInt64(1, time_);
-      }
-      if (!getApplicationIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, applicationId_);
-      }
-      if (!getComponentIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, componentId_);
-      }
-      if (!getApiIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, apiId_);
-      }
-      if (mipsDataNodes_ != 0) {
-        output.writeInt32(5, mipsDataNodes_);
-      }
-      if (dataToTransfer_ != 0L) {
-        output.writeInt64(6, dataToTransfer_);
-      }
-      if (requestId_ != 0) {
-        output.writeInt32(7, requestId_);
-      }
-      if (expectedDuration_ != 0) {
-        output.writeInt32(8, expectedDuration_);
-      }
-      if (getDataNodesList().size() > 0) {
-        output.writeUInt32NoTag(74);
-        output.writeUInt32NoTag(dataNodesMemoizedSerializedSize);
-      }
-      for (int i = 0; i < dataNodes_.size(); i++) {
-        output.writeInt32NoTag(dataNodes_.getInt(i));
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (time_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(1, time_);
-      }
-      if (!getApplicationIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, applicationId_);
-      }
-      if (!getComponentIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, componentId_);
-      }
-      if (!getApiIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, apiId_);
-      }
-      if (mipsDataNodes_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(5, mipsDataNodes_);
-      }
-      if (dataToTransfer_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(6, dataToTransfer_);
-      }
-      if (requestId_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(7, requestId_);
-      }
-      if (expectedDuration_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(8, expectedDuration_);
-      }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < dataNodes_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
-            .computeInt32SizeNoTag(dataNodes_.getInt(i));
-        }
-        size += dataSize;
-        if (!getDataNodesList().isEmpty()) {
-          size += 1;
-          size += com.google.protobuf.CodedOutputStream
-              .computeInt32SizeNoTag(dataSize);
-        }
-        dataNodesMemoizedSerializedSize = dataSize;
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof eu.recap.sim.models.WorkloadModel.Request)) {
-        return super.equals(obj);
-      }
-      eu.recap.sim.models.WorkloadModel.Request other = (eu.recap.sim.models.WorkloadModel.Request) obj;
-
-      if (getTime()
-          != other.getTime()) return false;
-      if (!getApplicationId()
-          .equals(other.getApplicationId())) return false;
-      if (!getComponentId()
-          .equals(other.getComponentId())) return false;
-      if (!getApiId()
-          .equals(other.getApiId())) return false;
-      if (getDataToTransfer()
-          != other.getDataToTransfer()) return false;
-      if (getMipsDataNodes()
-          != other.getMipsDataNodes()) return false;
-      if (getRequestId()
-          != other.getRequestId()) return false;
-      if (getExpectedDuration()
-          != other.getExpectedDuration()) return false;
-      if (!getDataNodesList()
-          .equals(other.getDataNodesList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + TIME_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getTime());
-      hash = (37 * hash) + APPLICATIONID_FIELD_NUMBER;
-      hash = (53 * hash) + getApplicationId().hashCode();
-      hash = (37 * hash) + COMPONENTID_FIELD_NUMBER;
-      hash = (53 * hash) + getComponentId().hashCode();
-      hash = (37 * hash) + APIID_FIELD_NUMBER;
-      hash = (53 * hash) + getApiId().hashCode();
-      hash = (37 * hash) + DATATOTRANSFER_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getDataToTransfer());
-      hash = (37 * hash) + MIPSDATANODES_FIELD_NUMBER;
-      hash = (53 * hash) + getMipsDataNodes();
-      hash = (37 * hash) + REQUESTID_FIELD_NUMBER;
-      hash = (53 * hash) + getRequestId();
-      hash = (37 * hash) + EXPECTEDDURATION_FIELD_NUMBER;
-      hash = (53 * hash) + getExpectedDuration();
-      if (getDataNodesCount() > 0) {
-        hash = (37 * hash) + DATANODES_FIELD_NUMBER;
-        hash = (53 * hash) + getDataNodesList().hashCode();
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static eu.recap.sim.models.WorkloadModel.Request parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static eu.recap.sim.models.WorkloadModel.Request parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static eu.recap.sim.models.WorkloadModel.Request parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static eu.recap.sim.models.WorkloadModel.Request parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static eu.recap.sim.models.WorkloadModel.Request parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static eu.recap.sim.models.WorkloadModel.Request parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static eu.recap.sim.models.WorkloadModel.Request parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static eu.recap.sim.models.WorkloadModel.Request parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static eu.recap.sim.models.WorkloadModel.Request parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static eu.recap.sim.models.WorkloadModel.Request parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static eu.recap.sim.models.WorkloadModel.Request parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static eu.recap.sim.models.WorkloadModel.Request parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(eu.recap.sim.models.WorkloadModel.Request prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code models.Request}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:models.Request)
-        eu.recap.sim.models.WorkloadModel.RequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return eu.recap.sim.models.WorkloadModel.internal_static_models_Request_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return eu.recap.sim.models.WorkloadModel.internal_static_models_Request_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                eu.recap.sim.models.WorkloadModel.Request.class, eu.recap.sim.models.WorkloadModel.Request.Builder.class);
-      }
-
-      // Construct using eu.recap.sim.models.WorkloadModel.Request.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        time_ = 0L;
-
-        applicationId_ = "";
-
-        componentId_ = "";
-
-        apiId_ = "";
-
-        dataToTransfer_ = 0L;
-
-        mipsDataNodes_ = 0;
-
-        requestId_ = 0;
-
-        expectedDuration_ = 0;
-
-        dataNodes_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000100);
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return eu.recap.sim.models.WorkloadModel.internal_static_models_Request_descriptor;
-      }
-
-      @java.lang.Override
-      public eu.recap.sim.models.WorkloadModel.Request getDefaultInstanceForType() {
-        return eu.recap.sim.models.WorkloadModel.Request.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public eu.recap.sim.models.WorkloadModel.Request build() {
-        eu.recap.sim.models.WorkloadModel.Request result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public eu.recap.sim.models.WorkloadModel.Request buildPartial() {
-        eu.recap.sim.models.WorkloadModel.Request result = new eu.recap.sim.models.WorkloadModel.Request(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        result.time_ = time_;
-        result.applicationId_ = applicationId_;
-        result.componentId_ = componentId_;
-        result.apiId_ = apiId_;
-        result.dataToTransfer_ = dataToTransfer_;
-        result.mipsDataNodes_ = mipsDataNodes_;
-        result.requestId_ = requestId_;
-        result.expectedDuration_ = expectedDuration_;
-        if (((bitField0_ & 0x00000100) != 0)) {
-          dataNodes_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000100);
-        }
-        result.dataNodes_ = dataNodes_;
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof eu.recap.sim.models.WorkloadModel.Request) {
-          return mergeFrom((eu.recap.sim.models.WorkloadModel.Request)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(eu.recap.sim.models.WorkloadModel.Request other) {
-        if (other == eu.recap.sim.models.WorkloadModel.Request.getDefaultInstance()) return this;
-        if (other.getTime() != 0L) {
-          setTime(other.getTime());
-        }
-        if (!other.getApplicationId().isEmpty()) {
-          applicationId_ = other.applicationId_;
-          onChanged();
-        }
-        if (!other.getComponentId().isEmpty()) {
-          componentId_ = other.componentId_;
-          onChanged();
-        }
-        if (!other.getApiId().isEmpty()) {
-          apiId_ = other.apiId_;
-          onChanged();
-        }
-        if (other.getDataToTransfer() != 0L) {
-          setDataToTransfer(other.getDataToTransfer());
-        }
-        if (other.getMipsDataNodes() != 0) {
-          setMipsDataNodes(other.getMipsDataNodes());
-        }
-        if (other.getRequestId() != 0) {
-          setRequestId(other.getRequestId());
-        }
-        if (other.getExpectedDuration() != 0) {
-          setExpectedDuration(other.getExpectedDuration());
-        }
-        if (!other.dataNodes_.isEmpty()) {
-          if (dataNodes_.isEmpty()) {
-            dataNodes_ = other.dataNodes_;
-            bitField0_ = (bitField0_ & ~0x00000100);
-          } else {
-            ensureDataNodesIsMutable();
-            dataNodes_.addAll(other.dataNodes_);
-          }
-          onChanged();
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        eu.recap.sim.models.WorkloadModel.Request parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (eu.recap.sim.models.WorkloadModel.Request) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private long time_ ;
-      /**
-       * <pre>
-       * starting time of request
-       * </pre>
-       *
-       * <code>int64 time = 1;</code>
-       */
-      public long getTime() {
-        return time_;
-      }
-      /**
-       * <pre>
-       * starting time of request
-       * </pre>
-       *
-       * <code>int64 time = 1;</code>
-       */
-      public Builder setTime(long value) {
-        
-        time_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * starting time of request
-       * </pre>
-       *
-       * <code>int64 time = 1;</code>
-       */
-      public Builder clearTime() {
-        
-        time_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object applicationId_ = "";
-      /**
-       * <code>string applicationId = 2;</code>
-       */
-      public java.lang.String getApplicationId() {
-        java.lang.Object ref = applicationId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          applicationId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string applicationId = 2;</code>
-       */
-      public com.google.protobuf.ByteString
-          getApplicationIdBytes() {
-        java.lang.Object ref = applicationId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          applicationId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string applicationId = 2;</code>
-       */
-      public Builder setApplicationId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        applicationId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string applicationId = 2;</code>
-       */
-      public Builder clearApplicationId() {
-        
-        applicationId_ = getDefaultInstance().getApplicationId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string applicationId = 2;</code>
-       */
-      public Builder setApplicationIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        applicationId_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object componentId_ = "";
-      /**
-       * <code>string componentId = 3;</code>
-       */
-      public java.lang.String getComponentId() {
-        java.lang.Object ref = componentId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          componentId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string componentId = 3;</code>
-       */
-      public com.google.protobuf.ByteString
-          getComponentIdBytes() {
-        java.lang.Object ref = componentId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          componentId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string componentId = 3;</code>
-       */
-      public Builder setComponentId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        componentId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string componentId = 3;</code>
-       */
-      public Builder clearComponentId() {
-        
-        componentId_ = getDefaultInstance().getComponentId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string componentId = 3;</code>
-       */
-      public Builder setComponentIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        componentId_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object apiId_ = "";
-      /**
-       * <code>string apiId = 4;</code>
-       */
-      public java.lang.String getApiId() {
-        java.lang.Object ref = apiId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          apiId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string apiId = 4;</code>
-       */
-      public com.google.protobuf.ByteString
-          getApiIdBytes() {
-        java.lang.Object ref = apiId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          apiId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string apiId = 4;</code>
-       */
-      public Builder setApiId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        apiId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string apiId = 4;</code>
-       */
-      public Builder clearApiId() {
-        
-        apiId_ = getDefaultInstance().getApiId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string apiId = 4;</code>
-       */
-      public Builder setApiIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        apiId_ = value;
-        onChanged();
-        return this;
-      }
-
-      private long dataToTransfer_ ;
-      /**
-       * <code>int64 dataToTransfer = 6;</code>
-       */
-      public long getDataToTransfer() {
-        return dataToTransfer_;
-      }
-      /**
-       * <code>int64 dataToTransfer = 6;</code>
-       */
-      public Builder setDataToTransfer(long value) {
-        
-        dataToTransfer_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int64 dataToTransfer = 6;</code>
-       */
-      public Builder clearDataToTransfer() {
-        
-        dataToTransfer_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private int mipsDataNodes_ ;
-      /**
-       * <pre>
-       * added By Malika: to adapt the execution time at data nodes
-       * </pre>
-       *
-       * <code>int32 mipsDataNodes = 5;</code>
-       */
-      public int getMipsDataNodes() {
-        return mipsDataNodes_;
-      }
-      /**
-       * <pre>
-       * added By Malika: to adapt the execution time at data nodes
-       * </pre>
-       *
-       * <code>int32 mipsDataNodes = 5;</code>
-       */
-      public Builder setMipsDataNodes(int value) {
-        
-        mipsDataNodes_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * added By Malika: to adapt the execution time at data nodes
-       * </pre>
-       *
-       * <code>int32 mipsDataNodes = 5;</code>
-       */
-      public Builder clearMipsDataNodes() {
-        
-        mipsDataNodes_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int requestId_ ;
-      /**
-       * <pre>
-       * added By Malika: the id of the request (will identify the cloudlets)
-       * </pre>
-       *
-       * <code>int32 requestId = 7;</code>
-       */
-      public int getRequestId() {
-        return requestId_;
-      }
-      /**
-       * <pre>
-       * added By Malika: the id of the request (will identify the cloudlets)
-       * </pre>
-       *
-       * <code>int32 requestId = 7;</code>
-       */
-      public Builder setRequestId(int value) {
-        
-        requestId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * added By Malika: the id of the request (will identify the cloudlets)
-       * </pre>
-       *
-       * <code>int32 requestId = 7;</code>
-       */
-      public Builder clearRequestId() {
-        
-        requestId_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int expectedDuration_ ;
-      /**
-       * <pre>
-       * added By Malika: time ine second that request took in real life
-       * </pre>
-       *
-       * <code>int32 expectedDuration = 8;</code>
-       */
-      public int getExpectedDuration() {
-        return expectedDuration_;
-      }
-      /**
-       * <pre>
-       * added By Malika: time ine second that request took in real life
-       * </pre>
-       *
-       * <code>int32 expectedDuration = 8;</code>
-       */
-      public Builder setExpectedDuration(int value) {
-        
-        expectedDuration_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * added By Malika: time ine second that request took in real life
-       * </pre>
-       *
-       * <code>int32 expectedDuration = 8;</code>
-       */
-      public Builder clearExpectedDuration() {
-        
-        expectedDuration_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private com.google.protobuf.Internal.IntList dataNodes_ = emptyIntList();
-      private void ensureDataNodesIsMutable() {
-        if (!((bitField0_ & 0x00000100) != 0)) {
-          dataNodes_ = mutableCopy(dataNodes_);
-          bitField0_ |= 0x00000100;
-         }
-      }
-      /**
-       * <pre>
-       * added By Malika: what data nodes to use for this request
-       * </pre>
-       *
-       * <code>repeated int32 dataNodes = 9;</code>
-       */
-      public java.util.List<java.lang.Integer>
-          getDataNodesList() {
-        return ((bitField0_ & 0x00000100) != 0) ?
-                 java.util.Collections.unmodifiableList(dataNodes_) : dataNodes_;
-      }
-      /**
-       * <pre>
-       * added By Malika: what data nodes to use for this request
-       * </pre>
-       *
-       * <code>repeated int32 dataNodes = 9;</code>
-       */
-      public int getDataNodesCount() {
-        return dataNodes_.size();
-      }
-      /**
-       * <pre>
-       * added By Malika: what data nodes to use for this request
-       * </pre>
-       *
-       * <code>repeated int32 dataNodes = 9;</code>
-       */
-      public int getDataNodes(int index) {
-        return dataNodes_.getInt(index);
-      }
-      /**
-       * <pre>
-       * added By Malika: what data nodes to use for this request
-       * </pre>
-       *
-       * <code>repeated int32 dataNodes = 9;</code>
-       */
-      public Builder setDataNodes(
-          int index, int value) {
-        ensureDataNodesIsMutable();
-        dataNodes_.setInt(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * added By Malika: what data nodes to use for this request
-       * </pre>
-       *
-       * <code>repeated int32 dataNodes = 9;</code>
-       */
-      public Builder addDataNodes(int value) {
-        ensureDataNodesIsMutable();
-        dataNodes_.addInt(value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * added By Malika: what data nodes to use for this request
-       * </pre>
-       *
-       * <code>repeated int32 dataNodes = 9;</code>
-       */
-      public Builder addAllDataNodes(
-          java.lang.Iterable<? extends java.lang.Integer> values) {
-        ensureDataNodesIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, dataNodes_);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * added By Malika: what data nodes to use for this request
-       * </pre>
-       *
-       * <code>repeated int32 dataNodes = 9;</code>
-       */
-      public Builder clearDataNodes() {
-        dataNodes_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000100);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * added by Joseph
-       * </pre>
-       * 
-       * <code> List<Long> searchContent = 10;</code>
-       */
-      private List<Long> searchContent;
-      public List<Long> getSearchContent() {
-    	  return searchContent;
-      }
-      public Builder setSearchContent(List<Long> value) {
-    	  searchContent=value;
-    	  onChanged();
-    	  return this;
-      }
-      
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:models.Request)
-    }
-
-    // @@protoc_insertion_point(class_scope:models.Request)
-    private static final eu.recap.sim.models.WorkloadModel.Request DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new eu.recap.sim.models.WorkloadModel.Request();
-    }
-
-    public static eu.recap.sim.models.WorkloadModel.Request getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<Request>
-        PARSER = new com.google.protobuf.AbstractParser<Request>() {
-      @java.lang.Override
-      public Request parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Request(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<Request> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Request> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public eu.recap.sim.models.WorkloadModel.Request getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-    
-
-  }
-
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_models_Workload_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_models_Workload_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_models_Device_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_models_Device_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_models_Request_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_models_Request_fieldAccessorTable;
-
-  public static com.google.protobuf.Descriptors.FileDescriptor
-      getDescriptor() {
-    return descriptor;
-  }
-  private static  com.google.protobuf.Descriptors.FileDescriptor
-      descriptor;
-  static {
-    java.lang.String[] descriptorData = {
-      "\n\023WorkloadModel.proto\022\006models\032\023LocationM" +
-      "odel.proto\":\n\010Workload\022\037\n\007devices\030\001 \003(\0132" +
-      "\016.models.Device\022\r\n\005notes\030\002 \001(\t\"v\n\006Device" +
-      "\022\020\n\010deviceId\030\003 \001(\t\022\022\n\ndeviceName\030\004 \001(\t\022#" +
-      "\n\tlocations\030\002 \003(\0132\020.models.Location\022!\n\010r" +
-      "equests\030\001 \003(\0132\017.models.Request\"\301\001\n\007Reque" +
-      "st\022\014\n\004time\030\001 \001(\003\022\025\n\rapplicationId\030\002 \001(\t\022" +
-      "\023\n\013componentId\030\003 \001(\t\022\r\n\005apiId\030\004 \001(\t\022\026\n\016d" +
-      "ataToTransfer\030\006 \001(\003\022\025\n\rmipsDataNodes\030\005 \001" +
-      "(\005\022\021\n\trequestId\030\007 \001(\005\022\030\n\020expectedDuratio" +
-      "n\030\010 \001(\005\022\021\n\tdataNodes\030\t \003(\005B$\n\023eu.recap.s" +
-      "im.modelsB\rWorkloadModelb\006proto3"
-    };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
-      .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
-          eu.recap.sim.models.LocationModel.getDescriptor(),
-        }, assigner);
-    internal_static_models_Workload_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_models_Workload_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_models_Workload_descriptor,
-        new java.lang.String[] { "Devices", "Notes", });
-    internal_static_models_Device_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_models_Device_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_models_Device_descriptor,
-        new java.lang.String[] { "DeviceId", "DeviceName", "Locations", "Requests", });
-    internal_static_models_Request_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_models_Request_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_models_Request_descriptor,
-        new java.lang.String[] { "Time", "ApplicationId", "ComponentId", "ApiId", "DataToTransfer", "MipsDataNodes", "RequestId", "ExpectedDuration", "DataNodes", });
-    eu.recap.sim.models.LocationModel.getDescriptor();
-  }
-
-  // @@protoc_insertion_point(outer_class_scope)
+	private WorkloadModel() {
+	}
+
+	public static void registerAllExtensions(com.google.protobuf.ExtensionRegistryLite registry) {
+	}
+
+	public static void registerAllExtensions(com.google.protobuf.ExtensionRegistry registry) {
+		registerAllExtensions((com.google.protobuf.ExtensionRegistryLite) registry);
+	}
+
+	public interface WorkloadOrBuilder extends
+			// @@protoc_insertion_point(interface_extends:models.Workload)
+			com.google.protobuf.MessageOrBuilder {
+
+		/**
+		 * <code>repeated .models.Device devices = 1;</code>
+		 */
+		java.util.List<eu.recap.sim.models.WorkloadModel.Device> getDevicesList();
+
+		/**
+		 * <code>repeated .models.Device devices = 1;</code>
+		 */
+		eu.recap.sim.models.WorkloadModel.Device getDevices(int index);
+
+		/**
+		 * <code>repeated .models.Device devices = 1;</code>
+		 */
+		int getDevicesCount();
+
+		/**
+		 * <code>repeated .models.Device devices = 1;</code>
+		 */
+		java.util.List<? extends eu.recap.sim.models.WorkloadModel.DeviceOrBuilder> getDevicesOrBuilderList();
+
+		/**
+		 * <code>repeated .models.Device devices = 1;</code>
+		 */
+		eu.recap.sim.models.WorkloadModel.DeviceOrBuilder getDevicesOrBuilder(int index);
+
+		/**
+		 * <code>string notes = 2;</code>
+		 */
+		java.lang.String getNotes();
+
+		/**
+		 * <code>string notes = 2;</code>
+		 */
+		com.google.protobuf.ByteString getNotesBytes();
+	}
+
+	/**
+	 * Protobuf type {@code models.Workload}
+	 */
+	public static final class Workload extends com.google.protobuf.GeneratedMessageV3 implements
+			// @@protoc_insertion_point(message_implements:models.Workload)
+			WorkloadOrBuilder {
+		private static final long serialVersionUID = 0L;
+
+		// Use Workload.newBuilder() to construct.
+		private Workload(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+			super(builder);
+		}
+
+		private Workload() {
+			devices_ = java.util.Collections.emptyList();
+			notes_ = "";
+		}
+
+		@java.lang.Override
+		public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+			return this.unknownFields;
+		}
+
+		private Workload(com.google.protobuf.CodedInputStream input,
+				com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+				throws com.google.protobuf.InvalidProtocolBufferException {
+			this();
+			if (extensionRegistry == null) {
+				throw new java.lang.NullPointerException();
+			}
+			int mutable_bitField0_ = 0;
+			com.google.protobuf.UnknownFieldSet.Builder unknownFields = com.google.protobuf.UnknownFieldSet
+					.newBuilder();
+			try {
+				boolean done = false;
+				while (!done) {
+					int tag = input.readTag();
+					switch (tag) {
+					case 0:
+						done = true;
+						break;
+					case 10: {
+						if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+							devices_ = new java.util.ArrayList<eu.recap.sim.models.WorkloadModel.Device>();
+							mutable_bitField0_ |= 0x00000001;
+						}
+						devices_.add(input.readMessage(eu.recap.sim.models.WorkloadModel.Device.parser(),
+								extensionRegistry));
+						break;
+					}
+					case 18: {
+						java.lang.String s = input.readStringRequireUtf8();
+
+						notes_ = s;
+						break;
+					}
+					default: {
+						if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+							done = true;
+						}
+						break;
+					}
+					}
+				}
+			} catch (com.google.protobuf.InvalidProtocolBufferException e) {
+				throw e.setUnfinishedMessage(this);
+			} catch (java.io.IOException e) {
+				throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
+			} finally {
+				if (((mutable_bitField0_ & 0x00000001) != 0)) {
+					devices_ = java.util.Collections.unmodifiableList(devices_);
+				}
+				this.unknownFields = unknownFields.build();
+				makeExtensionsImmutable();
+			}
+		}
+
+		public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+			return eu.recap.sim.models.WorkloadModel.internal_static_models_Workload_descriptor;
+		}
+
+		@java.lang.Override
+		protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+			return eu.recap.sim.models.WorkloadModel.internal_static_models_Workload_fieldAccessorTable
+					.ensureFieldAccessorsInitialized(eu.recap.sim.models.WorkloadModel.Workload.class,
+							eu.recap.sim.models.WorkloadModel.Workload.Builder.class);
+		}
+
+		private int bitField0_;
+		public static final int DEVICES_FIELD_NUMBER = 1;
+		private java.util.List<eu.recap.sim.models.WorkloadModel.Device> devices_;
+
+		/**
+		 * <code>repeated .models.Device devices = 1;</code>
+		 */
+		public java.util.List<eu.recap.sim.models.WorkloadModel.Device> getDevicesList() {
+			return devices_;
+		}
+
+		/**
+		 * <code>repeated .models.Device devices = 1;</code>
+		 */
+		public java.util.List<? extends eu.recap.sim.models.WorkloadModel.DeviceOrBuilder> getDevicesOrBuilderList() {
+			return devices_;
+		}
+
+		/**
+		 * <code>repeated .models.Device devices = 1;</code>
+		 */
+		public int getDevicesCount() {
+			return devices_.size();
+		}
+
+		/**
+		 * <code>repeated .models.Device devices = 1;</code>
+		 */
+		public eu.recap.sim.models.WorkloadModel.Device getDevices(int index) {
+			return devices_.get(index);
+		}
+
+		/**
+		 * <code>repeated .models.Device devices = 1;</code>
+		 */
+		public eu.recap.sim.models.WorkloadModel.DeviceOrBuilder getDevicesOrBuilder(int index) {
+			return devices_.get(index);
+		}
+
+		public static final int NOTES_FIELD_NUMBER = 2;
+		private volatile java.lang.Object notes_;
+
+		/**
+		 * <code>string notes = 2;</code>
+		 */
+		public java.lang.String getNotes() {
+			java.lang.Object ref = notes_;
+			if (ref instanceof java.lang.String) {
+				return (java.lang.String) ref;
+			} else {
+				com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+				java.lang.String s = bs.toStringUtf8();
+				notes_ = s;
+				return s;
+			}
+		}
+
+		/**
+		 * <code>string notes = 2;</code>
+		 */
+		public com.google.protobuf.ByteString getNotesBytes() {
+			java.lang.Object ref = notes_;
+			if (ref instanceof java.lang.String) {
+				com.google.protobuf.ByteString b = com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+				notes_ = b;
+				return b;
+			} else {
+				return (com.google.protobuf.ByteString) ref;
+			}
+		}
+
+		private byte memoizedIsInitialized = -1;
+
+		@java.lang.Override
+		public final boolean isInitialized() {
+			byte isInitialized = memoizedIsInitialized;
+			if (isInitialized == 1)
+				return true;
+			if (isInitialized == 0)
+				return false;
+
+			memoizedIsInitialized = 1;
+			return true;
+		}
+
+		@java.lang.Override
+		public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+			for (int i = 0; i < devices_.size(); i++) {
+				output.writeMessage(1, devices_.get(i));
+			}
+			if (!getNotesBytes().isEmpty()) {
+				com.google.protobuf.GeneratedMessageV3.writeString(output, 2, notes_);
+			}
+			unknownFields.writeTo(output);
+		}
+
+		@java.lang.Override
+		public int getSerializedSize() {
+			int size = memoizedSize;
+			if (size != -1)
+				return size;
+
+			size = 0;
+			for (int i = 0; i < devices_.size(); i++) {
+				size += com.google.protobuf.CodedOutputStream.computeMessageSize(1, devices_.get(i));
+			}
+			if (!getNotesBytes().isEmpty()) {
+				size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, notes_);
+			}
+			size += unknownFields.getSerializedSize();
+			memoizedSize = size;
+			return size;
+		}
+
+		@java.lang.Override
+		public boolean equals(final java.lang.Object obj) {
+			if (obj == this) {
+				return true;
+			}
+			if (!(obj instanceof eu.recap.sim.models.WorkloadModel.Workload)) {
+				return super.equals(obj);
+			}
+			eu.recap.sim.models.WorkloadModel.Workload other = (eu.recap.sim.models.WorkloadModel.Workload) obj;
+
+			if (!getDevicesList().equals(other.getDevicesList()))
+				return false;
+			if (!getNotes().equals(other.getNotes()))
+				return false;
+			if (!unknownFields.equals(other.unknownFields))
+				return false;
+			return true;
+		}
+
+		@java.lang.Override
+		public int hashCode() {
+			if (memoizedHashCode != 0) {
+				return memoizedHashCode;
+			}
+			int hash = 41;
+			hash = (19 * hash) + getDescriptor().hashCode();
+			if (getDevicesCount() > 0) {
+				hash = (37 * hash) + DEVICES_FIELD_NUMBER;
+				hash = (53 * hash) + getDevicesList().hashCode();
+			}
+			hash = (37 * hash) + NOTES_FIELD_NUMBER;
+			hash = (53 * hash) + getNotes().hashCode();
+			hash = (29 * hash) + unknownFields.hashCode();
+			memoizedHashCode = hash;
+			return hash;
+		}
+
+		public static eu.recap.sim.models.WorkloadModel.Workload parseFrom(java.nio.ByteBuffer data)
+				throws com.google.protobuf.InvalidProtocolBufferException {
+			return PARSER.parseFrom(data);
+		}
+
+		public static eu.recap.sim.models.WorkloadModel.Workload parseFrom(java.nio.ByteBuffer data,
+				com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+				throws com.google.protobuf.InvalidProtocolBufferException {
+			return PARSER.parseFrom(data, extensionRegistry);
+		}
+
+		public static eu.recap.sim.models.WorkloadModel.Workload parseFrom(com.google.protobuf.ByteString data)
+				throws com.google.protobuf.InvalidProtocolBufferException {
+			return PARSER.parseFrom(data);
+		}
+
+		public static eu.recap.sim.models.WorkloadModel.Workload parseFrom(com.google.protobuf.ByteString data,
+				com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+				throws com.google.protobuf.InvalidProtocolBufferException {
+			return PARSER.parseFrom(data, extensionRegistry);
+		}
+
+		public static eu.recap.sim.models.WorkloadModel.Workload parseFrom(byte[] data)
+				throws com.google.protobuf.InvalidProtocolBufferException {
+			return PARSER.parseFrom(data);
+		}
+
+		public static eu.recap.sim.models.WorkloadModel.Workload parseFrom(byte[] data,
+				com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+				throws com.google.protobuf.InvalidProtocolBufferException {
+			return PARSER.parseFrom(data, extensionRegistry);
+		}
+
+		public static eu.recap.sim.models.WorkloadModel.Workload parseFrom(java.io.InputStream input)
+				throws java.io.IOException {
+			return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+		}
+
+		public static eu.recap.sim.models.WorkloadModel.Workload parseFrom(java.io.InputStream input,
+				com.google.protobuf.ExtensionRegistryLite extensionRegistry) throws java.io.IOException {
+			return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+		}
+
+		public static eu.recap.sim.models.WorkloadModel.Workload parseDelimitedFrom(java.io.InputStream input)
+				throws java.io.IOException {
+			return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
+		}
+
+		public static eu.recap.sim.models.WorkloadModel.Workload parseDelimitedFrom(java.io.InputStream input,
+				com.google.protobuf.ExtensionRegistryLite extensionRegistry) throws java.io.IOException {
+			return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input,
+					extensionRegistry);
+		}
+
+		public static eu.recap.sim.models.WorkloadModel.Workload parseFrom(com.google.protobuf.CodedInputStream input)
+				throws java.io.IOException {
+			return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+		}
+
+		public static eu.recap.sim.models.WorkloadModel.Workload parseFrom(com.google.protobuf.CodedInputStream input,
+				com.google.protobuf.ExtensionRegistryLite extensionRegistry) throws java.io.IOException {
+			return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+		}
+
+		@java.lang.Override
+		public Builder newBuilderForType() {
+			return newBuilder();
+		}
+
+		public static Builder newBuilder() {
+			return DEFAULT_INSTANCE.toBuilder();
+		}
+
+		public static Builder newBuilder(eu.recap.sim.models.WorkloadModel.Workload prototype) {
+			return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+		}
+
+		@java.lang.Override
+		public Builder toBuilder() {
+			return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+		}
+
+		@java.lang.Override
+		protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+			Builder builder = new Builder(parent);
+			return builder;
+		}
+
+		/**
+		 * Protobuf type {@code models.Workload}
+		 */
+		public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+				// @@protoc_insertion_point(builder_implements:models.Workload)
+				eu.recap.sim.models.WorkloadModel.WorkloadOrBuilder {
+			public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+				return eu.recap.sim.models.WorkloadModel.internal_static_models_Workload_descriptor;
+			}
+
+			@java.lang.Override
+			protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+				return eu.recap.sim.models.WorkloadModel.internal_static_models_Workload_fieldAccessorTable
+						.ensureFieldAccessorsInitialized(eu.recap.sim.models.WorkloadModel.Workload.class,
+								eu.recap.sim.models.WorkloadModel.Workload.Builder.class);
+			}
+
+			// Construct using eu.recap.sim.models.WorkloadModel.Workload.newBuilder()
+			private Builder() {
+				maybeForceBuilderInitialization();
+			}
+
+			private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+				super(parent);
+				maybeForceBuilderInitialization();
+			}
+
+			private void maybeForceBuilderInitialization() {
+				if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
+					getDevicesFieldBuilder();
+				}
+			}
+
+			@java.lang.Override
+			public Builder clear() {
+				super.clear();
+				if (devicesBuilder_ == null) {
+					devices_ = java.util.Collections.emptyList();
+					bitField0_ = (bitField0_ & ~0x00000001);
+				} else {
+					devicesBuilder_.clear();
+				}
+				notes_ = "";
+
+				return this;
+			}
+
+			@java.lang.Override
+			public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+				return eu.recap.sim.models.WorkloadModel.internal_static_models_Workload_descriptor;
+			}
+
+			@java.lang.Override
+			public eu.recap.sim.models.WorkloadModel.Workload getDefaultInstanceForType() {
+				return eu.recap.sim.models.WorkloadModel.Workload.getDefaultInstance();
+			}
+
+			@java.lang.Override
+			public eu.recap.sim.models.WorkloadModel.Workload build() {
+				eu.recap.sim.models.WorkloadModel.Workload result = buildPartial();
+				if (!result.isInitialized()) {
+					throw newUninitializedMessageException(result);
+				}
+				return result;
+			}
+
+			@java.lang.Override
+			public eu.recap.sim.models.WorkloadModel.Workload buildPartial() {
+				eu.recap.sim.models.WorkloadModel.Workload result = new eu.recap.sim.models.WorkloadModel.Workload(
+						this);
+				int from_bitField0_ = bitField0_;
+				int to_bitField0_ = 0;
+				if (devicesBuilder_ == null) {
+					if (((bitField0_ & 0x00000001) != 0)) {
+						devices_ = java.util.Collections.unmodifiableList(devices_);
+						bitField0_ = (bitField0_ & ~0x00000001);
+					}
+					result.devices_ = devices_;
+				} else {
+					result.devices_ = devicesBuilder_.build();
+				}
+				result.notes_ = notes_;
+				result.bitField0_ = to_bitField0_;
+				onBuilt();
+				return result;
+			}
+
+			@java.lang.Override
+			public Builder clone() {
+				return super.clone();
+			}
+
+			@java.lang.Override
+			public Builder setField(com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+				return super.setField(field, value);
+			}
+
+			@java.lang.Override
+			public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+				return super.clearField(field);
+			}
+
+			@java.lang.Override
+			public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+				return super.clearOneof(oneof);
+			}
+
+			@java.lang.Override
+			public Builder setRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field, int index,
+					java.lang.Object value) {
+				return super.setRepeatedField(field, index, value);
+			}
+
+			@java.lang.Override
+			public Builder addRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field,
+					java.lang.Object value) {
+				return super.addRepeatedField(field, value);
+			}
+
+			@java.lang.Override
+			public Builder mergeFrom(com.google.protobuf.Message other) {
+				if (other instanceof eu.recap.sim.models.WorkloadModel.Workload) {
+					return mergeFrom((eu.recap.sim.models.WorkloadModel.Workload) other);
+				} else {
+					super.mergeFrom(other);
+					return this;
+				}
+			}
+
+			public Builder mergeFrom(eu.recap.sim.models.WorkloadModel.Workload other) {
+				if (other == eu.recap.sim.models.WorkloadModel.Workload.getDefaultInstance())
+					return this;
+				if (devicesBuilder_ == null) {
+					if (!other.devices_.isEmpty()) {
+						if (devices_.isEmpty()) {
+							devices_ = other.devices_;
+							bitField0_ = (bitField0_ & ~0x00000001);
+						} else {
+							ensureDevicesIsMutable();
+							devices_.addAll(other.devices_);
+						}
+						onChanged();
+					}
+				} else {
+					if (!other.devices_.isEmpty()) {
+						if (devicesBuilder_.isEmpty()) {
+							devicesBuilder_.dispose();
+							devicesBuilder_ = null;
+							devices_ = other.devices_;
+							bitField0_ = (bitField0_ & ~0x00000001);
+							devicesBuilder_ = com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders
+									? getDevicesFieldBuilder()
+									: null;
+						} else {
+							devicesBuilder_.addAllMessages(other.devices_);
+						}
+					}
+				}
+				if (!other.getNotes().isEmpty()) {
+					notes_ = other.notes_;
+					onChanged();
+				}
+				this.mergeUnknownFields(other.unknownFields);
+				onChanged();
+				return this;
+			}
+
+			@java.lang.Override
+			public final boolean isInitialized() {
+				return true;
+			}
+
+			@java.lang.Override
+			public Builder mergeFrom(com.google.protobuf.CodedInputStream input,
+					com.google.protobuf.ExtensionRegistryLite extensionRegistry) throws java.io.IOException {
+				eu.recap.sim.models.WorkloadModel.Workload parsedMessage = null;
+				try {
+					parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+				} catch (com.google.protobuf.InvalidProtocolBufferException e) {
+					parsedMessage = (eu.recap.sim.models.WorkloadModel.Workload) e.getUnfinishedMessage();
+					throw e.unwrapIOException();
+				} finally {
+					if (parsedMessage != null) {
+						mergeFrom(parsedMessage);
+					}
+				}
+				return this;
+			}
+
+			private int bitField0_;
+
+			private java.util.List<eu.recap.sim.models.WorkloadModel.Device> devices_ = java.util.Collections
+					.emptyList();
+
+			private void ensureDevicesIsMutable() {
+				if (!((bitField0_ & 0x00000001) != 0)) {
+					devices_ = new java.util.ArrayList<eu.recap.sim.models.WorkloadModel.Device>(devices_);
+					bitField0_ |= 0x00000001;
+				}
+			}
+
+			private com.google.protobuf.RepeatedFieldBuilderV3<eu.recap.sim.models.WorkloadModel.Device, eu.recap.sim.models.WorkloadModel.Device.Builder, eu.recap.sim.models.WorkloadModel.DeviceOrBuilder> devicesBuilder_;
+
+			/**
+			 * <code>repeated .models.Device devices = 1;</code>
+			 */
+			public java.util.List<eu.recap.sim.models.WorkloadModel.Device> getDevicesList() {
+				if (devicesBuilder_ == null) {
+					return java.util.Collections.unmodifiableList(devices_);
+				} else {
+					return devicesBuilder_.getMessageList();
+				}
+			}
+
+			/**
+			 * <code>repeated .models.Device devices = 1;</code>
+			 */
+			public int getDevicesCount() {
+				if (devicesBuilder_ == null) {
+					return devices_.size();
+				} else {
+					return devicesBuilder_.getCount();
+				}
+			}
+
+			/**
+			 * <code>repeated .models.Device devices = 1;</code>
+			 */
+			public eu.recap.sim.models.WorkloadModel.Device getDevices(int index) {
+				if (devicesBuilder_ == null) {
+					return devices_.get(index);
+				} else {
+					return devicesBuilder_.getMessage(index);
+				}
+			}
+
+			/**
+			 * <code>repeated .models.Device devices = 1;</code>
+			 */
+			public Builder setDevices(int index, eu.recap.sim.models.WorkloadModel.Device value) {
+				if (devicesBuilder_ == null) {
+					if (value == null) {
+						throw new NullPointerException();
+					}
+					ensureDevicesIsMutable();
+					devices_.set(index, value);
+					onChanged();
+				} else {
+					devicesBuilder_.setMessage(index, value);
+				}
+				return this;
+			}
+
+			/**
+			 * <code>repeated .models.Device devices = 1;</code>
+			 */
+			public Builder setDevices(int index, eu.recap.sim.models.WorkloadModel.Device.Builder builderForValue) {
+				if (devicesBuilder_ == null) {
+					ensureDevicesIsMutable();
+					devices_.set(index, builderForValue.build());
+					onChanged();
+				} else {
+					devicesBuilder_.setMessage(index, builderForValue.build());
+				}
+				return this;
+			}
+
+			/**
+			 * <code>repeated .models.Device devices = 1;</code>
+			 */
+			public Builder addDevices(eu.recap.sim.models.WorkloadModel.Device value) {
+				if (devicesBuilder_ == null) {
+					if (value == null) {
+						throw new NullPointerException();
+					}
+					ensureDevicesIsMutable();
+					devices_.add(value);
+					onChanged();
+				} else {
+					devicesBuilder_.addMessage(value);
+				}
+				return this;
+			}
+
+			/**
+			 * <code>repeated .models.Device devices = 1;</code>
+			 */
+			public Builder addDevices(int index, eu.recap.sim.models.WorkloadModel.Device value) {
+				if (devicesBuilder_ == null) {
+					if (value == null) {
+						throw new NullPointerException();
+					}
+					ensureDevicesIsMutable();
+					devices_.add(index, value);
+					onChanged();
+				} else {
+					devicesBuilder_.addMessage(index, value);
+				}
+				return this;
+			}
+
+			/**
+			 * <code>repeated .models.Device devices = 1;</code>
+			 */
+			public Builder addDevices(eu.recap.sim.models.WorkloadModel.Device.Builder builderForValue) {
+				if (devicesBuilder_ == null) {
+					ensureDevicesIsMutable();
+					devices_.add(builderForValue.build());
+					onChanged();
+				} else {
+					devicesBuilder_.addMessage(builderForValue.build());
+				}
+				return this;
+			}
+
+			/**
+			 * <code>repeated .models.Device devices = 1;</code>
+			 */
+			public Builder addDevices(int index, eu.recap.sim.models.WorkloadModel.Device.Builder builderForValue) {
+				if (devicesBuilder_ == null) {
+					ensureDevicesIsMutable();
+					devices_.add(index, builderForValue.build());
+					onChanged();
+				} else {
+					devicesBuilder_.addMessage(index, builderForValue.build());
+				}
+				return this;
+			}
+
+			/**
+			 * <code>repeated .models.Device devices = 1;</code>
+			 */
+			public Builder addAllDevices(
+					java.lang.Iterable<? extends eu.recap.sim.models.WorkloadModel.Device> values) {
+				if (devicesBuilder_ == null) {
+					ensureDevicesIsMutable();
+					com.google.protobuf.AbstractMessageLite.Builder.addAll(values, devices_);
+					onChanged();
+				} else {
+					devicesBuilder_.addAllMessages(values);
+				}
+				return this;
+			}
+
+			/**
+			 * <code>repeated .models.Device devices = 1;</code>
+			 */
+			public Builder clearDevices() {
+				if (devicesBuilder_ == null) {
+					devices_ = java.util.Collections.emptyList();
+					bitField0_ = (bitField0_ & ~0x00000001);
+					onChanged();
+				} else {
+					devicesBuilder_.clear();
+				}
+				return this;
+			}
+
+			/**
+			 * <code>repeated .models.Device devices = 1;</code>
+			 */
+			public Builder removeDevices(int index) {
+				if (devicesBuilder_ == null) {
+					ensureDevicesIsMutable();
+					devices_.remove(index);
+					onChanged();
+				} else {
+					devicesBuilder_.remove(index);
+				}
+				return this;
+			}
+
+			/**
+			 * <code>repeated .models.Device devices = 1;</code>
+			 */
+			public eu.recap.sim.models.WorkloadModel.Device.Builder getDevicesBuilder(int index) {
+				return getDevicesFieldBuilder().getBuilder(index);
+			}
+
+			/**
+			 * <code>repeated .models.Device devices = 1;</code>
+			 */
+			public eu.recap.sim.models.WorkloadModel.DeviceOrBuilder getDevicesOrBuilder(int index) {
+				if (devicesBuilder_ == null) {
+					return devices_.get(index);
+				} else {
+					return devicesBuilder_.getMessageOrBuilder(index);
+				}
+			}
+
+			/**
+			 * <code>repeated .models.Device devices = 1;</code>
+			 */
+			public java.util.List<? extends eu.recap.sim.models.WorkloadModel.DeviceOrBuilder> getDevicesOrBuilderList() {
+				if (devicesBuilder_ != null) {
+					return devicesBuilder_.getMessageOrBuilderList();
+				} else {
+					return java.util.Collections.unmodifiableList(devices_);
+				}
+			}
+
+			/**
+			 * <code>repeated .models.Device devices = 1;</code>
+			 */
+			public eu.recap.sim.models.WorkloadModel.Device.Builder addDevicesBuilder() {
+				return getDevicesFieldBuilder()
+						.addBuilder(eu.recap.sim.models.WorkloadModel.Device.getDefaultInstance());
+			}
+
+			/**
+			 * <code>repeated .models.Device devices = 1;</code>
+			 */
+			public eu.recap.sim.models.WorkloadModel.Device.Builder addDevicesBuilder(int index) {
+				return getDevicesFieldBuilder().addBuilder(index,
+						eu.recap.sim.models.WorkloadModel.Device.getDefaultInstance());
+			}
+
+			/**
+			 * <code>repeated .models.Device devices = 1;</code>
+			 */
+			public java.util.List<eu.recap.sim.models.WorkloadModel.Device.Builder> getDevicesBuilderList() {
+				return getDevicesFieldBuilder().getBuilderList();
+			}
+
+			private com.google.protobuf.RepeatedFieldBuilderV3<eu.recap.sim.models.WorkloadModel.Device, eu.recap.sim.models.WorkloadModel.Device.Builder, eu.recap.sim.models.WorkloadModel.DeviceOrBuilder> getDevicesFieldBuilder() {
+				if (devicesBuilder_ == null) {
+					devicesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<eu.recap.sim.models.WorkloadModel.Device, eu.recap.sim.models.WorkloadModel.Device.Builder, eu.recap.sim.models.WorkloadModel.DeviceOrBuilder>(
+							devices_, ((bitField0_ & 0x00000001) != 0), getParentForChildren(), isClean());
+					devices_ = null;
+				}
+				return devicesBuilder_;
+			}
+
+			private java.lang.Object notes_ = "";
+
+			/**
+			 * <code>string notes = 2;</code>
+			 */
+			public java.lang.String getNotes() {
+				java.lang.Object ref = notes_;
+				if (!(ref instanceof java.lang.String)) {
+					com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+					java.lang.String s = bs.toStringUtf8();
+					notes_ = s;
+					return s;
+				} else {
+					return (java.lang.String) ref;
+				}
+			}
+
+			/**
+			 * <code>string notes = 2;</code>
+			 */
+			public com.google.protobuf.ByteString getNotesBytes() {
+				java.lang.Object ref = notes_;
+				if (ref instanceof String) {
+					com.google.protobuf.ByteString b = com.google.protobuf.ByteString
+							.copyFromUtf8((java.lang.String) ref);
+					notes_ = b;
+					return b;
+				} else {
+					return (com.google.protobuf.ByteString) ref;
+				}
+			}
+
+			/**
+			 * <code>string notes = 2;</code>
+			 */
+			public Builder setNotes(java.lang.String value) {
+				if (value == null) {
+					throw new NullPointerException();
+				}
+
+				notes_ = value;
+				onChanged();
+				return this;
+			}
+
+			/**
+			 * <code>string notes = 2;</code>
+			 */
+			public Builder clearNotes() {
+
+				notes_ = getDefaultInstance().getNotes();
+				onChanged();
+				return this;
+			}
+
+			/**
+			 * <code>string notes = 2;</code>
+			 */
+			public Builder setNotesBytes(com.google.protobuf.ByteString value) {
+				if (value == null) {
+					throw new NullPointerException();
+				}
+				checkByteStringIsUtf8(value);
+
+				notes_ = value;
+				onChanged();
+				return this;
+			}
+
+			@java.lang.Override
+			public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+				return super.setUnknownFields(unknownFields);
+			}
+
+			@java.lang.Override
+			public final Builder mergeUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+				return super.mergeUnknownFields(unknownFields);
+			}
+
+			// @@protoc_insertion_point(builder_scope:models.Workload)
+		}
+
+		// @@protoc_insertion_point(class_scope:models.Workload)
+		private static final eu.recap.sim.models.WorkloadModel.Workload DEFAULT_INSTANCE;
+		static {
+			DEFAULT_INSTANCE = new eu.recap.sim.models.WorkloadModel.Workload();
+		}
+
+		public static eu.recap.sim.models.WorkloadModel.Workload getDefaultInstance() {
+			return DEFAULT_INSTANCE;
+		}
+
+		private static final com.google.protobuf.Parser<Workload> PARSER = new com.google.protobuf.AbstractParser<Workload>() {
+			@java.lang.Override
+			public Workload parsePartialFrom(com.google.protobuf.CodedInputStream input,
+					com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+					throws com.google.protobuf.InvalidProtocolBufferException {
+				return new Workload(input, extensionRegistry);
+			}
+		};
+
+		public static com.google.protobuf.Parser<Workload> parser() {
+			return PARSER;
+		}
+
+		@java.lang.Override
+		public com.google.protobuf.Parser<Workload> getParserForType() {
+			return PARSER;
+		}
+
+		@java.lang.Override
+		public eu.recap.sim.models.WorkloadModel.Workload getDefaultInstanceForType() {
+			return DEFAULT_INSTANCE;
+		}
+
+	}
+
+	public interface DeviceOrBuilder extends
+			// @@protoc_insertion_point(interface_extends:models.Device)
+			com.google.protobuf.MessageOrBuilder {
+
+		/**
+		 * <code>string deviceId = 3;</code>
+		 */
+		java.lang.String getDeviceId();
+
+		/**
+		 * <code>string deviceId = 3;</code>
+		 */
+		com.google.protobuf.ByteString getDeviceIdBytes();
+
+		/**
+		 * <code>string deviceName = 4;</code>
+		 */
+		java.lang.String getDeviceName();
+
+		/**
+		 * <code>string deviceName = 4;</code>
+		 */
+		com.google.protobuf.ByteString getDeviceNameBytes();
+
+		/**
+		 * <code>repeated .models.Location locations = 2;</code>
+		 */
+		java.util.List<eu.recap.sim.models.LocationModel.Location> getLocationsList();
+
+		/**
+		 * <code>repeated .models.Location locations = 2;</code>
+		 */
+		eu.recap.sim.models.LocationModel.Location getLocations(int index);
+
+		/**
+		 * <code>repeated .models.Location locations = 2;</code>
+		 */
+		int getLocationsCount();
+
+		/**
+		 * <code>repeated .models.Location locations = 2;</code>
+		 */
+		java.util.List<? extends eu.recap.sim.models.LocationModel.LocationOrBuilder> getLocationsOrBuilderList();
+
+		/**
+		 * <code>repeated .models.Location locations = 2;</code>
+		 */
+		eu.recap.sim.models.LocationModel.LocationOrBuilder getLocationsOrBuilder(int index);
+
+		/**
+		 * <code>repeated .models.Request requests = 1;</code>
+		 */
+		java.util.List<eu.recap.sim.models.WorkloadModel.Request> getRequestsList();
+
+		/**
+		 * <code>repeated .models.Request requests = 1;</code>
+		 */
+		eu.recap.sim.models.WorkloadModel.Request getRequests(int index);
+
+		/**
+		 * <code>repeated .models.Request requests = 1;</code>
+		 */
+		int getRequestsCount();
+
+		/**
+		 * <code>repeated .models.Request requests = 1;</code>
+		 */
+		java.util.List<? extends eu.recap.sim.models.WorkloadModel.RequestOrBuilder> getRequestsOrBuilderList();
+
+		/**
+		 * <code>repeated .models.Request requests = 1;</code>
+		 */
+		eu.recap.sim.models.WorkloadModel.RequestOrBuilder getRequestsOrBuilder(int index);
+	}
+
+	/**
+	 * Protobuf type {@code models.Device}
+	 */
+	public static final class Device extends com.google.protobuf.GeneratedMessageV3 implements
+			// @@protoc_insertion_point(message_implements:models.Device)
+			DeviceOrBuilder {
+		private static final long serialVersionUID = 0L;
+
+		// Use Device.newBuilder() to construct.
+		private Device(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+			super(builder);
+		}
+
+		private Device() {
+			deviceId_ = "";
+			deviceName_ = "";
+			locations_ = java.util.Collections.emptyList();
+			requests_ = java.util.Collections.emptyList();
+		}
+
+		@java.lang.Override
+		public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+			return this.unknownFields;
+		}
+
+		private Device(com.google.protobuf.CodedInputStream input,
+				com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+				throws com.google.protobuf.InvalidProtocolBufferException {
+			this();
+			if (extensionRegistry == null) {
+				throw new java.lang.NullPointerException();
+			}
+			int mutable_bitField0_ = 0;
+			com.google.protobuf.UnknownFieldSet.Builder unknownFields = com.google.protobuf.UnknownFieldSet
+					.newBuilder();
+			try {
+				boolean done = false;
+				while (!done) {
+					int tag = input.readTag();
+					switch (tag) {
+					case 0:
+						done = true;
+						break;
+					case 10: {
+						if (!((mutable_bitField0_ & 0x00000008) != 0)) {
+							requests_ = new java.util.ArrayList<eu.recap.sim.models.WorkloadModel.Request>();
+							mutable_bitField0_ |= 0x00000008;
+						}
+						requests_.add(input.readMessage(eu.recap.sim.models.WorkloadModel.Request.parser(),
+								extensionRegistry));
+						break;
+					}
+					case 18: {
+						if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+							locations_ = new java.util.ArrayList<eu.recap.sim.models.LocationModel.Location>();
+							mutable_bitField0_ |= 0x00000004;
+						}
+						locations_.add(input.readMessage(eu.recap.sim.models.LocationModel.Location.parser(),
+								extensionRegistry));
+						break;
+					}
+					case 26: {
+						java.lang.String s = input.readStringRequireUtf8();
+
+						deviceId_ = s;
+						break;
+					}
+					case 34: {
+						java.lang.String s = input.readStringRequireUtf8();
+
+						deviceName_ = s;
+						break;
+					}
+					default: {
+						if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+							done = true;
+						}
+						break;
+					}
+					}
+				}
+			} catch (com.google.protobuf.InvalidProtocolBufferException e) {
+				throw e.setUnfinishedMessage(this);
+			} catch (java.io.IOException e) {
+				throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
+			} finally {
+				if (((mutable_bitField0_ & 0x00000008) != 0)) {
+					requests_ = java.util.Collections.unmodifiableList(requests_);
+				}
+				if (((mutable_bitField0_ & 0x00000004) != 0)) {
+					locations_ = java.util.Collections.unmodifiableList(locations_);
+				}
+				this.unknownFields = unknownFields.build();
+				makeExtensionsImmutable();
+			}
+		}
+
+		public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+			return eu.recap.sim.models.WorkloadModel.internal_static_models_Device_descriptor;
+		}
+
+		@java.lang.Override
+		protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+			return eu.recap.sim.models.WorkloadModel.internal_static_models_Device_fieldAccessorTable
+					.ensureFieldAccessorsInitialized(eu.recap.sim.models.WorkloadModel.Device.class,
+							eu.recap.sim.models.WorkloadModel.Device.Builder.class);
+		}
+
+		private int bitField0_;
+		public static final int DEVICEID_FIELD_NUMBER = 3;
+		private volatile java.lang.Object deviceId_;
+
+		/**
+		 * <code>string deviceId = 3;</code>
+		 */
+		public java.lang.String getDeviceId() {
+			java.lang.Object ref = deviceId_;
+			if (ref instanceof java.lang.String) {
+				return (java.lang.String) ref;
+			} else {
+				com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+				java.lang.String s = bs.toStringUtf8();
+				deviceId_ = s;
+				return s;
+			}
+		}
+
+		/**
+		 * <code>string deviceId = 3;</code>
+		 */
+		public com.google.protobuf.ByteString getDeviceIdBytes() {
+			java.lang.Object ref = deviceId_;
+			if (ref instanceof java.lang.String) {
+				com.google.protobuf.ByteString b = com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+				deviceId_ = b;
+				return b;
+			} else {
+				return (com.google.protobuf.ByteString) ref;
+			}
+		}
+
+		public static final int DEVICENAME_FIELD_NUMBER = 4;
+		private volatile java.lang.Object deviceName_;
+
+		/**
+		 * <code>string deviceName = 4;</code>
+		 */
+		public java.lang.String getDeviceName() {
+			java.lang.Object ref = deviceName_;
+			if (ref instanceof java.lang.String) {
+				return (java.lang.String) ref;
+			} else {
+				com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+				java.lang.String s = bs.toStringUtf8();
+				deviceName_ = s;
+				return s;
+			}
+		}
+
+		/**
+		 * <code>string deviceName = 4;</code>
+		 */
+		public com.google.protobuf.ByteString getDeviceNameBytes() {
+			java.lang.Object ref = deviceName_;
+			if (ref instanceof java.lang.String) {
+				com.google.protobuf.ByteString b = com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+				deviceName_ = b;
+				return b;
+			} else {
+				return (com.google.protobuf.ByteString) ref;
+			}
+		}
+
+		public static final int LOCATIONS_FIELD_NUMBER = 2;
+		private java.util.List<eu.recap.sim.models.LocationModel.Location> locations_;
+
+		/**
+		 * <code>repeated .models.Location locations = 2;</code>
+		 */
+		public java.util.List<eu.recap.sim.models.LocationModel.Location> getLocationsList() {
+			return locations_;
+		}
+
+		/**
+		 * <code>repeated .models.Location locations = 2;</code>
+		 */
+		public java.util.List<? extends eu.recap.sim.models.LocationModel.LocationOrBuilder> getLocationsOrBuilderList() {
+			return locations_;
+		}
+
+		/**
+		 * <code>repeated .models.Location locations = 2;</code>
+		 */
+		public int getLocationsCount() {
+			return locations_.size();
+		}
+
+		/**
+		 * <code>repeated .models.Location locations = 2;</code>
+		 */
+		public eu.recap.sim.models.LocationModel.Location getLocations(int index) {
+			return locations_.get(index);
+		}
+
+		/**
+		 * <code>repeated .models.Location locations = 2;</code>
+		 */
+		public eu.recap.sim.models.LocationModel.LocationOrBuilder getLocationsOrBuilder(int index) {
+			return locations_.get(index);
+		}
+
+		public static final int REQUESTS_FIELD_NUMBER = 1;
+		private java.util.List<eu.recap.sim.models.WorkloadModel.Request> requests_;
+
+		/**
+		 * <code>repeated .models.Request requests = 1;</code>
+		 */
+		public java.util.List<eu.recap.sim.models.WorkloadModel.Request> getRequestsList() {
+			return requests_;
+		}
+
+		/**
+		 * <code>repeated .models.Request requests = 1;</code>
+		 */
+		public java.util.List<? extends eu.recap.sim.models.WorkloadModel.RequestOrBuilder> getRequestsOrBuilderList() {
+			return requests_;
+		}
+
+		/**
+		 * <code>repeated .models.Request requests = 1;</code>
+		 */
+		public int getRequestsCount() {
+			return requests_.size();
+		}
+
+		/**
+		 * <code>repeated .models.Request requests = 1;</code>
+		 */
+		public eu.recap.sim.models.WorkloadModel.Request getRequests(int index) {
+			return requests_.get(index);
+		}
+
+		/**
+		 * <code>repeated .models.Request requests = 1;</code>
+		 */
+		public eu.recap.sim.models.WorkloadModel.RequestOrBuilder getRequestsOrBuilder(int index) {
+			return requests_.get(index);
+		}
+
+		private byte memoizedIsInitialized = -1;
+
+		@java.lang.Override
+		public final boolean isInitialized() {
+			byte isInitialized = memoizedIsInitialized;
+			if (isInitialized == 1)
+				return true;
+			if (isInitialized == 0)
+				return false;
+
+			memoizedIsInitialized = 1;
+			return true;
+		}
+
+		@java.lang.Override
+		public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+			for (int i = 0; i < requests_.size(); i++) {
+				output.writeMessage(1, requests_.get(i));
+			}
+			for (int i = 0; i < locations_.size(); i++) {
+				output.writeMessage(2, locations_.get(i));
+			}
+			if (!getDeviceIdBytes().isEmpty()) {
+				com.google.protobuf.GeneratedMessageV3.writeString(output, 3, deviceId_);
+			}
+			if (!getDeviceNameBytes().isEmpty()) {
+				com.google.protobuf.GeneratedMessageV3.writeString(output, 4, deviceName_);
+			}
+			unknownFields.writeTo(output);
+		}
+
+		@java.lang.Override
+		public int getSerializedSize() {
+			int size = memoizedSize;
+			if (size != -1)
+				return size;
+
+			size = 0;
+			for (int i = 0; i < requests_.size(); i++) {
+				size += com.google.protobuf.CodedOutputStream.computeMessageSize(1, requests_.get(i));
+			}
+			for (int i = 0; i < locations_.size(); i++) {
+				size += com.google.protobuf.CodedOutputStream.computeMessageSize(2, locations_.get(i));
+			}
+			if (!getDeviceIdBytes().isEmpty()) {
+				size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, deviceId_);
+			}
+			if (!getDeviceNameBytes().isEmpty()) {
+				size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, deviceName_);
+			}
+			size += unknownFields.getSerializedSize();
+			memoizedSize = size;
+			return size;
+		}
+
+		@java.lang.Override
+		public boolean equals(final java.lang.Object obj) {
+			if (obj == this) {
+				return true;
+			}
+			if (!(obj instanceof eu.recap.sim.models.WorkloadModel.Device)) {
+				return super.equals(obj);
+			}
+			eu.recap.sim.models.WorkloadModel.Device other = (eu.recap.sim.models.WorkloadModel.Device) obj;
+
+			if (!getDeviceId().equals(other.getDeviceId()))
+				return false;
+			if (!getDeviceName().equals(other.getDeviceName()))
+				return false;
+			if (!getLocationsList().equals(other.getLocationsList()))
+				return false;
+			if (!getRequestsList().equals(other.getRequestsList()))
+				return false;
+			if (!unknownFields.equals(other.unknownFields))
+				return false;
+			return true;
+		}
+
+		@java.lang.Override
+		public int hashCode() {
+			if (memoizedHashCode != 0) {
+				return memoizedHashCode;
+			}
+			int hash = 41;
+			hash = (19 * hash) + getDescriptor().hashCode();
+			hash = (37 * hash) + DEVICEID_FIELD_NUMBER;
+			hash = (53 * hash) + getDeviceId().hashCode();
+			hash = (37 * hash) + DEVICENAME_FIELD_NUMBER;
+			hash = (53 * hash) + getDeviceName().hashCode();
+			if (getLocationsCount() > 0) {
+				hash = (37 * hash) + LOCATIONS_FIELD_NUMBER;
+				hash = (53 * hash) + getLocationsList().hashCode();
+			}
+			if (getRequestsCount() > 0) {
+				hash = (37 * hash) + REQUESTS_FIELD_NUMBER;
+				hash = (53 * hash) + getRequestsList().hashCode();
+			}
+			hash = (29 * hash) + unknownFields.hashCode();
+			memoizedHashCode = hash;
+			return hash;
+		}
+
+		public static eu.recap.sim.models.WorkloadModel.Device parseFrom(java.nio.ByteBuffer data)
+				throws com.google.protobuf.InvalidProtocolBufferException {
+			return PARSER.parseFrom(data);
+		}
+
+		public static eu.recap.sim.models.WorkloadModel.Device parseFrom(java.nio.ByteBuffer data,
+				com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+				throws com.google.protobuf.InvalidProtocolBufferException {
+			return PARSER.parseFrom(data, extensionRegistry);
+		}
+
+		public static eu.recap.sim.models.WorkloadModel.Device parseFrom(com.google.protobuf.ByteString data)
+				throws com.google.protobuf.InvalidProtocolBufferException {
+			return PARSER.parseFrom(data);
+		}
+
+		public static eu.recap.sim.models.WorkloadModel.Device parseFrom(com.google.protobuf.ByteString data,
+				com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+				throws com.google.protobuf.InvalidProtocolBufferException {
+			return PARSER.parseFrom(data, extensionRegistry);
+		}
+
+		public static eu.recap.sim.models.WorkloadModel.Device parseFrom(byte[] data)
+				throws com.google.protobuf.InvalidProtocolBufferException {
+			return PARSER.parseFrom(data);
+		}
+
+		public static eu.recap.sim.models.WorkloadModel.Device parseFrom(byte[] data,
+				com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+				throws com.google.protobuf.InvalidProtocolBufferException {
+			return PARSER.parseFrom(data, extensionRegistry);
+		}
+
+		public static eu.recap.sim.models.WorkloadModel.Device parseFrom(java.io.InputStream input)
+				throws java.io.IOException {
+			return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+		}
+
+		public static eu.recap.sim.models.WorkloadModel.Device parseFrom(java.io.InputStream input,
+				com.google.protobuf.ExtensionRegistryLite extensionRegistry) throws java.io.IOException {
+			return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+		}
+
+		public static eu.recap.sim.models.WorkloadModel.Device parseDelimitedFrom(java.io.InputStream input)
+				throws java.io.IOException {
+			return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
+		}
+
+		public static eu.recap.sim.models.WorkloadModel.Device parseDelimitedFrom(java.io.InputStream input,
+				com.google.protobuf.ExtensionRegistryLite extensionRegistry) throws java.io.IOException {
+			return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input,
+					extensionRegistry);
+		}
+
+		public static eu.recap.sim.models.WorkloadModel.Device parseFrom(com.google.protobuf.CodedInputStream input)
+				throws java.io.IOException {
+			return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+		}
+
+		public static eu.recap.sim.models.WorkloadModel.Device parseFrom(com.google.protobuf.CodedInputStream input,
+				com.google.protobuf.ExtensionRegistryLite extensionRegistry) throws java.io.IOException {
+			return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+		}
+
+		@java.lang.Override
+		public Builder newBuilderForType() {
+			return newBuilder();
+		}
+
+		public static Builder newBuilder() {
+			return DEFAULT_INSTANCE.toBuilder();
+		}
+
+		public static Builder newBuilder(eu.recap.sim.models.WorkloadModel.Device prototype) {
+			return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+		}
+
+		@java.lang.Override
+		public Builder toBuilder() {
+			return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+		}
+
+		@java.lang.Override
+		protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+			Builder builder = new Builder(parent);
+			return builder;
+		}
+
+		/**
+		 * Protobuf type {@code models.Device}
+		 */
+		public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+				// @@protoc_insertion_point(builder_implements:models.Device)
+				eu.recap.sim.models.WorkloadModel.DeviceOrBuilder {
+			public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+				return eu.recap.sim.models.WorkloadModel.internal_static_models_Device_descriptor;
+			}
+
+			@java.lang.Override
+			protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+				return eu.recap.sim.models.WorkloadModel.internal_static_models_Device_fieldAccessorTable
+						.ensureFieldAccessorsInitialized(eu.recap.sim.models.WorkloadModel.Device.class,
+								eu.recap.sim.models.WorkloadModel.Device.Builder.class);
+			}
+
+			// Construct using eu.recap.sim.models.WorkloadModel.Device.newBuilder()
+			private Builder() {
+				maybeForceBuilderInitialization();
+			}
+
+			private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+				super(parent);
+				maybeForceBuilderInitialization();
+			}
+
+			private void maybeForceBuilderInitialization() {
+				if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
+					getLocationsFieldBuilder();
+					getRequestsFieldBuilder();
+				}
+			}
+
+			@java.lang.Override
+			public Builder clear() {
+				super.clear();
+				deviceId_ = "";
+
+				deviceName_ = "";
+
+				if (locationsBuilder_ == null) {
+					locations_ = java.util.Collections.emptyList();
+					bitField0_ = (bitField0_ & ~0x00000004);
+				} else {
+					locationsBuilder_.clear();
+				}
+				if (requestsBuilder_ == null) {
+					requests_ = java.util.Collections.emptyList();
+					bitField0_ = (bitField0_ & ~0x00000008);
+				} else {
+					requestsBuilder_.clear();
+				}
+				return this;
+			}
+
+			@java.lang.Override
+			public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+				return eu.recap.sim.models.WorkloadModel.internal_static_models_Device_descriptor;
+			}
+
+			@java.lang.Override
+			public eu.recap.sim.models.WorkloadModel.Device getDefaultInstanceForType() {
+				return eu.recap.sim.models.WorkloadModel.Device.getDefaultInstance();
+			}
+
+			@java.lang.Override
+			public eu.recap.sim.models.WorkloadModel.Device build() {
+				eu.recap.sim.models.WorkloadModel.Device result = buildPartial();
+				if (!result.isInitialized()) {
+					throw newUninitializedMessageException(result);
+				}
+				return result;
+			}
+
+			@java.lang.Override
+			public eu.recap.sim.models.WorkloadModel.Device buildPartial() {
+				eu.recap.sim.models.WorkloadModel.Device result = new eu.recap.sim.models.WorkloadModel.Device(this);
+				int from_bitField0_ = bitField0_;
+				int to_bitField0_ = 0;
+				result.deviceId_ = deviceId_;
+				result.deviceName_ = deviceName_;
+				if (locationsBuilder_ == null) {
+					if (((bitField0_ & 0x00000004) != 0)) {
+						locations_ = java.util.Collections.unmodifiableList(locations_);
+						bitField0_ = (bitField0_ & ~0x00000004);
+					}
+					result.locations_ = locations_;
+				} else {
+					result.locations_ = locationsBuilder_.build();
+				}
+				if (requestsBuilder_ == null) {
+					if (((bitField0_ & 0x00000008) != 0)) {
+						requests_ = java.util.Collections.unmodifiableList(requests_);
+						bitField0_ = (bitField0_ & ~0x00000008);
+					}
+					result.requests_ = requests_;
+				} else {
+					result.requests_ = requestsBuilder_.build();
+				}
+				result.bitField0_ = to_bitField0_;
+				onBuilt();
+				return result;
+			}
+
+			@java.lang.Override
+			public Builder clone() {
+				return super.clone();
+			}
+
+			@java.lang.Override
+			public Builder setField(com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+				return super.setField(field, value);
+			}
+
+			@java.lang.Override
+			public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+				return super.clearField(field);
+			}
+
+			@java.lang.Override
+			public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+				return super.clearOneof(oneof);
+			}
+
+			@java.lang.Override
+			public Builder setRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field, int index,
+					java.lang.Object value) {
+				return super.setRepeatedField(field, index, value);
+			}
+
+			@java.lang.Override
+			public Builder addRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field,
+					java.lang.Object value) {
+				return super.addRepeatedField(field, value);
+			}
+
+			@java.lang.Override
+			public Builder mergeFrom(com.google.protobuf.Message other) {
+				if (other instanceof eu.recap.sim.models.WorkloadModel.Device) {
+					return mergeFrom((eu.recap.sim.models.WorkloadModel.Device) other);
+				} else {
+					super.mergeFrom(other);
+					return this;
+				}
+			}
+
+			public Builder mergeFrom(eu.recap.sim.models.WorkloadModel.Device other) {
+				if (other == eu.recap.sim.models.WorkloadModel.Device.getDefaultInstance())
+					return this;
+				if (!other.getDeviceId().isEmpty()) {
+					deviceId_ = other.deviceId_;
+					onChanged();
+				}
+				if (!other.getDeviceName().isEmpty()) {
+					deviceName_ = other.deviceName_;
+					onChanged();
+				}
+				if (locationsBuilder_ == null) {
+					if (!other.locations_.isEmpty()) {
+						if (locations_.isEmpty()) {
+							locations_ = other.locations_;
+							bitField0_ = (bitField0_ & ~0x00000004);
+						} else {
+							ensureLocationsIsMutable();
+							locations_.addAll(other.locations_);
+						}
+						onChanged();
+					}
+				} else {
+					if (!other.locations_.isEmpty()) {
+						if (locationsBuilder_.isEmpty()) {
+							locationsBuilder_.dispose();
+							locationsBuilder_ = null;
+							locations_ = other.locations_;
+							bitField0_ = (bitField0_ & ~0x00000004);
+							locationsBuilder_ = com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders
+									? getLocationsFieldBuilder()
+									: null;
+						} else {
+							locationsBuilder_.addAllMessages(other.locations_);
+						}
+					}
+				}
+				if (requestsBuilder_ == null) {
+					if (!other.requests_.isEmpty()) {
+						if (requests_.isEmpty()) {
+							requests_ = other.requests_;
+							bitField0_ = (bitField0_ & ~0x00000008);
+						} else {
+							ensureRequestsIsMutable();
+							requests_.addAll(other.requests_);
+						}
+						onChanged();
+					}
+				} else {
+					if (!other.requests_.isEmpty()) {
+						if (requestsBuilder_.isEmpty()) {
+							requestsBuilder_.dispose();
+							requestsBuilder_ = null;
+							requests_ = other.requests_;
+							bitField0_ = (bitField0_ & ~0x00000008);
+							requestsBuilder_ = com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders
+									? getRequestsFieldBuilder()
+									: null;
+						} else {
+							requestsBuilder_.addAllMessages(other.requests_);
+						}
+					}
+				}
+				this.mergeUnknownFields(other.unknownFields);
+				onChanged();
+				return this;
+			}
+
+			@java.lang.Override
+			public final boolean isInitialized() {
+				return true;
+			}
+
+			@java.lang.Override
+			public Builder mergeFrom(com.google.protobuf.CodedInputStream input,
+					com.google.protobuf.ExtensionRegistryLite extensionRegistry) throws java.io.IOException {
+				eu.recap.sim.models.WorkloadModel.Device parsedMessage = null;
+				try {
+					parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+				} catch (com.google.protobuf.InvalidProtocolBufferException e) {
+					parsedMessage = (eu.recap.sim.models.WorkloadModel.Device) e.getUnfinishedMessage();
+					throw e.unwrapIOException();
+				} finally {
+					if (parsedMessage != null) {
+						mergeFrom(parsedMessage);
+					}
+				}
+				return this;
+			}
+
+			private int bitField0_;
+
+			private java.lang.Object deviceId_ = "";
+
+			/**
+			 * <code>string deviceId = 3;</code>
+			 */
+			public java.lang.String getDeviceId() {
+				java.lang.Object ref = deviceId_;
+				if (!(ref instanceof java.lang.String)) {
+					com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+					java.lang.String s = bs.toStringUtf8();
+					deviceId_ = s;
+					return s;
+				} else {
+					return (java.lang.String) ref;
+				}
+			}
+
+			/**
+			 * <code>string deviceId = 3;</code>
+			 */
+			public com.google.protobuf.ByteString getDeviceIdBytes() {
+				java.lang.Object ref = deviceId_;
+				if (ref instanceof String) {
+					com.google.protobuf.ByteString b = com.google.protobuf.ByteString
+							.copyFromUtf8((java.lang.String) ref);
+					deviceId_ = b;
+					return b;
+				} else {
+					return (com.google.protobuf.ByteString) ref;
+				}
+			}
+
+			/**
+			 * <code>string deviceId = 3;</code>
+			 */
+			public Builder setDeviceId(java.lang.String value) {
+				if (value == null) {
+					throw new NullPointerException();
+				}
+
+				deviceId_ = value;
+				onChanged();
+				return this;
+			}
+
+			/**
+			 * <code>string deviceId = 3;</code>
+			 */
+			public Builder clearDeviceId() {
+
+				deviceId_ = getDefaultInstance().getDeviceId();
+				onChanged();
+				return this;
+			}
+
+			/**
+			 * <code>string deviceId = 3;</code>
+			 */
+			public Builder setDeviceIdBytes(com.google.protobuf.ByteString value) {
+				if (value == null) {
+					throw new NullPointerException();
+				}
+				checkByteStringIsUtf8(value);
+
+				deviceId_ = value;
+				onChanged();
+				return this;
+			}
+
+			private java.lang.Object deviceName_ = "";
+
+			/**
+			 * <code>string deviceName = 4;</code>
+			 */
+			public java.lang.String getDeviceName() {
+				java.lang.Object ref = deviceName_;
+				if (!(ref instanceof java.lang.String)) {
+					com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+					java.lang.String s = bs.toStringUtf8();
+					deviceName_ = s;
+					return s;
+				} else {
+					return (java.lang.String) ref;
+				}
+			}
+
+			/**
+			 * <code>string deviceName = 4;</code>
+			 */
+			public com.google.protobuf.ByteString getDeviceNameBytes() {
+				java.lang.Object ref = deviceName_;
+				if (ref instanceof String) {
+					com.google.protobuf.ByteString b = com.google.protobuf.ByteString
+							.copyFromUtf8((java.lang.String) ref);
+					deviceName_ = b;
+					return b;
+				} else {
+					return (com.google.protobuf.ByteString) ref;
+				}
+			}
+
+			/**
+			 * <code>string deviceName = 4;</code>
+			 */
+			public Builder setDeviceName(java.lang.String value) {
+				if (value == null) {
+					throw new NullPointerException();
+				}
+
+				deviceName_ = value;
+				onChanged();
+				return this;
+			}
+
+			/**
+			 * <code>string deviceName = 4;</code>
+			 */
+			public Builder clearDeviceName() {
+
+				deviceName_ = getDefaultInstance().getDeviceName();
+				onChanged();
+				return this;
+			}
+
+			/**
+			 * <code>string deviceName = 4;</code>
+			 */
+			public Builder setDeviceNameBytes(com.google.protobuf.ByteString value) {
+				if (value == null) {
+					throw new NullPointerException();
+				}
+				checkByteStringIsUtf8(value);
+
+				deviceName_ = value;
+				onChanged();
+				return this;
+			}
+
+			private java.util.List<eu.recap.sim.models.LocationModel.Location> locations_ = java.util.Collections
+					.emptyList();
+
+			private void ensureLocationsIsMutable() {
+				if (!((bitField0_ & 0x00000004) != 0)) {
+					locations_ = new java.util.ArrayList<eu.recap.sim.models.LocationModel.Location>(locations_);
+					bitField0_ |= 0x00000004;
+				}
+			}
+
+			private com.google.protobuf.RepeatedFieldBuilderV3<eu.recap.sim.models.LocationModel.Location, eu.recap.sim.models.LocationModel.Location.Builder, eu.recap.sim.models.LocationModel.LocationOrBuilder> locationsBuilder_;
+
+			/**
+			 * <code>repeated .models.Location locations = 2;</code>
+			 */
+			public java.util.List<eu.recap.sim.models.LocationModel.Location> getLocationsList() {
+				if (locationsBuilder_ == null) {
+					return java.util.Collections.unmodifiableList(locations_);
+				} else {
+					return locationsBuilder_.getMessageList();
+				}
+			}
+
+			/**
+			 * <code>repeated .models.Location locations = 2;</code>
+			 */
+			public int getLocationsCount() {
+				if (locationsBuilder_ == null) {
+					return locations_.size();
+				} else {
+					return locationsBuilder_.getCount();
+				}
+			}
+
+			/**
+			 * <code>repeated .models.Location locations = 2;</code>
+			 */
+			public eu.recap.sim.models.LocationModel.Location getLocations(int index) {
+				if (locationsBuilder_ == null) {
+					return locations_.get(index);
+				} else {
+					return locationsBuilder_.getMessage(index);
+				}
+			}
+
+			/**
+			 * <code>repeated .models.Location locations = 2;</code>
+			 */
+			public Builder setLocations(int index, eu.recap.sim.models.LocationModel.Location value) {
+				if (locationsBuilder_ == null) {
+					if (value == null) {
+						throw new NullPointerException();
+					}
+					ensureLocationsIsMutable();
+					locations_.set(index, value);
+					onChanged();
+				} else {
+					locationsBuilder_.setMessage(index, value);
+				}
+				return this;
+			}
+
+			/**
+			 * <code>repeated .models.Location locations = 2;</code>
+			 */
+			public Builder setLocations(int index, eu.recap.sim.models.LocationModel.Location.Builder builderForValue) {
+				if (locationsBuilder_ == null) {
+					ensureLocationsIsMutable();
+					locations_.set(index, builderForValue.build());
+					onChanged();
+				} else {
+					locationsBuilder_.setMessage(index, builderForValue.build());
+				}
+				return this;
+			}
+
+			/**
+			 * <code>repeated .models.Location locations = 2;</code>
+			 */
+			public Builder addLocations(eu.recap.sim.models.LocationModel.Location value) {
+				if (locationsBuilder_ == null) {
+					if (value == null) {
+						throw new NullPointerException();
+					}
+					ensureLocationsIsMutable();
+					locations_.add(value);
+					onChanged();
+				} else {
+					locationsBuilder_.addMessage(value);
+				}
+				return this;
+			}
+
+			/**
+			 * <code>repeated .models.Location locations = 2;</code>
+			 */
+			public Builder addLocations(int index, eu.recap.sim.models.LocationModel.Location value) {
+				if (locationsBuilder_ == null) {
+					if (value == null) {
+						throw new NullPointerException();
+					}
+					ensureLocationsIsMutable();
+					locations_.add(index, value);
+					onChanged();
+				} else {
+					locationsBuilder_.addMessage(index, value);
+				}
+				return this;
+			}
+
+			/**
+			 * <code>repeated .models.Location locations = 2;</code>
+			 */
+			public Builder addLocations(eu.recap.sim.models.LocationModel.Location.Builder builderForValue) {
+				if (locationsBuilder_ == null) {
+					ensureLocationsIsMutable();
+					locations_.add(builderForValue.build());
+					onChanged();
+				} else {
+					locationsBuilder_.addMessage(builderForValue.build());
+				}
+				return this;
+			}
+
+			/**
+			 * <code>repeated .models.Location locations = 2;</code>
+			 */
+			public Builder addLocations(int index, eu.recap.sim.models.LocationModel.Location.Builder builderForValue) {
+				if (locationsBuilder_ == null) {
+					ensureLocationsIsMutable();
+					locations_.add(index, builderForValue.build());
+					onChanged();
+				} else {
+					locationsBuilder_.addMessage(index, builderForValue.build());
+				}
+				return this;
+			}
+
+			/**
+			 * <code>repeated .models.Location locations = 2;</code>
+			 */
+			public Builder addAllLocations(
+					java.lang.Iterable<? extends eu.recap.sim.models.LocationModel.Location> values) {
+				if (locationsBuilder_ == null) {
+					ensureLocationsIsMutable();
+					com.google.protobuf.AbstractMessageLite.Builder.addAll(values, locations_);
+					onChanged();
+				} else {
+					locationsBuilder_.addAllMessages(values);
+				}
+				return this;
+			}
+
+			/**
+			 * <code>repeated .models.Location locations = 2;</code>
+			 */
+			public Builder clearLocations() {
+				if (locationsBuilder_ == null) {
+					locations_ = java.util.Collections.emptyList();
+					bitField0_ = (bitField0_ & ~0x00000004);
+					onChanged();
+				} else {
+					locationsBuilder_.clear();
+				}
+				return this;
+			}
+
+			/**
+			 * <code>repeated .models.Location locations = 2;</code>
+			 */
+			public Builder removeLocations(int index) {
+				if (locationsBuilder_ == null) {
+					ensureLocationsIsMutable();
+					locations_.remove(index);
+					onChanged();
+				} else {
+					locationsBuilder_.remove(index);
+				}
+				return this;
+			}
+
+			/**
+			 * <code>repeated .models.Location locations = 2;</code>
+			 */
+			public eu.recap.sim.models.LocationModel.Location.Builder getLocationsBuilder(int index) {
+				return getLocationsFieldBuilder().getBuilder(index);
+			}
+
+			/**
+			 * <code>repeated .models.Location locations = 2;</code>
+			 */
+			public eu.recap.sim.models.LocationModel.LocationOrBuilder getLocationsOrBuilder(int index) {
+				if (locationsBuilder_ == null) {
+					return locations_.get(index);
+				} else {
+					return locationsBuilder_.getMessageOrBuilder(index);
+				}
+			}
+
+			/**
+			 * <code>repeated .models.Location locations = 2;</code>
+			 */
+			public java.util.List<? extends eu.recap.sim.models.LocationModel.LocationOrBuilder> getLocationsOrBuilderList() {
+				if (locationsBuilder_ != null) {
+					return locationsBuilder_.getMessageOrBuilderList();
+				} else {
+					return java.util.Collections.unmodifiableList(locations_);
+				}
+			}
+
+			/**
+			 * <code>repeated .models.Location locations = 2;</code>
+			 */
+			public eu.recap.sim.models.LocationModel.Location.Builder addLocationsBuilder() {
+				return getLocationsFieldBuilder()
+						.addBuilder(eu.recap.sim.models.LocationModel.Location.getDefaultInstance());
+			}
+
+			/**
+			 * <code>repeated .models.Location locations = 2;</code>
+			 */
+			public eu.recap.sim.models.LocationModel.Location.Builder addLocationsBuilder(int index) {
+				return getLocationsFieldBuilder().addBuilder(index,
+						eu.recap.sim.models.LocationModel.Location.getDefaultInstance());
+			}
+
+			/**
+			 * <code>repeated .models.Location locations = 2;</code>
+			 */
+			public java.util.List<eu.recap.sim.models.LocationModel.Location.Builder> getLocationsBuilderList() {
+				return getLocationsFieldBuilder().getBuilderList();
+			}
+
+			private com.google.protobuf.RepeatedFieldBuilderV3<eu.recap.sim.models.LocationModel.Location, eu.recap.sim.models.LocationModel.Location.Builder, eu.recap.sim.models.LocationModel.LocationOrBuilder> getLocationsFieldBuilder() {
+				if (locationsBuilder_ == null) {
+					locationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<eu.recap.sim.models.LocationModel.Location, eu.recap.sim.models.LocationModel.Location.Builder, eu.recap.sim.models.LocationModel.LocationOrBuilder>(
+							locations_, ((bitField0_ & 0x00000004) != 0), getParentForChildren(), isClean());
+					locations_ = null;
+				}
+				return locationsBuilder_;
+			}
+
+			private java.util.List<eu.recap.sim.models.WorkloadModel.Request> requests_ = java.util.Collections
+					.emptyList();
+
+			private void ensureRequestsIsMutable() {
+				if (!((bitField0_ & 0x00000008) != 0)) {
+					requests_ = new java.util.ArrayList<eu.recap.sim.models.WorkloadModel.Request>(requests_);
+					bitField0_ |= 0x00000008;
+				}
+			}
+
+			private com.google.protobuf.RepeatedFieldBuilderV3<eu.recap.sim.models.WorkloadModel.Request, eu.recap.sim.models.WorkloadModel.Request.Builder, eu.recap.sim.models.WorkloadModel.RequestOrBuilder> requestsBuilder_;
+
+			/**
+			 * <code>repeated .models.Request requests = 1;</code>
+			 */
+			public java.util.List<eu.recap.sim.models.WorkloadModel.Request> getRequestsList() {
+				if (requestsBuilder_ == null) {
+					return java.util.Collections.unmodifiableList(requests_);
+				} else {
+					return requestsBuilder_.getMessageList();
+				}
+			}
+
+			/**
+			 * <code>repeated .models.Request requests = 1;</code>
+			 */
+			public int getRequestsCount() {
+				if (requestsBuilder_ == null) {
+					return requests_.size();
+				} else {
+					return requestsBuilder_.getCount();
+				}
+			}
+
+			/**
+			 * <code>repeated .models.Request requests = 1;</code>
+			 */
+			public eu.recap.sim.models.WorkloadModel.Request getRequests(int index) {
+				if (requestsBuilder_ == null) {
+					return requests_.get(index);
+				} else {
+					return requestsBuilder_.getMessage(index);
+				}
+			}
+
+			/**
+			 * <code>repeated .models.Request requests = 1;</code>
+			 */
+			public Builder setRequests(int index, eu.recap.sim.models.WorkloadModel.Request value) {
+				if (requestsBuilder_ == null) {
+					if (value == null) {
+						throw new NullPointerException();
+					}
+					ensureRequestsIsMutable();
+					requests_.set(index, value);
+					onChanged();
+				} else {
+					requestsBuilder_.setMessage(index, value);
+				}
+				return this;
+			}
+
+			/**
+			 * <code>repeated .models.Request requests = 1;</code>
+			 */
+			public Builder setRequests(int index, eu.recap.sim.models.WorkloadModel.Request.Builder builderForValue) {
+				if (requestsBuilder_ == null) {
+					ensureRequestsIsMutable();
+					requests_.set(index, builderForValue.build());
+					onChanged();
+				} else {
+					requestsBuilder_.setMessage(index, builderForValue.build());
+				}
+				return this;
+			}
+
+			/**
+			 * <code>repeated .models.Request requests = 1;</code>
+			 */
+			public Builder addRequests(eu.recap.sim.models.WorkloadModel.Request value) {
+				if (requestsBuilder_ == null) {
+					if (value == null) {
+						throw new NullPointerException();
+					}
+					ensureRequestsIsMutable();
+					requests_.add(value);
+					onChanged();
+				} else {
+					requestsBuilder_.addMessage(value);
+				}
+				return this;
+			}
+
+			/**
+			 * <code>repeated .models.Request requests = 1;</code>
+			 */
+			public Builder addRequests(int index, eu.recap.sim.models.WorkloadModel.Request value) {
+				if (requestsBuilder_ == null) {
+					if (value == null) {
+						throw new NullPointerException();
+					}
+					ensureRequestsIsMutable();
+					requests_.add(index, value);
+					onChanged();
+				} else {
+					requestsBuilder_.addMessage(index, value);
+				}
+				return this;
+			}
+
+			/**
+			 * <code>repeated .models.Request requests = 1;</code>
+			 */
+			public Builder addRequests(eu.recap.sim.models.WorkloadModel.Request.Builder builderForValue) {
+				if (requestsBuilder_ == null) {
+					ensureRequestsIsMutable();
+					requests_.add(builderForValue.build());
+					onChanged();
+				} else {
+					requestsBuilder_.addMessage(builderForValue.build());
+				}
+				return this;
+			}
+
+			/**
+			 * <code>repeated .models.Request requests = 1;</code>
+			 */
+			public Builder addRequests(int index, eu.recap.sim.models.WorkloadModel.Request.Builder builderForValue) {
+				if (requestsBuilder_ == null) {
+					ensureRequestsIsMutable();
+					requests_.add(index, builderForValue.build());
+					onChanged();
+				} else {
+					requestsBuilder_.addMessage(index, builderForValue.build());
+				}
+				return this;
+			}
+
+			/**
+			 * <code>repeated .models.Request requests = 1;</code>
+			 */
+			public Builder addAllRequests(
+					java.lang.Iterable<? extends eu.recap.sim.models.WorkloadModel.Request> values) {
+				if (requestsBuilder_ == null) {
+					ensureRequestsIsMutable();
+					com.google.protobuf.AbstractMessageLite.Builder.addAll(values, requests_);
+					onChanged();
+				} else {
+					requestsBuilder_.addAllMessages(values);
+				}
+				return this;
+			}
+
+			/**
+			 * <code>repeated .models.Request requests = 1;</code>
+			 */
+			public Builder clearRequests() {
+				if (requestsBuilder_ == null) {
+					requests_ = java.util.Collections.emptyList();
+					bitField0_ = (bitField0_ & ~0x00000008);
+					onChanged();
+				} else {
+					requestsBuilder_.clear();
+				}
+				return this;
+			}
+
+			/**
+			 * <code>repeated .models.Request requests = 1;</code>
+			 */
+			public Builder removeRequests(int index) {
+				if (requestsBuilder_ == null) {
+					ensureRequestsIsMutable();
+					requests_.remove(index);
+					onChanged();
+				} else {
+					requestsBuilder_.remove(index);
+				}
+				return this;
+			}
+
+			/**
+			 * <code>repeated .models.Request requests = 1;</code>
+			 */
+			public eu.recap.sim.models.WorkloadModel.Request.Builder getRequestsBuilder(int index) {
+				return getRequestsFieldBuilder().getBuilder(index);
+			}
+
+			/**
+			 * <code>repeated .models.Request requests = 1;</code>
+			 */
+			public eu.recap.sim.models.WorkloadModel.RequestOrBuilder getRequestsOrBuilder(int index) {
+				if (requestsBuilder_ == null) {
+					return requests_.get(index);
+				} else {
+					return requestsBuilder_.getMessageOrBuilder(index);
+				}
+			}
+
+			/**
+			 * <code>repeated .models.Request requests = 1;</code>
+			 */
+			public java.util.List<? extends eu.recap.sim.models.WorkloadModel.RequestOrBuilder> getRequestsOrBuilderList() {
+				if (requestsBuilder_ != null) {
+					return requestsBuilder_.getMessageOrBuilderList();
+				} else {
+					return java.util.Collections.unmodifiableList(requests_);
+				}
+			}
+
+			/**
+			 * <code>repeated .models.Request requests = 1;</code>
+			 */
+			public eu.recap.sim.models.WorkloadModel.Request.Builder addRequestsBuilder() {
+				return getRequestsFieldBuilder()
+						.addBuilder(eu.recap.sim.models.WorkloadModel.Request.getDefaultInstance());
+			}
+
+			/**
+			 * <code>repeated .models.Request requests = 1;</code>
+			 */
+			public eu.recap.sim.models.WorkloadModel.Request.Builder addRequestsBuilder(int index) {
+				return getRequestsFieldBuilder().addBuilder(index,
+						eu.recap.sim.models.WorkloadModel.Request.getDefaultInstance());
+			}
+
+			/**
+			 * <code>repeated .models.Request requests = 1;</code>
+			 */
+			public java.util.List<eu.recap.sim.models.WorkloadModel.Request.Builder> getRequestsBuilderList() {
+				return getRequestsFieldBuilder().getBuilderList();
+			}
+
+			private com.google.protobuf.RepeatedFieldBuilderV3<eu.recap.sim.models.WorkloadModel.Request, eu.recap.sim.models.WorkloadModel.Request.Builder, eu.recap.sim.models.WorkloadModel.RequestOrBuilder> getRequestsFieldBuilder() {
+				if (requestsBuilder_ == null) {
+					requestsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<eu.recap.sim.models.WorkloadModel.Request, eu.recap.sim.models.WorkloadModel.Request.Builder, eu.recap.sim.models.WorkloadModel.RequestOrBuilder>(
+							requests_, ((bitField0_ & 0x00000008) != 0), getParentForChildren(), isClean());
+					requests_ = null;
+				}
+				return requestsBuilder_;
+			}
+
+			@java.lang.Override
+			public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+				return super.setUnknownFields(unknownFields);
+			}
+
+			@java.lang.Override
+			public final Builder mergeUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+				return super.mergeUnknownFields(unknownFields);
+			}
+
+			// @@protoc_insertion_point(builder_scope:models.Device)
+		}
+
+		// @@protoc_insertion_point(class_scope:models.Device)
+		private static final eu.recap.sim.models.WorkloadModel.Device DEFAULT_INSTANCE;
+		static {
+			DEFAULT_INSTANCE = new eu.recap.sim.models.WorkloadModel.Device();
+		}
+
+		public static eu.recap.sim.models.WorkloadModel.Device getDefaultInstance() {
+			return DEFAULT_INSTANCE;
+		}
+
+		private static final com.google.protobuf.Parser<Device> PARSER = new com.google.protobuf.AbstractParser<Device>() {
+			@java.lang.Override
+			public Device parsePartialFrom(com.google.protobuf.CodedInputStream input,
+					com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+					throws com.google.protobuf.InvalidProtocolBufferException {
+				return new Device(input, extensionRegistry);
+			}
+		};
+
+		public static com.google.protobuf.Parser<Device> parser() {
+			return PARSER;
+		}
+
+		@java.lang.Override
+		public com.google.protobuf.Parser<Device> getParserForType() {
+			return PARSER;
+		}
+
+		@java.lang.Override
+		public eu.recap.sim.models.WorkloadModel.Device getDefaultInstanceForType() {
+			return DEFAULT_INSTANCE;
+		}
+
+	}
+
+	public interface RequestOrBuilder extends
+			// @@protoc_insertion_point(interface_extends:models.Request)
+			com.google.protobuf.MessageOrBuilder {
+
+		/**
+		 * <pre>
+		 * starting time of request
+		 * </pre>
+		 *
+		 * <code>int64 time = 1;</code>
+		 */
+		long getTime();
+
+		/**
+		 * <code>string applicationId = 2;</code>
+		 */
+		java.lang.String getApplicationId();
+
+		/**
+		 * <code>string applicationId = 2;</code>
+		 */
+		com.google.protobuf.ByteString getApplicationIdBytes();
+
+		/**
+		 * <code>string componentId = 3;</code>
+		 */
+		java.lang.String getComponentId();
+
+		/**
+		 * <code>string componentId = 3;</code>
+		 */
+		com.google.protobuf.ByteString getComponentIdBytes();
+
+		/**
+		 * <code>string apiId = 4;</code>
+		 */
+		java.lang.String getApiId();
+
+		/**
+		 * <code>string apiId = 4;</code>
+		 */
+		com.google.protobuf.ByteString getApiIdBytes();
+
+		/**
+		 * <code>int64 dataToTransfer = 6;</code>
+		 */
+		long getDataToTransfer();
+
+		/**
+		 * <pre>
+		 * added By Malika: to adapt the execution time at data nodes
+		 * </pre>
+		 *
+		 * <code>int32 mipsDataNodes = 5;</code>
+		 */
+		int getMipsDataNodes();
+
+		/**
+		 * <pre>
+		 * added By Malika: the id of the request (will identify the cloudlets)
+		 * </pre>
+		 *
+		 * <code>int32 requestId = 7;</code>
+		 */
+		int getRequestId();
+
+		/**
+		 * <pre>
+		 * added By Malika: time ine second that request took in real life
+		 * </pre>
+		 *
+		 * <code>int32 expectedDuration = 8;</code>
+		 */
+		int getExpectedDuration();
+
+		/**
+		 * <pre>
+		 * added By Malika: what data nodes to use for this request
+		 * </pre>
+		 *
+		 * <code>repeated int32 dataNodes = 9;</code>
+		 */
+		java.util.List<java.lang.Integer> getDataNodesList();
+
+		/**
+		 * <pre>
+		 * added By Malika: what data nodes to use for this request
+		 * </pre>
+		 *
+		 * <code>repeated int32 dataNodes = 9;</code>
+		 */
+		int getDataNodesCount();
+
+		/**
+		 * <pre>
+		 * added By Malika: what data nodes to use for this request
+		 * </pre>
+		 *
+		 * <code>repeated int32 dataNodes = 9;</code>
+		 */
+		int getDataNodes(int index);
+		// TODO : add methods getSearchContent and setSearchContent to interface
+	}
+
+	/**
+	 * Protobuf type {@code models.Request}
+	 */
+	public static final class Request extends com.google.protobuf.GeneratedMessageV3 implements
+			// @@protoc_insertion_point(message_implements:models.Request)
+			RequestOrBuilder {
+		private static final long serialVersionUID = 0L;
+
+		// Use Request.newBuilder() to construct.
+		private Request(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+			super(builder);
+		}
+
+		private Request() {
+			applicationId_ = "";
+			componentId_ = "";
+			apiId_ = "";
+			dataNodes_ = emptyIntList();
+		}
+
+		@java.lang.Override
+		public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+			return this.unknownFields;
+		}
+
+		private Request(com.google.protobuf.CodedInputStream input,
+				com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+				throws com.google.protobuf.InvalidProtocolBufferException {
+			this();
+			if (extensionRegistry == null) {
+				throw new java.lang.NullPointerException();
+			}
+			int mutable_bitField0_ = 0;
+			com.google.protobuf.UnknownFieldSet.Builder unknownFields = com.google.protobuf.UnknownFieldSet
+					.newBuilder();
+			try {
+				boolean done = false;
+				while (!done) {
+					int tag = input.readTag();
+					switch (tag) {
+					case 0:
+						done = true;
+						break;
+					case 8: {
+
+						time_ = input.readInt64();
+						break;
+					}
+					case 18: {
+						java.lang.String s = input.readStringRequireUtf8();
+
+						applicationId_ = s;
+						break;
+					}
+					case 26: {
+						java.lang.String s = input.readStringRequireUtf8();
+
+						componentId_ = s;
+						break;
+					}
+					case 34: {
+						java.lang.String s = input.readStringRequireUtf8();
+
+						apiId_ = s;
+						break;
+					}
+					case 40: {
+
+						mipsDataNodes_ = input.readInt32();
+						break;
+					}
+					case 48: {
+
+						dataToTransfer_ = input.readInt64();
+						break;
+					}
+					case 56: {
+
+						requestId_ = input.readInt32();
+						break;
+					}
+					case 64: {
+
+						expectedDuration_ = input.readInt32();
+						break;
+					}
+					case 72: {
+						if (!((mutable_bitField0_ & 0x00000100) != 0)) {
+							dataNodes_ = newIntList();
+							mutable_bitField0_ |= 0x00000100;
+						}
+						dataNodes_.addInt(input.readInt32());
+						break;
+					}
+					case 74: {
+						int length = input.readRawVarint32();
+						int limit = input.pushLimit(length);
+						if (!((mutable_bitField0_ & 0x00000100) != 0) && input.getBytesUntilLimit() > 0) {
+							dataNodes_ = newIntList();
+							mutable_bitField0_ |= 0x00000100;
+						}
+						while (input.getBytesUntilLimit() > 0) {
+							dataNodes_.addInt(input.readInt32());
+						}
+						input.popLimit(limit);
+						break;
+					}
+					default: {
+						if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+							done = true;
+						}
+						break;
+					}
+					}
+				}
+			} catch (com.google.protobuf.InvalidProtocolBufferException e) {
+				throw e.setUnfinishedMessage(this);
+			} catch (java.io.IOException e) {
+				throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
+			} finally {
+				if (((mutable_bitField0_ & 0x00000100) != 0)) {
+					dataNodes_.makeImmutable(); // C
+				}
+				this.unknownFields = unknownFields.build();
+				makeExtensionsImmutable();
+			}
+		}
+
+		public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+			return eu.recap.sim.models.WorkloadModel.internal_static_models_Request_descriptor;
+		}
+
+		@java.lang.Override
+		protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+			return eu.recap.sim.models.WorkloadModel.internal_static_models_Request_fieldAccessorTable
+					.ensureFieldAccessorsInitialized(eu.recap.sim.models.WorkloadModel.Request.class,
+							eu.recap.sim.models.WorkloadModel.Request.Builder.class);
+		}
+
+		private int bitField0_;
+		public static final int TIME_FIELD_NUMBER = 1;
+		private long time_;
+
+		/**
+		 * <pre>
+		 * starting time of request
+		 * </pre>
+		 *
+		 * <code>int64 time = 1;</code>
+		 */
+		public long getTime() {
+			return time_;
+		}
+
+		public static final int APPLICATIONID_FIELD_NUMBER = 2;
+		private volatile java.lang.Object applicationId_;
+
+		/**
+		 * <code>string applicationId = 2;</code>
+		 */
+		public java.lang.String getApplicationId() {
+			java.lang.Object ref = applicationId_;
+			if (ref instanceof java.lang.String) {
+				return (java.lang.String) ref;
+			} else {
+				com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+				java.lang.String s = bs.toStringUtf8();
+				applicationId_ = s;
+				return s;
+			}
+		}
+
+		/**
+		 * <code>string applicationId = 2;</code>
+		 */
+		public com.google.protobuf.ByteString getApplicationIdBytes() {
+			java.lang.Object ref = applicationId_;
+			if (ref instanceof java.lang.String) {
+				com.google.protobuf.ByteString b = com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+				applicationId_ = b;
+				return b;
+			} else {
+				return (com.google.protobuf.ByteString) ref;
+			}
+		}
+
+		public static final int COMPONENTID_FIELD_NUMBER = 3;
+		private volatile java.lang.Object componentId_;
+
+		/**
+		 * <code>string componentId = 3;</code>
+		 */
+		public java.lang.String getComponentId() {
+			java.lang.Object ref = componentId_;
+			if (ref instanceof java.lang.String) {
+				return (java.lang.String) ref;
+			} else {
+				com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+				java.lang.String s = bs.toStringUtf8();
+				componentId_ = s;
+				return s;
+			}
+		}
+
+		/**
+		 * <code>string componentId = 3;</code>
+		 */
+		public com.google.protobuf.ByteString getComponentIdBytes() {
+			java.lang.Object ref = componentId_;
+			if (ref instanceof java.lang.String) {
+				com.google.protobuf.ByteString b = com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+				componentId_ = b;
+				return b;
+			} else {
+				return (com.google.protobuf.ByteString) ref;
+			}
+		}
+
+		public static final int APIID_FIELD_NUMBER = 4;
+		private volatile java.lang.Object apiId_;
+
+		/**
+		 * <code>string apiId = 4;</code>
+		 */
+		public java.lang.String getApiId() {
+			java.lang.Object ref = apiId_;
+			if (ref instanceof java.lang.String) {
+				return (java.lang.String) ref;
+			} else {
+				com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+				java.lang.String s = bs.toStringUtf8();
+				apiId_ = s;
+				return s;
+			}
+		}
+
+		/**
+		 * <code>string apiId = 4;</code>
+		 */
+		public com.google.protobuf.ByteString getApiIdBytes() {
+			java.lang.Object ref = apiId_;
+			if (ref instanceof java.lang.String) {
+				com.google.protobuf.ByteString b = com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+				apiId_ = b;
+				return b;
+			} else {
+				return (com.google.protobuf.ByteString) ref;
+			}
+		}
+
+		public static final int DATATOTRANSFER_FIELD_NUMBER = 6;
+		private long dataToTransfer_;
+
+		/**
+		 * <code>int64 dataToTransfer = 6;</code>
+		 */
+		public long getDataToTransfer() {
+			return dataToTransfer_;
+		}
+
+		public static final int MIPSDATANODES_FIELD_NUMBER = 5;
+		private int mipsDataNodes_;
+
+		/**
+		 * <pre>
+		 * added By Malika: to adapt the execution time at data nodes
+		 * </pre>
+		 *
+		 * <code>int32 mipsDataNodes = 5;</code>
+		 */
+		public int getMipsDataNodes() {
+			return mipsDataNodes_;
+		}
+
+		public static final int REQUESTID_FIELD_NUMBER = 7;
+		private int requestId_;
+
+		/**
+		 * <pre>
+		 * added By Malika: the id of the request (will identify the cloudlets)
+		 * </pre>
+		 *
+		 * <code>int32 requestId = 7;</code>
+		 */
+		public int getRequestId() {
+			return requestId_;
+		}
+
+		public static final int EXPECTEDDURATION_FIELD_NUMBER = 8;
+		private int expectedDuration_;
+
+		/**
+		 * <pre>
+		 * added By Malika: time ine second that request took in real life
+		 * </pre>
+		 *
+		 * <code>int32 expectedDuration = 8;</code>
+		 */
+		public int getExpectedDuration() {
+			return expectedDuration_;
+		}
+
+		public static final int DATANODES_FIELD_NUMBER = 9;
+		private com.google.protobuf.Internal.IntList dataNodes_;
+
+		/**
+		 * <pre>
+		 * added By Malika: what data nodes to use for this request
+		 * </pre>
+		 *
+		 * <code>repeated int32 dataNodes = 9;</code>
+		 */
+		public java.util.List<java.lang.Integer> getDataNodesList() {
+			return dataNodes_;
+		}
+
+		/**
+		 * <pre>
+		 * added By Malika: what data nodes to use for this request
+		 * </pre>
+		 *
+		 * <code>repeated int32 dataNodes = 9;</code>
+		 */
+		public int getDataNodesCount() {
+			return dataNodes_.size();
+		}
+
+		/**
+		 * <pre>
+		 * added By Malika: what data nodes to use for this request
+		 * </pre>
+		 *
+		 * <code>repeated int32 dataNodes = 9;</code>
+		 */
+		public int getDataNodes(int index) {
+			return dataNodes_.getInt(index);
+		}
+		
+		/**TODO
+		 * <pre> added by Joseph: the contents (words) of the search request</pre>
+		 * <code> List<Long> searchContent = 10</code>
+		 */
+		private List<Long> searchContent;
+		public List<Long> getSearchContent(){
+			return searchContent;
+		}
+		public void setSearchContent(List<Long> value) {
+			searchContent=value;
+		}
+
+		private int dataNodesMemoizedSerializedSize = -1;
+
+		private byte memoizedIsInitialized = -1;
+		
+
+		@java.lang.Override
+		public final boolean isInitialized() {
+			byte isInitialized = memoizedIsInitialized;
+			if (isInitialized == 1)
+				return true;
+			if (isInitialized == 0)
+				return false;
+
+			memoizedIsInitialized = 1;
+			return true;
+		}
+
+		@java.lang.Override
+		public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+			getSerializedSize();
+			if (time_ != 0L) {
+				output.writeInt64(1, time_);
+			}
+			if (!getApplicationIdBytes().isEmpty()) {
+				com.google.protobuf.GeneratedMessageV3.writeString(output, 2, applicationId_);
+			}
+			if (!getComponentIdBytes().isEmpty()) {
+				com.google.protobuf.GeneratedMessageV3.writeString(output, 3, componentId_);
+			}
+			if (!getApiIdBytes().isEmpty()) {
+				com.google.protobuf.GeneratedMessageV3.writeString(output, 4, apiId_);
+			}
+			if (mipsDataNodes_ != 0) {
+				output.writeInt32(5, mipsDataNodes_);
+			}
+			if (dataToTransfer_ != 0L) {
+				output.writeInt64(6, dataToTransfer_);
+			}
+			if (requestId_ != 0) {
+				output.writeInt32(7, requestId_);
+			}
+			if (expectedDuration_ != 0) {
+				output.writeInt32(8, expectedDuration_);
+			}
+			if (getDataNodesList().size() > 0) {
+				output.writeUInt32NoTag(74);
+				output.writeUInt32NoTag(dataNodesMemoizedSerializedSize);
+			}
+			for (int i = 0; i < dataNodes_.size(); i++) {
+				output.writeInt32NoTag(dataNodes_.getInt(i));
+			}
+			unknownFields.writeTo(output);
+		}
+
+		@java.lang.Override
+		public int getSerializedSize() {
+			int size = memoizedSize;
+			if (size != -1)
+				return size;
+
+			size = 0;
+			if (time_ != 0L) {
+				size += com.google.protobuf.CodedOutputStream.computeInt64Size(1, time_);
+			}
+			if (!getApplicationIdBytes().isEmpty()) {
+				size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, applicationId_);
+			}
+			if (!getComponentIdBytes().isEmpty()) {
+				size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, componentId_);
+			}
+			if (!getApiIdBytes().isEmpty()) {
+				size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, apiId_);
+			}
+			if (mipsDataNodes_ != 0) {
+				size += com.google.protobuf.CodedOutputStream.computeInt32Size(5, mipsDataNodes_);
+			}
+			if (dataToTransfer_ != 0L) {
+				size += com.google.protobuf.CodedOutputStream.computeInt64Size(6, dataToTransfer_);
+			}
+			if (requestId_ != 0) {
+				size += com.google.protobuf.CodedOutputStream.computeInt32Size(7, requestId_);
+			}
+			if (expectedDuration_ != 0) {
+				size += com.google.protobuf.CodedOutputStream.computeInt32Size(8, expectedDuration_);
+			}
+			{
+				int dataSize = 0;
+				for (int i = 0; i < dataNodes_.size(); i++) {
+					dataSize += com.google.protobuf.CodedOutputStream.computeInt32SizeNoTag(dataNodes_.getInt(i));
+				}
+				size += dataSize;
+				if (!getDataNodesList().isEmpty()) {
+					size += 1;
+					size += com.google.protobuf.CodedOutputStream.computeInt32SizeNoTag(dataSize);
+				}
+				dataNodesMemoizedSerializedSize = dataSize;
+			}
+			size += unknownFields.getSerializedSize();
+			memoizedSize = size;
+			return size;
+		}
+
+		@java.lang.Override
+		public boolean equals(final java.lang.Object obj) {
+			if (obj == this) {
+				return true;
+			}
+			if (!(obj instanceof eu.recap.sim.models.WorkloadModel.Request)) {
+				return super.equals(obj);
+			}
+			eu.recap.sim.models.WorkloadModel.Request other = (eu.recap.sim.models.WorkloadModel.Request) obj;
+
+			if (getTime() != other.getTime())
+				return false;
+			if (!getApplicationId().equals(other.getApplicationId()))
+				return false;
+			if (!getComponentId().equals(other.getComponentId()))
+				return false;
+			if (!getApiId().equals(other.getApiId()))
+				return false;
+			if (getDataToTransfer() != other.getDataToTransfer())
+				return false;
+			if (getMipsDataNodes() != other.getMipsDataNodes())
+				return false;
+			if (getRequestId() != other.getRequestId())
+				return false;
+			if (getExpectedDuration() != other.getExpectedDuration())
+				return false;
+			if (!getDataNodesList().equals(other.getDataNodesList()))
+				return false;
+			if (!unknownFields.equals(other.unknownFields))
+				return false;
+			return true;
+		}
+
+		@java.lang.Override
+		public int hashCode() {
+			if (memoizedHashCode != 0) {
+				return memoizedHashCode;
+			}
+			int hash = 41;
+			hash = (19 * hash) + getDescriptor().hashCode();
+			hash = (37 * hash) + TIME_FIELD_NUMBER;
+			hash = (53 * hash) + com.google.protobuf.Internal.hashLong(getTime());
+			hash = (37 * hash) + APPLICATIONID_FIELD_NUMBER;
+			hash = (53 * hash) + getApplicationId().hashCode();
+			hash = (37 * hash) + COMPONENTID_FIELD_NUMBER;
+			hash = (53 * hash) + getComponentId().hashCode();
+			hash = (37 * hash) + APIID_FIELD_NUMBER;
+			hash = (53 * hash) + getApiId().hashCode();
+			hash = (37 * hash) + DATATOTRANSFER_FIELD_NUMBER;
+			hash = (53 * hash) + com.google.protobuf.Internal.hashLong(getDataToTransfer());
+			hash = (37 * hash) + MIPSDATANODES_FIELD_NUMBER;
+			hash = (53 * hash) + getMipsDataNodes();
+			hash = (37 * hash) + REQUESTID_FIELD_NUMBER;
+			hash = (53 * hash) + getRequestId();
+			hash = (37 * hash) + EXPECTEDDURATION_FIELD_NUMBER;
+			hash = (53 * hash) + getExpectedDuration();
+			if (getDataNodesCount() > 0) {
+				hash = (37 * hash) + DATANODES_FIELD_NUMBER;
+				hash = (53 * hash) + getDataNodesList().hashCode();
+			}
+			hash = (29 * hash) + unknownFields.hashCode();
+			memoizedHashCode = hash;
+			return hash;
+		}
+
+		public static eu.recap.sim.models.WorkloadModel.Request parseFrom(java.nio.ByteBuffer data)
+				throws com.google.protobuf.InvalidProtocolBufferException {
+			return PARSER.parseFrom(data);
+		}
+
+		public static eu.recap.sim.models.WorkloadModel.Request parseFrom(java.nio.ByteBuffer data,
+				com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+				throws com.google.protobuf.InvalidProtocolBufferException {
+			return PARSER.parseFrom(data, extensionRegistry);
+		}
+
+		public static eu.recap.sim.models.WorkloadModel.Request parseFrom(com.google.protobuf.ByteString data)
+				throws com.google.protobuf.InvalidProtocolBufferException {
+			return PARSER.parseFrom(data);
+		}
+
+		public static eu.recap.sim.models.WorkloadModel.Request parseFrom(com.google.protobuf.ByteString data,
+				com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+				throws com.google.protobuf.InvalidProtocolBufferException {
+			return PARSER.parseFrom(data, extensionRegistry);
+		}
+
+		public static eu.recap.sim.models.WorkloadModel.Request parseFrom(byte[] data)
+				throws com.google.protobuf.InvalidProtocolBufferException {
+			return PARSER.parseFrom(data);
+		}
+
+		public static eu.recap.sim.models.WorkloadModel.Request parseFrom(byte[] data,
+				com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+				throws com.google.protobuf.InvalidProtocolBufferException {
+			return PARSER.parseFrom(data, extensionRegistry);
+		}
+
+		public static eu.recap.sim.models.WorkloadModel.Request parseFrom(java.io.InputStream input)
+				throws java.io.IOException {
+			return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+		}
+
+		public static eu.recap.sim.models.WorkloadModel.Request parseFrom(java.io.InputStream input,
+				com.google.protobuf.ExtensionRegistryLite extensionRegistry) throws java.io.IOException {
+			return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+		}
+
+		public static eu.recap.sim.models.WorkloadModel.Request parseDelimitedFrom(java.io.InputStream input)
+				throws java.io.IOException {
+			return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
+		}
+
+		public static eu.recap.sim.models.WorkloadModel.Request parseDelimitedFrom(java.io.InputStream input,
+				com.google.protobuf.ExtensionRegistryLite extensionRegistry) throws java.io.IOException {
+			return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input,
+					extensionRegistry);
+		}
+
+		public static eu.recap.sim.models.WorkloadModel.Request parseFrom(com.google.protobuf.CodedInputStream input)
+				throws java.io.IOException {
+			return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+		}
+
+		public static eu.recap.sim.models.WorkloadModel.Request parseFrom(com.google.protobuf.CodedInputStream input,
+				com.google.protobuf.ExtensionRegistryLite extensionRegistry) throws java.io.IOException {
+			return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input, extensionRegistry);
+		}
+
+		@java.lang.Override
+		public Builder newBuilderForType() {
+			return newBuilder();
+		}
+
+		public static Builder newBuilder() {
+			return DEFAULT_INSTANCE.toBuilder();
+		}
+
+		public static Builder newBuilder(eu.recap.sim.models.WorkloadModel.Request prototype) {
+			return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+		}
+
+		@java.lang.Override
+		public Builder toBuilder() {
+			return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+		}
+
+		@java.lang.Override
+		protected Builder newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+			Builder builder = new Builder(parent);
+			return builder;
+		}
+
+		/**
+		 * Protobuf type {@code models.Request}
+		 */
+		public static final class Builder extends com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+				// @@protoc_insertion_point(builder_implements:models.Request)
+				eu.recap.sim.models.WorkloadModel.RequestOrBuilder {
+			public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+				return eu.recap.sim.models.WorkloadModel.internal_static_models_Request_descriptor;
+			}
+
+			@java.lang.Override
+			protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internalGetFieldAccessorTable() {
+				return eu.recap.sim.models.WorkloadModel.internal_static_models_Request_fieldAccessorTable
+						.ensureFieldAccessorsInitialized(eu.recap.sim.models.WorkloadModel.Request.class,
+								eu.recap.sim.models.WorkloadModel.Request.Builder.class);
+			}
+
+			// Construct using eu.recap.sim.models.WorkloadModel.Request.newBuilder()
+			private Builder() {
+				maybeForceBuilderInitialization();
+			}
+
+			private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+				super(parent);
+				maybeForceBuilderInitialization();
+			}
+
+			private void maybeForceBuilderInitialization() {
+				if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
+				}
+			}
+
+			@java.lang.Override
+			public Builder clear() {
+				super.clear();
+				time_ = 0L;
+
+				applicationId_ = "";
+
+				componentId_ = "";
+
+				apiId_ = "";
+
+				dataToTransfer_ = 0L;
+
+				mipsDataNodes_ = 0;
+
+				requestId_ = 0;
+
+				expectedDuration_ = 0;
+
+				dataNodes_ = emptyIntList();
+				bitField0_ = (bitField0_ & ~0x00000100);
+				return this;
+			}
+
+			@java.lang.Override
+			public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+				return eu.recap.sim.models.WorkloadModel.internal_static_models_Request_descriptor;
+			}
+
+			@java.lang.Override
+			public eu.recap.sim.models.WorkloadModel.Request getDefaultInstanceForType() {
+				return eu.recap.sim.models.WorkloadModel.Request.getDefaultInstance();
+			}
+
+			@java.lang.Override
+			public eu.recap.sim.models.WorkloadModel.Request build() {
+				eu.recap.sim.models.WorkloadModel.Request result = buildPartial();
+				if (!result.isInitialized()) {
+					throw newUninitializedMessageException(result);
+				}
+				return result;
+			}
+
+			@java.lang.Override
+			public eu.recap.sim.models.WorkloadModel.Request buildPartial() {
+				eu.recap.sim.models.WorkloadModel.Request result = new eu.recap.sim.models.WorkloadModel.Request(this);
+				int from_bitField0_ = bitField0_;
+				int to_bitField0_ = 0;
+				result.time_ = time_;
+				result.applicationId_ = applicationId_;
+				result.componentId_ = componentId_;
+				result.apiId_ = apiId_;
+				result.dataToTransfer_ = dataToTransfer_;
+				result.mipsDataNodes_ = mipsDataNodes_;
+				result.requestId_ = requestId_;
+				result.expectedDuration_ = expectedDuration_;
+				if (((bitField0_ & 0x00000100) != 0)) {
+					dataNodes_.makeImmutable();
+					bitField0_ = (bitField0_ & ~0x00000100);
+				}
+				result.dataNodes_ = dataNodes_;
+				result.bitField0_ = to_bitField0_;
+				onBuilt();
+				return result;
+			}
+
+			@java.lang.Override
+			public Builder clone() {
+				return super.clone();
+			}
+
+			@java.lang.Override
+			public Builder setField(com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+				return super.setField(field, value);
+			}
+
+			@java.lang.Override
+			public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+				return super.clearField(field);
+			}
+
+			@java.lang.Override
+			public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+				return super.clearOneof(oneof);
+			}
+
+			@java.lang.Override
+			public Builder setRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field, int index,
+					java.lang.Object value) {
+				return super.setRepeatedField(field, index, value);
+			}
+
+			@java.lang.Override
+			public Builder addRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor field,
+					java.lang.Object value) {
+				return super.addRepeatedField(field, value);
+			}
+
+			@java.lang.Override
+			public Builder mergeFrom(com.google.protobuf.Message other) {
+				if (other instanceof eu.recap.sim.models.WorkloadModel.Request) {
+					return mergeFrom((eu.recap.sim.models.WorkloadModel.Request) other);
+				} else {
+					super.mergeFrom(other);
+					return this;
+				}
+			}
+
+			public Builder mergeFrom(eu.recap.sim.models.WorkloadModel.Request other) {
+				if (other == eu.recap.sim.models.WorkloadModel.Request.getDefaultInstance())
+					return this;
+				if (other.getTime() != 0L) {
+					setTime(other.getTime());
+				}
+				if (!other.getApplicationId().isEmpty()) {
+					applicationId_ = other.applicationId_;
+					onChanged();
+				}
+				if (!other.getComponentId().isEmpty()) {
+					componentId_ = other.componentId_;
+					onChanged();
+				}
+				if (!other.getApiId().isEmpty()) {
+					apiId_ = other.apiId_;
+					onChanged();
+				}
+				if (other.getDataToTransfer() != 0L) {
+					setDataToTransfer(other.getDataToTransfer());
+				}
+				if (other.getMipsDataNodes() != 0) {
+					setMipsDataNodes(other.getMipsDataNodes());
+				}
+				if (other.getRequestId() != 0) {
+					setRequestId(other.getRequestId());
+				}
+				if (other.getExpectedDuration() != 0) {
+					setExpectedDuration(other.getExpectedDuration());
+				}
+				if (!other.dataNodes_.isEmpty()) {
+					if (dataNodes_.isEmpty()) {
+						dataNodes_ = other.dataNodes_;
+						bitField0_ = (bitField0_ & ~0x00000100);
+					} else {
+						ensureDataNodesIsMutable();
+						dataNodes_.addAll(other.dataNodes_);
+					}
+					onChanged();
+				}
+				this.mergeUnknownFields(other.unknownFields);
+				onChanged();
+				return this;
+			}
+
+			@java.lang.Override
+			public final boolean isInitialized() {
+				return true;
+			}
+
+			@java.lang.Override
+			public Builder mergeFrom(com.google.protobuf.CodedInputStream input,
+					com.google.protobuf.ExtensionRegistryLite extensionRegistry) throws java.io.IOException {
+				eu.recap.sim.models.WorkloadModel.Request parsedMessage = null;
+				try {
+					parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+				} catch (com.google.protobuf.InvalidProtocolBufferException e) {
+					parsedMessage = (eu.recap.sim.models.WorkloadModel.Request) e.getUnfinishedMessage();
+					throw e.unwrapIOException();
+				} finally {
+					if (parsedMessage != null) {
+						mergeFrom(parsedMessage);
+					}
+				}
+				return this;
+			}
+
+			private int bitField0_;
+
+			private long time_;
+
+			/**
+			 * <pre>
+			 * starting time of request
+			 * </pre>
+			 *
+			 * <code>int64 time = 1;</code>
+			 */
+			public long getTime() {
+				return time_;
+			}
+
+			/**
+			 * <pre>
+			 * starting time of request
+			 * </pre>
+			 *
+			 * <code>int64 time = 1;</code>
+			 */
+			public Builder setTime(long value) {
+
+				time_ = value;
+				onChanged();
+				return this;
+			}
+
+			/**
+			 * <pre>
+			 * starting time of request
+			 * </pre>
+			 *
+			 * <code>int64 time = 1;</code>
+			 */
+			public Builder clearTime() {
+
+				time_ = 0L;
+				onChanged();
+				return this;
+			}
+
+			private java.lang.Object applicationId_ = "";
+
+			/**
+			 * <code>string applicationId = 2;</code>
+			 */
+			public java.lang.String getApplicationId() {
+				java.lang.Object ref = applicationId_;
+				if (!(ref instanceof java.lang.String)) {
+					com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+					java.lang.String s = bs.toStringUtf8();
+					applicationId_ = s;
+					return s;
+				} else {
+					return (java.lang.String) ref;
+				}
+			}
+
+			/**
+			 * <code>string applicationId = 2;</code>
+			 */
+			public com.google.protobuf.ByteString getApplicationIdBytes() {
+				java.lang.Object ref = applicationId_;
+				if (ref instanceof String) {
+					com.google.protobuf.ByteString b = com.google.protobuf.ByteString
+							.copyFromUtf8((java.lang.String) ref);
+					applicationId_ = b;
+					return b;
+				} else {
+					return (com.google.protobuf.ByteString) ref;
+				}
+			}
+
+			/**
+			 * <code>string applicationId = 2;</code>
+			 */
+			public Builder setApplicationId(java.lang.String value) {
+				if (value == null) {
+					throw new NullPointerException();
+				}
+
+				applicationId_ = value;
+				onChanged();
+				return this;
+			}
+
+			/**
+			 * <code>string applicationId = 2;</code>
+			 */
+			public Builder clearApplicationId() {
+
+				applicationId_ = getDefaultInstance().getApplicationId();
+				onChanged();
+				return this;
+			}
+
+			/**
+			 * <code>string applicationId = 2;</code>
+			 */
+			public Builder setApplicationIdBytes(com.google.protobuf.ByteString value) {
+				if (value == null) {
+					throw new NullPointerException();
+				}
+				checkByteStringIsUtf8(value);
+
+				applicationId_ = value;
+				onChanged();
+				return this;
+			}
+
+			private java.lang.Object componentId_ = "";
+
+			/**
+			 * <code>string componentId = 3;</code>
+			 */
+			public java.lang.String getComponentId() {
+				java.lang.Object ref = componentId_;
+				if (!(ref instanceof java.lang.String)) {
+					com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+					java.lang.String s = bs.toStringUtf8();
+					componentId_ = s;
+					return s;
+				} else {
+					return (java.lang.String) ref;
+				}
+			}
+
+			/**
+			 * <code>string componentId = 3;</code>
+			 */
+			public com.google.protobuf.ByteString getComponentIdBytes() {
+				java.lang.Object ref = componentId_;
+				if (ref instanceof String) {
+					com.google.protobuf.ByteString b = com.google.protobuf.ByteString
+							.copyFromUtf8((java.lang.String) ref);
+					componentId_ = b;
+					return b;
+				} else {
+					return (com.google.protobuf.ByteString) ref;
+				}
+			}
+
+			/**
+			 * <code>string componentId = 3;</code>
+			 */
+			public Builder setComponentId(java.lang.String value) {
+				if (value == null) {
+					throw new NullPointerException();
+				}
+
+				componentId_ = value;
+				onChanged();
+				return this;
+			}
+
+			/**
+			 * <code>string componentId = 3;</code>
+			 */
+			public Builder clearComponentId() {
+
+				componentId_ = getDefaultInstance().getComponentId();
+				onChanged();
+				return this;
+			}
+
+			/**
+			 * <code>string componentId = 3;</code>
+			 */
+			public Builder setComponentIdBytes(com.google.protobuf.ByteString value) {
+				if (value == null) {
+					throw new NullPointerException();
+				}
+				checkByteStringIsUtf8(value);
+
+				componentId_ = value;
+				onChanged();
+				return this;
+			}
+
+			private java.lang.Object apiId_ = "";
+
+			/**
+			 * <code>string apiId = 4;</code>
+			 */
+			public java.lang.String getApiId() {
+				java.lang.Object ref = apiId_;
+				if (!(ref instanceof java.lang.String)) {
+					com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+					java.lang.String s = bs.toStringUtf8();
+					apiId_ = s;
+					return s;
+				} else {
+					return (java.lang.String) ref;
+				}
+			}
+
+			/**
+			 * <code>string apiId = 4;</code>
+			 */
+			public com.google.protobuf.ByteString getApiIdBytes() {
+				java.lang.Object ref = apiId_;
+				if (ref instanceof String) {
+					com.google.protobuf.ByteString b = com.google.protobuf.ByteString
+							.copyFromUtf8((java.lang.String) ref);
+					apiId_ = b;
+					return b;
+				} else {
+					return (com.google.protobuf.ByteString) ref;
+				}
+			}
+
+			/**
+			 * <code>string apiId = 4;</code>
+			 */
+			public Builder setApiId(java.lang.String value) {
+				if (value == null) {
+					throw new NullPointerException();
+				}
+
+				apiId_ = value;
+				onChanged();
+				return this;
+			}
+
+			/**
+			 * <code>string apiId = 4;</code>
+			 */
+			public Builder clearApiId() {
+
+				apiId_ = getDefaultInstance().getApiId();
+				onChanged();
+				return this;
+			}
+
+			/**
+			 * <code>string apiId = 4;</code>
+			 */
+			public Builder setApiIdBytes(com.google.protobuf.ByteString value) {
+				if (value == null) {
+					throw new NullPointerException();
+				}
+				checkByteStringIsUtf8(value);
+
+				apiId_ = value;
+				onChanged();
+				return this;
+			}
+
+			private long dataToTransfer_;
+
+			/**
+			 * <code>int64 dataToTransfer = 6;</code>
+			 */
+			public long getDataToTransfer() {
+				return dataToTransfer_;
+			}
+
+			/**
+			 * <code>int64 dataToTransfer = 6;</code>
+			 */
+			public Builder setDataToTransfer(long value) {
+
+				dataToTransfer_ = value;
+				onChanged();
+				return this;
+			}
+
+			/**
+			 * <code>int64 dataToTransfer = 6;</code>
+			 */
+			public Builder clearDataToTransfer() {
+
+				dataToTransfer_ = 0L;
+				onChanged();
+				return this;
+			}
+
+			private int mipsDataNodes_;
+
+			/**
+			 * <pre>
+			 * added By Malika: to adapt the execution time at data nodes
+			 * </pre>
+			 *
+			 * <code>int32 mipsDataNodes = 5;</code>
+			 */
+			public int getMipsDataNodes() {
+				return mipsDataNodes_;
+			}
+
+			/**
+			 * <pre>
+			 * added By Malika: to adapt the execution time at data nodes
+			 * </pre>
+			 *
+			 * <code>int32 mipsDataNodes = 5;</code>
+			 */
+			public Builder setMipsDataNodes(int value) {
+
+				mipsDataNodes_ = value;
+				onChanged();
+				return this;
+			}
+
+			/**
+			 * <pre>
+			 * added By Malika: to adapt the execution time at data nodes
+			 * </pre>
+			 *
+			 * <code>int32 mipsDataNodes = 5;</code>
+			 */
+			public Builder clearMipsDataNodes() {
+
+				mipsDataNodes_ = 0;
+				onChanged();
+				return this;
+			}
+
+			private int requestId_;
+
+			/**
+			 * <pre>
+			 * added By Malika: the id of the request (will identify the cloudlets)
+			 * </pre>
+			 *
+			 * <code>int32 requestId = 7;</code>
+			 */
+			public int getRequestId() {
+				return requestId_;
+			}
+
+			/**
+			 * <pre>
+			 * added By Malika: the id of the request (will identify the cloudlets)
+			 * </pre>
+			 *
+			 * <code>int32 requestId = 7;</code>
+			 */
+			public Builder setRequestId(int value) {
+
+				requestId_ = value;
+				onChanged();
+				return this;
+			}
+
+			/**
+			 * <pre>
+			 * added By Malika: the id of the request (will identify the cloudlets)
+			 * </pre>
+			 *
+			 * <code>int32 requestId = 7;</code>
+			 */
+			public Builder clearRequestId() {
+
+				requestId_ = 0;
+				onChanged();
+				return this;
+			}
+
+			private int expectedDuration_;
+
+			/**
+			 * <pre>
+			 * added By Malika: time ine second that request took in real life
+			 * </pre>
+			 *
+			 * <code>int32 expectedDuration = 8;</code>
+			 */
+			public int getExpectedDuration() {
+				return expectedDuration_;
+			}
+
+			/**
+			 * <pre>
+			 * added By Malika: time ine second that request took in real life
+			 * </pre>
+			 *
+			 * <code>int32 expectedDuration = 8;</code>
+			 */
+			public Builder setExpectedDuration(int value) {
+
+				expectedDuration_ = value;
+				onChanged();
+				return this;
+			}
+
+			/**
+			 * <pre>
+			 * added By Malika: time ine second that request took in real life
+			 * </pre>
+			 *
+			 * <code>int32 expectedDuration = 8;</code>
+			 */
+			public Builder clearExpectedDuration() {
+
+				expectedDuration_ = 0;
+				onChanged();
+				return this;
+			}
+
+			private com.google.protobuf.Internal.IntList dataNodes_ = emptyIntList();
+
+			private void ensureDataNodesIsMutable() {
+				if (!((bitField0_ & 0x00000100) != 0)) {
+					dataNodes_ = mutableCopy(dataNodes_);
+					bitField0_ |= 0x00000100;
+				}
+			}
+
+			/**
+			 * <pre>
+			 * added By Malika: what data nodes to use for this request
+			 * </pre>
+			 *
+			 * <code>repeated int32 dataNodes = 9;</code>
+			 */
+			public java.util.List<java.lang.Integer> getDataNodesList() {
+				return ((bitField0_ & 0x00000100) != 0) ? java.util.Collections.unmodifiableList(dataNodes_)
+						: dataNodes_;
+			}
+
+			/**
+			 * <pre>
+			 * added By Malika: what data nodes to use for this request
+			 * </pre>
+			 *
+			 * <code>repeated int32 dataNodes = 9;</code>
+			 */
+			public int getDataNodesCount() {
+				return dataNodes_.size();
+			}
+
+			/**
+			 * <pre>
+			 * added By Malika: what data nodes to use for this request
+			 * </pre>
+			 *
+			 * <code>repeated int32 dataNodes = 9;</code>
+			 */
+			public int getDataNodes(int index) {
+				return dataNodes_.getInt(index);
+			}
+
+			/**
+			 * <pre>
+			 * added By Malika: what data nodes to use for this request
+			 * </pre>
+			 *
+			 * <code>repeated int32 dataNodes = 9;</code>
+			 */
+			public Builder setDataNodes(int index, int value) {
+				ensureDataNodesIsMutable();
+				dataNodes_.setInt(index, value);
+				onChanged();
+				return this;
+			}
+
+			/**
+			 * <pre>
+			 * added By Malika: what data nodes to use for this request
+			 * </pre>
+			 *
+			 * <code>repeated int32 dataNodes = 9;</code>
+			 */
+			public Builder addDataNodes(int value) {
+				ensureDataNodesIsMutable();
+				dataNodes_.addInt(value);
+				onChanged();
+				return this;
+			}
+
+			/**
+			 * <pre>
+			 * added By Malika: what data nodes to use for this request
+			 * </pre>
+			 *
+			 * <code>repeated int32 dataNodes = 9;</code>
+			 */
+			public Builder addAllDataNodes(java.lang.Iterable<? extends java.lang.Integer> values) {
+				ensureDataNodesIsMutable();
+				com.google.protobuf.AbstractMessageLite.Builder.addAll(values, dataNodes_);
+				onChanged();
+				return this;
+			}
+
+			/**
+			 * <pre>
+			 * added By Malika: what data nodes to use for this request
+			 * </pre>
+			 *
+			 * <code>repeated int32 dataNodes = 9;</code>
+			 */
+			public Builder clearDataNodes() {
+				dataNodes_ = emptyIntList();
+				bitField0_ = (bitField0_ & ~0x00000100);
+				onChanged();
+				return this;
+			}
+
+			/**
+			 * <pre>
+			 * added by Joseph
+			 * </pre>
+			 * 
+			 * <code> List<Long> searchContent = 10;</code>
+			 */
+			private List<Long> searchContent;
+
+			public List<Long> getSearchContent() {
+				return searchContent;
+			}
+
+			public Builder setSearchContent(List<Long> value) {
+				searchContent = value;
+				onChanged();
+				return this;
+			}
+
+			@java.lang.Override
+			public final Builder setUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+				return super.setUnknownFields(unknownFields);
+			}
+
+			@java.lang.Override
+			public final Builder mergeUnknownFields(final com.google.protobuf.UnknownFieldSet unknownFields) {
+				return super.mergeUnknownFields(unknownFields);
+			}
+
+			// @@protoc_insertion_point(builder_scope:models.Request)
+		}
+
+		// @@protoc_insertion_point(class_scope:models.Request)
+		private static final eu.recap.sim.models.WorkloadModel.Request DEFAULT_INSTANCE;
+		static {
+			DEFAULT_INSTANCE = new eu.recap.sim.models.WorkloadModel.Request();
+		}
+
+		public static eu.recap.sim.models.WorkloadModel.Request getDefaultInstance() {
+			return DEFAULT_INSTANCE;
+		}
+
+		private static final com.google.protobuf.Parser<Request> PARSER = new com.google.protobuf.AbstractParser<Request>() {
+			@java.lang.Override
+			public Request parsePartialFrom(com.google.protobuf.CodedInputStream input,
+					com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+					throws com.google.protobuf.InvalidProtocolBufferException {
+				return new Request(input, extensionRegistry);
+			}
+		};
+
+		public static com.google.protobuf.Parser<Request> parser() {
+			return PARSER;
+		}
+
+		@java.lang.Override
+		public com.google.protobuf.Parser<Request> getParserForType() {
+			return PARSER;
+		}
+
+		@java.lang.Override
+		public eu.recap.sim.models.WorkloadModel.Request getDefaultInstanceForType() {
+			return DEFAULT_INSTANCE;
+		}
+
+	}
+
+	private static final com.google.protobuf.Descriptors.Descriptor internal_static_models_Workload_descriptor;
+	private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internal_static_models_Workload_fieldAccessorTable;
+	private static final com.google.protobuf.Descriptors.Descriptor internal_static_models_Device_descriptor;
+	private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internal_static_models_Device_fieldAccessorTable;
+	private static final com.google.protobuf.Descriptors.Descriptor internal_static_models_Request_descriptor;
+	private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable internal_static_models_Request_fieldAccessorTable;
+
+	public static com.google.protobuf.Descriptors.FileDescriptor getDescriptor() {
+		return descriptor;
+	}
+
+	private static com.google.protobuf.Descriptors.FileDescriptor descriptor;
+	static {
+		java.lang.String[] descriptorData = { "\n\023WorkloadModel.proto\022\006models\032\023LocationM"
+				+ "odel.proto\":\n\010Workload\022\037\n\007devices\030\001 \003(\0132"
+				+ "\016.models.Device\022\r\n\005notes\030\002 \001(\t\"v\n\006Device"
+				+ "\022\020\n\010deviceId\030\003 \001(\t\022\022\n\ndeviceName\030\004 \001(\t\022#"
+				+ "\n\tlocations\030\002 \003(\0132\020.models.Location\022!\n\010r"
+				+ "equests\030\001 \003(\0132\017.models.Request\"\301\001\n\007Reque"
+				+ "st\022\014\n\004time\030\001 \001(\003\022\025\n\rapplicationId\030\002 \001(\t\022"
+				+ "\023\n\013componentId\030\003 \001(\t\022\r\n\005apiId\030\004 \001(\t\022\026\n\016d"
+				+ "ataToTransfer\030\006 \001(\003\022\025\n\rmipsDataNodes\030\005 \001"
+				+ "(\005\022\021\n\trequestId\030\007 \001(\005\022\030\n\020expectedDuratio"
+				+ "n\030\010 \001(\005\022\021\n\tdataNodes\030\t \003(\005B$\n\023eu.recap.s"
+				+ "im.modelsB\rWorkloadModelb\006proto3" };
+		com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner = new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
+			public com.google.protobuf.ExtensionRegistry assignDescriptors(
+					com.google.protobuf.Descriptors.FileDescriptor root) {
+				descriptor = root;
+				return null;
+			}
+		};
+		com.google.protobuf.Descriptors.FileDescriptor.internalBuildGeneratedFileFrom(descriptorData,
+				new com.google.protobuf.Descriptors.FileDescriptor[] {
+						eu.recap.sim.models.LocationModel.getDescriptor(), },
+				assigner);
+		internal_static_models_Workload_descriptor = getDescriptor().getMessageTypes().get(0);
+		internal_static_models_Workload_fieldAccessorTable = new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+				internal_static_models_Workload_descriptor, new java.lang.String[] { "Devices", "Notes", });
+		internal_static_models_Device_descriptor = getDescriptor().getMessageTypes().get(1);
+		internal_static_models_Device_fieldAccessorTable = new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+				internal_static_models_Device_descriptor,
+				new java.lang.String[] { "DeviceId", "DeviceName", "Locations", "Requests", });
+		internal_static_models_Request_descriptor = getDescriptor().getMessageTypes().get(2);
+		internal_static_models_Request_fieldAccessorTable = new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+				internal_static_models_Request_descriptor,
+				new java.lang.String[] { "Time", "ApplicationId", "ComponentId", "ApiId", "DataToTransfer",
+						"MipsDataNodes", "RequestId", "ExpectedDuration", "DataNodes", });
+		eu.recap.sim.models.LocationModel.getDescriptor();
+	}
+
+	// @@protoc_insertion_point(outer_class_scope)
 }

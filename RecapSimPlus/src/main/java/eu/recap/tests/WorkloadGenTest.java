@@ -58,19 +58,20 @@ public class WorkloadGenTest {
 		 * Creation of Requests
 		 */
 		List<Request.Builder> buildersRequests = buildersRequests(termDist, NB_REQUEST);
+		List<Request> requests=new ArrayList<Request>();
 		int i = 0;
 		for (Request.Builder request : buildersRequests) {
 			request.setTime(timeSequence.get(i));
 
 			// TODO : setting all possible parameters here
-			request.build();
+			requests.add(request.build());
 		}
 
 		/*
 		 * Allocation of requests on devices, LinknovateValidationRWM_LogAccess
 		 * TODO : check
 		 */
-		// Get IP addresses of devices who sent requests
+		//creating devices list
 		int deviceQty = 0;
 		HashMap<String, Device.Builder> devices = new HashMap<String, Device.Builder>();
 		for (String id : IDS) {
@@ -79,18 +80,34 @@ public class WorkloadGenTest {
 				device.setDeviceId(deviceQty + "");
 				device.setDeviceName("IP_" + id + "_" + deviceQty);
 				deviceQty++;
-
 				devices.put(id, device);
 			}
-
 		}
-		
-		
+		//adding requests to each device
+		for(int req=0;req<NB_REQUEST;req++) {
+			devices.get(IDS.get(req)).addRequests(requests.get(req));
+		}
 		
 		/*
 		 * Workload generation
 		 */
+		Workload.Builder workloadBuilder=Workload.newBuilder();
+		for(Device.Builder device:devices.values()) {
+			workloadBuilder.addDevices(device);
+		}
+		Workload workload=workloadBuilder.build();
+		
+		printResults(workload);
 
+	}
+
+	private static void printResults(Workload workload) {
+		for(Device device:workload.getDevicesList()) {
+			for(Request request:device.getRequestsList()) {
+				System.out.println(request.getSearchContent().toString());
+			}
+		}
+		
 	}
 
 	/**
