@@ -2466,7 +2466,7 @@ public final class WorkloadModel {
   /**
    * Protobuf type {@code models.Request}
    */
-  public  static final class Request extends
+  public static final class Request extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:models.Request)
       RequestOrBuilder {
