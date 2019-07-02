@@ -7,7 +7,7 @@ import java.util.List;
 
 //imports depuis Workload generator
 import Classes.Query;
-import Classes.Word;
+import Classes.Long;
 import Classes.WorkloadGen;
 
 public class GeneralLauncherTest {
@@ -38,12 +38,12 @@ public class GeneralLauncherTest {
 		final int nbTermSet=1000;
 		final int nbQuery=1000;
 		
-		List<Word> termSet=new ArrayList<Word>();
+		List<Long> termSet=new ArrayList<Long>();
 		List<Double> termFreq=new ArrayList<Double>();
 		
 		//TODO : change list creation
 		for(int i=1;i<=nbTermSet;i++) {
-			Word w=new Word(i);
+			Long w=new Long(i);
 			termSet.add(w);
 			termFreq.add(1./w.getId());
 		}
