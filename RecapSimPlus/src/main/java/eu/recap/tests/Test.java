@@ -116,6 +116,31 @@ public class Test {
 }
 
 
+class ID{
+	private long id;
+	
+	public ID() {
+		this.id=0;
+	}
+	
+	public String createID() {
+		return Long.toString(this.id++);
+	}
+}
+
+
+class ExpD{
+	private double lambda;
+	
+	public ExpD(double lambda) {
+		this.lambda=lambda;
+	}
+	
+	public double sample() {
+		return -Math.log(Math.random())/lambda;
+	}
+}
+
 
 
 
