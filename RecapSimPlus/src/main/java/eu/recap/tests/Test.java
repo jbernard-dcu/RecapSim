@@ -1,7 +1,5 @@
 package eu.recap.tests;
 
-import java.io.File;
-
 import eu.recap.sim.models.InfrastructureModel.*;
 import eu.recap.sim.models.InfrastructureModel.Node.CPU;
 import eu.recap.sim.models.InfrastructureModel.Node.Core;
@@ -118,11 +116,9 @@ public class Test {
 
 class ID{
 	private long id;
-	
 	public ID() {
 		this.id=0;
 	}
-	
 	public String createID() {
 		return Long.toString(this.id++);
 	}
@@ -131,19 +127,13 @@ class ID{
 
 class ExpD{
 	private double lambda;
-	
 	public ExpD(double lambda) {
 		this.lambda=lambda;
 	}
-	
 	public double sample() {
 		return -Math.log(Math.random())/lambda;
 	}
 }
-
-
-
-
 
 
 
