@@ -2459,6 +2459,10 @@ public final class WorkloadModel {
      * <code>repeated int32 dataNodes = 9;</code>
      */
     int getDataNodes(int index);
+    /**
+     * 
+     */
+    
   }
   /**
    * Protobuf type {@code models.Request}
