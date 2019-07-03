@@ -1,8 +1,6 @@
 package Classes;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Random;
@@ -11,10 +9,12 @@ import java.util.TreeMap;
 import eu.recap.sim.models.WorkloadModel.*;
 
 public class WorkloadGenTest {
-
+	
+	//Parameters randNbWords()
 	final static int MOY_NBWORD = 4;
 	final static int STD_NBWORD = 2;
-
+	
+	//Parameters termSet and querySet
 	final static int NB_TERMSET = 10000;
 	final static int NB_REQUEST = 1000;
 
@@ -24,7 +24,7 @@ public class WorkloadGenTest {
 		 * Creation of termDist, Zipf distribution Creation of timeSequence, Exponential
 		 * distribution
 		 */
-		long startTime = new Date().getTime();
+		long startTime = System.currentTimeMillis();
 
 		TreeMap<Long, Double> termDist = new TreeMap<Long, Double>();
 		List<Long> timeSequence = new ArrayList<Long>();
@@ -76,7 +76,7 @@ public class WorkloadGenTest {
 
 			// TODO : setting all possible parameters here
 			requests.add(request.build());
-			
+
 			i++;
 		}
 
@@ -127,8 +127,6 @@ public class WorkloadGenTest {
 
 	/**
 	 * Exponential distributed time of next request
-	 * 
-	 * @return
 	 */
 	private static long getNextTime() {
 		double lambda = 0.0001;
@@ -136,10 +134,9 @@ public class WorkloadGenTest {
 	}
 
 	/**
-	 * 
-	 * @param termDist
-	 * @param nbRequest
-	 * @return
+	 * generates a List of nbRequest Request.Builders</br>
+	 * searchContent, ComponentId, apiId, reqestId and dataToTransfer are set here</br>
+	 * TODO : add as many settings as possible
 	 */
 	public static List<Request.Builder> buildersRequests(TreeMap<Long, Double> termDist, int nbRequest) {
 		List<Request.Builder> res = new ArrayList<Request.Builder>();
@@ -155,8 +152,8 @@ public class WorkloadGenTest {
 	}
 
 	/**
-	 * 
-	 * @return
+	 * Random integer number with a gaussian distribution</br>
+	 * Change parameters or this to have a different distribution of the length of words
 	 */
 	public static int randNbWord() {
 		int res = (int) (MOY_NBWORD + STD_NBWORD * new Random().nextGaussian());
@@ -164,15 +161,15 @@ public class WorkloadGenTest {
 	}
 
 	/**
-	 * Creates a formatted String giving the contents of a Request. Change this
-	 * method to change the format of the String.
+	 * Creates a formatted String giving the contents of a Request. </br>
+	 * Change this method to change the format of the String.</br>
+	 * Change proto file of WorkloadModel to change type of request content. </br>
 	 * 
-	 * Current format : 123456289 1st digit : length of the number following digits
-	 * : number etc... for all numbers So here the request is 2-456-89
-	 * 
-	 * @param termDist
-	 * @param nbWord
-	 * @return
+	 * Current format : "123456289"</br>
+	 * 1st digit : length of the number </br>
+	 * following digits : number </br>
+	 * etc... for all numbers </br>
+	 * So here the request is 2-456-89</br>
 	 */
 	public static String randQueryContent(TreeMap<Long, Double> termDist, int nbWord) {
 		// Creating distribution
