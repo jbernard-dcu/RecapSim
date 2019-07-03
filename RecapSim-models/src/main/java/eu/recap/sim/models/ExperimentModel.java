@@ -126,6 +126,7 @@ public final class ExperimentModel {
     }
     private Experiment() {
       name_ = "";
+      duration_ = 0D;
       placementPolicy_ = "";
       consolidationPolicy_ = "";
       autoScalinigPolicy_ = "";
@@ -231,7 +232,7 @@ public final class ExperimentModel {
               break;
             }
             default: {
-              if (!parseUnknownField(
+              if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -600,36 +601,38 @@ public final class ExperimentModel {
       }
       eu.recap.sim.models.ExperimentModel.Experiment other = (eu.recap.sim.models.ExperimentModel.Experiment) obj;
 
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (java.lang.Double.doubleToLongBits(getDuration())
-          != java.lang.Double.doubleToLongBits(
-              other.getDuration())) return false;
-      if (!getPlacementPolicy()
-          .equals(other.getPlacementPolicy())) return false;
-      if (!getConsolidationPolicy()
-          .equals(other.getConsolidationPolicy())) return false;
-      if (!getAutoScalinigPolicy()
-          .equals(other.getAutoScalinigPolicy())) return false;
-      if (!getRequestRoutingPolicy()
-          .equals(other.getRequestRoutingPolicy())) return false;
-      if (hasInfrastructure() != other.hasInfrastructure()) return false;
+      boolean result = true;
+      result = result && getName()
+          .equals(other.getName());
+      result = result && (
+          java.lang.Double.doubleToLongBits(getDuration())
+          == java.lang.Double.doubleToLongBits(
+              other.getDuration()));
+      result = result && getPlacementPolicy()
+          .equals(other.getPlacementPolicy());
+      result = result && getConsolidationPolicy()
+          .equals(other.getConsolidationPolicy());
+      result = result && getAutoScalinigPolicy()
+          .equals(other.getAutoScalinigPolicy());
+      result = result && getRequestRoutingPolicy()
+          .equals(other.getRequestRoutingPolicy());
+      result = result && (hasInfrastructure() == other.hasInfrastructure());
       if (hasInfrastructure()) {
-        if (!getInfrastructure()
-            .equals(other.getInfrastructure())) return false;
+        result = result && getInfrastructure()
+            .equals(other.getInfrastructure());
       }
-      if (hasApplicationLandscape() != other.hasApplicationLandscape()) return false;
+      result = result && (hasApplicationLandscape() == other.hasApplicationLandscape());
       if (hasApplicationLandscape()) {
-        if (!getApplicationLandscape()
-            .equals(other.getApplicationLandscape())) return false;
+        result = result && getApplicationLandscape()
+            .equals(other.getApplicationLandscape());
       }
-      if (hasWorkload() != other.hasWorkload()) return false;
+      result = result && (hasWorkload() == other.hasWorkload());
       if (hasWorkload()) {
-        if (!getWorkload()
-            .equals(other.getWorkload())) return false;
+        result = result && getWorkload()
+            .equals(other.getWorkload());
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
     }
 
     @java.lang.Override
@@ -880,35 +883,35 @@ public final class ExperimentModel {
 
       @java.lang.Override
       public Builder clone() {
-        return super.clone();
+        return (Builder) super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.setField(field, value);
+        return (Builder) super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
+        return (Builder) super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
+        return (Builder) super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
+        return (Builder) super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.addRepeatedField(field, value);
+        return (Builder) super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1354,7 +1357,7 @@ public final class ExperimentModel {
         return this;
       }
 
-      private eu.recap.sim.models.InfrastructureModel.Infrastructure infrastructure_;
+      private eu.recap.sim.models.InfrastructureModel.Infrastructure infrastructure_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           eu.recap.sim.models.InfrastructureModel.Infrastructure, eu.recap.sim.models.InfrastructureModel.Infrastructure.Builder, eu.recap.sim.models.InfrastructureModel.InfrastructureOrBuilder> infrastructureBuilder_;
       /**
@@ -1471,7 +1474,7 @@ public final class ExperimentModel {
         return infrastructureBuilder_;
       }
 
-      private eu.recap.sim.models.ApplicationModel.ApplicationLandscape applicationLandscape_;
+      private eu.recap.sim.models.ApplicationModel.ApplicationLandscape applicationLandscape_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           eu.recap.sim.models.ApplicationModel.ApplicationLandscape, eu.recap.sim.models.ApplicationModel.ApplicationLandscape.Builder, eu.recap.sim.models.ApplicationModel.ApplicationLandscapeOrBuilder> applicationLandscapeBuilder_;
       /**
@@ -1588,7 +1591,7 @@ public final class ExperimentModel {
         return applicationLandscapeBuilder_;
       }
 
-      private eu.recap.sim.models.WorkloadModel.Workload workload_;
+      private eu.recap.sim.models.WorkloadModel.Workload workload_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           eu.recap.sim.models.WorkloadModel.Workload, eu.recap.sim.models.WorkloadModel.Workload.Builder, eu.recap.sim.models.WorkloadModel.WorkloadOrBuilder> workloadBuilder_;
       /**
@@ -1707,7 +1710,7 @@ public final class ExperimentModel {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       @java.lang.Override

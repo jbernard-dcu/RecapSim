@@ -94,7 +94,7 @@ public final class WorkloadModel {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
                 devices_ = new java.util.ArrayList<eu.recap.sim.models.WorkloadModel.Device>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -109,7 +109,7 @@ public final class WorkloadModel {
               break;
             }
             default: {
-              if (!parseUnknownField(
+              if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -123,7 +123,7 @@ public final class WorkloadModel {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
           devices_ = java.util.Collections.unmodifiableList(devices_);
         }
         this.unknownFields = unknownFields.build();
@@ -264,12 +264,13 @@ public final class WorkloadModel {
       }
       eu.recap.sim.models.WorkloadModel.Workload other = (eu.recap.sim.models.WorkloadModel.Workload) obj;
 
-      if (!getDevicesList()
-          .equals(other.getDevicesList())) return false;
-      if (!getNotes()
-          .equals(other.getNotes())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      boolean result = true;
+      result = result && getDevicesList()
+          .equals(other.getDevicesList());
+      result = result && getNotes()
+          .equals(other.getNotes());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
     }
 
     @java.lang.Override
@@ -456,7 +457,7 @@ public final class WorkloadModel {
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (devicesBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
             devices_ = java.util.Collections.unmodifiableList(devices_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -472,35 +473,35 @@ public final class WorkloadModel {
 
       @java.lang.Override
       public Builder clone() {
-        return super.clone();
+        return (Builder) super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.setField(field, value);
+        return (Builder) super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
+        return (Builder) super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
+        return (Builder) super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
+        return (Builder) super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.addRepeatedField(field, value);
+        return (Builder) super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -577,7 +578,7 @@ public final class WorkloadModel {
       private java.util.List<eu.recap.sim.models.WorkloadModel.Device> devices_ =
         java.util.Collections.emptyList();
       private void ensureDevicesIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
           devices_ = new java.util.ArrayList<eu.recap.sim.models.WorkloadModel.Device>(devices_);
           bitField0_ |= 0x00000001;
          }
@@ -806,7 +807,7 @@ public final class WorkloadModel {
           devicesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               eu.recap.sim.models.WorkloadModel.Device, eu.recap.sim.models.WorkloadModel.Device.Builder, eu.recap.sim.models.WorkloadModel.DeviceOrBuilder>(
                   devices_,
-                  ((bitField0_ & 0x00000001) != 0),
+                  ((bitField0_ & 0x00000001) == 0x00000001),
                   getParentForChildren(),
                   isClean());
           devices_ = null;
@@ -885,7 +886,7 @@ public final class WorkloadModel {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       @java.lang.Override
@@ -1051,7 +1052,7 @@ public final class WorkloadModel {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
                 requests_ = new java.util.ArrayList<eu.recap.sim.models.WorkloadModel.Request>();
                 mutable_bitField0_ |= 0x00000008;
               }
@@ -1060,7 +1061,7 @@ public final class WorkloadModel {
               break;
             }
             case 18: {
-              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
                 locations_ = new java.util.ArrayList<eu.recap.sim.models.LocationModel.Location>();
                 mutable_bitField0_ |= 0x00000004;
               }
@@ -1081,7 +1082,7 @@ public final class WorkloadModel {
               break;
             }
             default: {
-              if (!parseUnknownField(
+              if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1095,10 +1096,10 @@ public final class WorkloadModel {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000008) != 0)) {
+        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
           requests_ = java.util.Collections.unmodifiableList(requests_);
         }
-        if (((mutable_bitField0_ & 0x00000004) != 0)) {
+        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
           locations_ = java.util.Collections.unmodifiableList(locations_);
         }
         this.unknownFields = unknownFields.build();
@@ -1321,16 +1322,17 @@ public final class WorkloadModel {
       }
       eu.recap.sim.models.WorkloadModel.Device other = (eu.recap.sim.models.WorkloadModel.Device) obj;
 
-      if (!getDeviceId()
-          .equals(other.getDeviceId())) return false;
-      if (!getDeviceName()
-          .equals(other.getDeviceName())) return false;
-      if (!getLocationsList()
-          .equals(other.getLocationsList())) return false;
-      if (!getRequestsList()
-          .equals(other.getRequestsList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      boolean result = true;
+      result = result && getDeviceId()
+          .equals(other.getDeviceId());
+      result = result && getDeviceName()
+          .equals(other.getDeviceName());
+      result = result && getLocationsList()
+          .equals(other.getLocationsList());
+      result = result && getRequestsList()
+          .equals(other.getRequestsList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
     }
 
     @java.lang.Override
@@ -1534,7 +1536,7 @@ public final class WorkloadModel {
         result.deviceId_ = deviceId_;
         result.deviceName_ = deviceName_;
         if (locationsBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0)) {
+          if (((bitField0_ & 0x00000004) == 0x00000004)) {
             locations_ = java.util.Collections.unmodifiableList(locations_);
             bitField0_ = (bitField0_ & ~0x00000004);
           }
@@ -1543,7 +1545,7 @@ public final class WorkloadModel {
           result.locations_ = locationsBuilder_.build();
         }
         if (requestsBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) != 0)) {
+          if (((bitField0_ & 0x00000008) == 0x00000008)) {
             requests_ = java.util.Collections.unmodifiableList(requests_);
             bitField0_ = (bitField0_ & ~0x00000008);
           }
@@ -1558,35 +1560,35 @@ public final class WorkloadModel {
 
       @java.lang.Override
       public Builder clone() {
-        return super.clone();
+        return (Builder) super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.setField(field, value);
+        return (Builder) super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
+        return (Builder) super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
+        return (Builder) super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
+        return (Builder) super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.addRepeatedField(field, value);
+        return (Builder) super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1831,7 +1833,7 @@ public final class WorkloadModel {
       private java.util.List<eu.recap.sim.models.LocationModel.Location> locations_ =
         java.util.Collections.emptyList();
       private void ensureLocationsIsMutable() {
-        if (!((bitField0_ & 0x00000004) != 0)) {
+        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
           locations_ = new java.util.ArrayList<eu.recap.sim.models.LocationModel.Location>(locations_);
           bitField0_ |= 0x00000004;
          }
@@ -2060,7 +2062,7 @@ public final class WorkloadModel {
           locationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               eu.recap.sim.models.LocationModel.Location, eu.recap.sim.models.LocationModel.Location.Builder, eu.recap.sim.models.LocationModel.LocationOrBuilder>(
                   locations_,
-                  ((bitField0_ & 0x00000004) != 0),
+                  ((bitField0_ & 0x00000004) == 0x00000004),
                   getParentForChildren(),
                   isClean());
           locations_ = null;
@@ -2071,7 +2073,7 @@ public final class WorkloadModel {
       private java.util.List<eu.recap.sim.models.WorkloadModel.Request> requests_ =
         java.util.Collections.emptyList();
       private void ensureRequestsIsMutable() {
-        if (!((bitField0_ & 0x00000008) != 0)) {
+        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
           requests_ = new java.util.ArrayList<eu.recap.sim.models.WorkloadModel.Request>(requests_);
           bitField0_ |= 0x00000008;
          }
@@ -2300,7 +2302,7 @@ public final class WorkloadModel {
           requestsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               eu.recap.sim.models.WorkloadModel.Request, eu.recap.sim.models.WorkloadModel.Request.Builder, eu.recap.sim.models.WorkloadModel.RequestOrBuilder>(
                   requests_,
-                  ((bitField0_ & 0x00000008) != 0),
+                  ((bitField0_ & 0x00000008) == 0x00000008),
                   getParentForChildren(),
                   isClean());
           requests_ = null;
@@ -2310,7 +2312,7 @@ public final class WorkloadModel {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       @java.lang.Override
@@ -2459,6 +2461,24 @@ public final class WorkloadModel {
      * <code>repeated int32 dataNodes = 9;</code>
      */
     int getDataNodes(int index);
+
+    /**
+     * <pre>
+     * added by Joseph: the contents of the request
+     * </pre>
+     *
+     * <code>string searchContent = 10;</code>
+     */
+    java.lang.String getSearchContent();
+    /**
+     * <pre>
+     * added by Joseph: the contents of the request
+     * </pre>
+     *
+     * <code>string searchContent = 10;</code>
+     */
+    com.google.protobuf.ByteString
+        getSearchContentBytes();
   }
   /**
    * Protobuf type {@code models.Request}
@@ -2473,10 +2493,16 @@ public final class WorkloadModel {
       super(builder);
     }
     private Request() {
+      time_ = 0L;
       applicationId_ = "";
       componentId_ = "";
       apiId_ = "";
-      dataNodes_ = emptyIntList();
+      dataToTransfer_ = 0L;
+      mipsDataNodes_ = 0;
+      requestId_ = 0;
+      expectedDuration_ = 0;
+      dataNodes_ = java.util.Collections.emptyList();
+      searchContent_ = "";
     }
 
     @java.lang.Override
@@ -2547,28 +2573,34 @@ public final class WorkloadModel {
               break;
             }
             case 72: {
-              if (!((mutable_bitField0_ & 0x00000100) != 0)) {
-                dataNodes_ = newIntList();
+              if (!((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+                dataNodes_ = new java.util.ArrayList<java.lang.Integer>();
                 mutable_bitField0_ |= 0x00000100;
               }
-              dataNodes_.addInt(input.readInt32());
+              dataNodes_.add(input.readInt32());
               break;
             }
             case 74: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000100) != 0) && input.getBytesUntilLimit() > 0) {
-                dataNodes_ = newIntList();
+              if (!((mutable_bitField0_ & 0x00000100) == 0x00000100) && input.getBytesUntilLimit() > 0) {
+                dataNodes_ = new java.util.ArrayList<java.lang.Integer>();
                 mutable_bitField0_ |= 0x00000100;
               }
               while (input.getBytesUntilLimit() > 0) {
-                dataNodes_.addInt(input.readInt32());
+                dataNodes_.add(input.readInt32());
               }
               input.popLimit(limit);
               break;
             }
+            case 82: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              searchContent_ = s;
+              break;
+            }
             default: {
-              if (!parseUnknownField(
+              if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2582,8 +2614,8 @@ public final class WorkloadModel {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000100) != 0)) {
-          dataNodes_.makeImmutable(); // C
+        if (((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+          dataNodes_ = java.util.Collections.unmodifiableList(dataNodes_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -2767,7 +2799,7 @@ public final class WorkloadModel {
     }
 
     public static final int DATANODES_FIELD_NUMBER = 9;
-    private com.google.protobuf.Internal.IntList dataNodes_;
+    private java.util.List<java.lang.Integer> dataNodes_;
     /**
      * <pre>
      * added By Malika: what data nodes to use for this request
@@ -2797,9 +2829,51 @@ public final class WorkloadModel {
      * <code>repeated int32 dataNodes = 9;</code>
      */
     public int getDataNodes(int index) {
-      return dataNodes_.getInt(index);
+      return dataNodes_.get(index);
     }
     private int dataNodesMemoizedSerializedSize = -1;
+
+    public static final int SEARCHCONTENT_FIELD_NUMBER = 10;
+    private volatile java.lang.Object searchContent_;
+    /**
+     * <pre>
+     * added by Joseph: the contents of the request
+     * </pre>
+     *
+     * <code>string searchContent = 10;</code>
+     */
+    public java.lang.String getSearchContent() {
+      java.lang.Object ref = searchContent_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        searchContent_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * added by Joseph: the contents of the request
+     * </pre>
+     *
+     * <code>string searchContent = 10;</code>
+     */
+    public com.google.protobuf.ByteString
+        getSearchContentBytes() {
+      java.lang.Object ref = searchContent_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        searchContent_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
 
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
@@ -2845,7 +2919,10 @@ public final class WorkloadModel {
         output.writeUInt32NoTag(dataNodesMemoizedSerializedSize);
       }
       for (int i = 0; i < dataNodes_.size(); i++) {
-        output.writeInt32NoTag(dataNodes_.getInt(i));
+        output.writeInt32NoTag(dataNodes_.get(i));
+      }
+      if (!getSearchContentBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, searchContent_);
       }
       unknownFields.writeTo(output);
     }
@@ -2889,7 +2966,7 @@ public final class WorkloadModel {
         int dataSize = 0;
         for (int i = 0; i < dataNodes_.size(); i++) {
           dataSize += com.google.protobuf.CodedOutputStream
-            .computeInt32SizeNoTag(dataNodes_.getInt(i));
+            .computeInt32SizeNoTag(dataNodes_.get(i));
         }
         size += dataSize;
         if (!getDataNodesList().isEmpty()) {
@@ -2898,6 +2975,9 @@ public final class WorkloadModel {
               .computeInt32SizeNoTag(dataSize);
         }
         dataNodesMemoizedSerializedSize = dataSize;
+      }
+      if (!getSearchContentBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, searchContent_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2914,26 +2994,29 @@ public final class WorkloadModel {
       }
       eu.recap.sim.models.WorkloadModel.Request other = (eu.recap.sim.models.WorkloadModel.Request) obj;
 
-      if (getTime()
-          != other.getTime()) return false;
-      if (!getApplicationId()
-          .equals(other.getApplicationId())) return false;
-      if (!getComponentId()
-          .equals(other.getComponentId())) return false;
-      if (!getApiId()
-          .equals(other.getApiId())) return false;
-      if (getDataToTransfer()
-          != other.getDataToTransfer()) return false;
-      if (getMipsDataNodes()
-          != other.getMipsDataNodes()) return false;
-      if (getRequestId()
-          != other.getRequestId()) return false;
-      if (getExpectedDuration()
-          != other.getExpectedDuration()) return false;
-      if (!getDataNodesList()
-          .equals(other.getDataNodesList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      boolean result = true;
+      result = result && (getTime()
+          == other.getTime());
+      result = result && getApplicationId()
+          .equals(other.getApplicationId());
+      result = result && getComponentId()
+          .equals(other.getComponentId());
+      result = result && getApiId()
+          .equals(other.getApiId());
+      result = result && (getDataToTransfer()
+          == other.getDataToTransfer());
+      result = result && (getMipsDataNodes()
+          == other.getMipsDataNodes());
+      result = result && (getRequestId()
+          == other.getRequestId());
+      result = result && (getExpectedDuration()
+          == other.getExpectedDuration());
+      result = result && getDataNodesList()
+          .equals(other.getDataNodesList());
+      result = result && getSearchContent()
+          .equals(other.getSearchContent());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
     }
 
     @java.lang.Override
@@ -2965,6 +3048,8 @@ public final class WorkloadModel {
         hash = (37 * hash) + DATANODES_FIELD_NUMBER;
         hash = (53 * hash) + getDataNodesList().hashCode();
       }
+      hash = (37 * hash) + SEARCHCONTENT_FIELD_NUMBER;
+      hash = (53 * hash) + getSearchContent().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3114,8 +3199,10 @@ public final class WorkloadModel {
 
         expectedDuration_ = 0;
 
-        dataNodes_ = emptyIntList();
+        dataNodes_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000100);
+        searchContent_ = "";
+
         return this;
       }
 
@@ -3152,11 +3239,12 @@ public final class WorkloadModel {
         result.mipsDataNodes_ = mipsDataNodes_;
         result.requestId_ = requestId_;
         result.expectedDuration_ = expectedDuration_;
-        if (((bitField0_ & 0x00000100) != 0)) {
-          dataNodes_.makeImmutable();
+        if (((bitField0_ & 0x00000100) == 0x00000100)) {
+          dataNodes_ = java.util.Collections.unmodifiableList(dataNodes_);
           bitField0_ = (bitField0_ & ~0x00000100);
         }
         result.dataNodes_ = dataNodes_;
+        result.searchContent_ = searchContent_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -3164,35 +3252,35 @@ public final class WorkloadModel {
 
       @java.lang.Override
       public Builder clone() {
-        return super.clone();
+        return (Builder) super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.setField(field, value);
+        return (Builder) super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
+        return (Builder) super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
+        return (Builder) super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
+        return (Builder) super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.addRepeatedField(field, value);
+        return (Builder) super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3241,6 +3329,10 @@ public final class WorkloadModel {
             ensureDataNodesIsMutable();
             dataNodes_.addAll(other.dataNodes_);
           }
+          onChanged();
+        }
+        if (!other.getSearchContent().isEmpty()) {
+          searchContent_ = other.searchContent_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -3658,10 +3750,10 @@ public final class WorkloadModel {
         return this;
       }
 
-      private com.google.protobuf.Internal.IntList dataNodes_ = emptyIntList();
+      private java.util.List<java.lang.Integer> dataNodes_ = java.util.Collections.emptyList();
       private void ensureDataNodesIsMutable() {
-        if (!((bitField0_ & 0x00000100) != 0)) {
-          dataNodes_ = mutableCopy(dataNodes_);
+        if (!((bitField0_ & 0x00000100) == 0x00000100)) {
+          dataNodes_ = new java.util.ArrayList<java.lang.Integer>(dataNodes_);
           bitField0_ |= 0x00000100;
          }
       }
@@ -3674,8 +3766,7 @@ public final class WorkloadModel {
        */
       public java.util.List<java.lang.Integer>
           getDataNodesList() {
-        return ((bitField0_ & 0x00000100) != 0) ?
-                 java.util.Collections.unmodifiableList(dataNodes_) : dataNodes_;
+        return java.util.Collections.unmodifiableList(dataNodes_);
       }
       /**
        * <pre>
@@ -3695,7 +3786,7 @@ public final class WorkloadModel {
        * <code>repeated int32 dataNodes = 9;</code>
        */
       public int getDataNodes(int index) {
-        return dataNodes_.getInt(index);
+        return dataNodes_.get(index);
       }
       /**
        * <pre>
@@ -3707,7 +3798,7 @@ public final class WorkloadModel {
       public Builder setDataNodes(
           int index, int value) {
         ensureDataNodesIsMutable();
-        dataNodes_.setInt(index, value);
+        dataNodes_.set(index, value);
         onChanged();
         return this;
       }
@@ -3720,7 +3811,7 @@ public final class WorkloadModel {
        */
       public Builder addDataNodes(int value) {
         ensureDataNodesIsMutable();
-        dataNodes_.addInt(value);
+        dataNodes_.add(value);
         onChanged();
         return this;
       }
@@ -3747,15 +3838,104 @@ public final class WorkloadModel {
        * <code>repeated int32 dataNodes = 9;</code>
        */
       public Builder clearDataNodes() {
-        dataNodes_ = emptyIntList();
+        dataNodes_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000100);
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object searchContent_ = "";
+      /**
+       * <pre>
+       * added by Joseph: the contents of the request
+       * </pre>
+       *
+       * <code>string searchContent = 10;</code>
+       */
+      public java.lang.String getSearchContent() {
+        java.lang.Object ref = searchContent_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          searchContent_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * added by Joseph: the contents of the request
+       * </pre>
+       *
+       * <code>string searchContent = 10;</code>
+       */
+      public com.google.protobuf.ByteString
+          getSearchContentBytes() {
+        java.lang.Object ref = searchContent_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          searchContent_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * added by Joseph: the contents of the request
+       * </pre>
+       *
+       * <code>string searchContent = 10;</code>
+       */
+      public Builder setSearchContent(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        searchContent_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * added by Joseph: the contents of the request
+       * </pre>
+       *
+       * <code>string searchContent = 10;</code>
+       */
+      public Builder clearSearchContent() {
+        
+        searchContent_ = getDefaultInstance().getSearchContent();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * added by Joseph: the contents of the request
+       * </pre>
+       *
+       * <code>string searchContent = 10;</code>
+       */
+      public Builder setSearchContentBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        searchContent_ = value;
         onChanged();
         return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       @java.lang.Override
@@ -3834,13 +4014,14 @@ public final class WorkloadModel {
       "\016.models.Device\022\r\n\005notes\030\002 \001(\t\"v\n\006Device" +
       "\022\020\n\010deviceId\030\003 \001(\t\022\022\n\ndeviceName\030\004 \001(\t\022#" +
       "\n\tlocations\030\002 \003(\0132\020.models.Location\022!\n\010r" +
-      "equests\030\001 \003(\0132\017.models.Request\"\301\001\n\007Reque" +
+      "equests\030\001 \003(\0132\017.models.Request\"\330\001\n\007Reque" +
       "st\022\014\n\004time\030\001 \001(\003\022\025\n\rapplicationId\030\002 \001(\t\022" +
       "\023\n\013componentId\030\003 \001(\t\022\r\n\005apiId\030\004 \001(\t\022\026\n\016d" +
       "ataToTransfer\030\006 \001(\003\022\025\n\rmipsDataNodes\030\005 \001" +
       "(\005\022\021\n\trequestId\030\007 \001(\005\022\030\n\020expectedDuratio" +
-      "n\030\010 \001(\005\022\021\n\tdataNodes\030\t \003(\005B$\n\023eu.recap.s" +
-      "im.modelsB\rWorkloadModelb\006proto3"
+      "n\030\010 \001(\005\022\021\n\tdataNodes\030\t \003(\005\022\025\n\rsearchCont" +
+      "ent\030\n \001(\tB$\n\023eu.recap.sim.modelsB\rWorklo" +
+      "adModelb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -3872,7 +4053,7 @@ public final class WorkloadModel {
     internal_static_models_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_models_Request_descriptor,
-        new java.lang.String[] { "Time", "ApplicationId", "ComponentId", "ApiId", "DataToTransfer", "MipsDataNodes", "RequestId", "ExpectedDuration", "DataNodes", });
+        new java.lang.String[] { "Time", "ApplicationId", "ComponentId", "ApiId", "DataToTransfer", "MipsDataNodes", "RequestId", "ExpectedDuration", "DataNodes", "SearchContent", });
     eu.recap.sim.models.LocationModel.getDescriptor();
   }
 
