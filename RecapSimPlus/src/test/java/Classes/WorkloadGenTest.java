@@ -9,12 +9,12 @@ import java.util.TreeMap;
 import eu.recap.sim.models.WorkloadModel.*;
 
 public class WorkloadGenTest {
-	
-	//Parameters randNbWords()
+
+	// Parameters randNbWords()
 	final static int MOY_NBWORD = 4;
 	final static int STD_NBWORD = 2;
-	
-	//Parameters termSet and querySet
+
+	// Parameters termSet and querySet
 	final static int NB_TERMSET = 10000;
 	final static int NB_REQUEST = 1000;
 
@@ -35,8 +35,8 @@ public class WorkloadGenTest {
 		}
 
 		/*
-		 * Generating client IDs list and repart of requests between clients
-		 * TODO : allow any distribution 
+		 * Generating client IDs list and repart of requests between clients TODO :
+		 * allow any distribution
 		 */
 		// Creating lists
 		String[] IDs = new String[NB_REQUEST]; // Each index corresponds to one request, the value is the clientID
@@ -68,7 +68,7 @@ public class WorkloadGenTest {
 		/*
 		 * Creation of Requests
 		 */
-		List<Request.Builder> buildersRequests = buildersRequests(termDist, NB_REQUEST);
+		List<Request.Builder> buildersRequests = buildersRequests(termDist);
 		List<Request> requests = new ArrayList<Request>();
 		int i = 0;
 		for (Request.Builder request : buildersRequests) {
@@ -115,11 +115,16 @@ public class WorkloadGenTest {
 	}
 
 	private static void printResults(Workload workload, long startTime) {
-		System.out.println("   Request   |   Time   |   Device   ");
+		String configPrintf="%32s %1s %8s %1s %6s %1s %17s";
+		System.out.printf(configPrintf,"Request","|","Time","|","Device","|","Score\n");
+		System.out.println("----------------------------------------------------------------------------------");
 		for (Device device : workload.getDevicesList()) {
 			for (Request request : device.getRequestsList()) {
-				System.out.println(request.getSearchContent().toString() + " | " + (request.getTime() - startTime)
-						+ " | " + device.getDeviceId());
+				System.out.printf(configPrintf,
+						request.getSearchContent().toString(),"|",
+						(request.getTime() - startTime),"|",
+						device.getDeviceId(),"|",
+						getScore(request)+"\n");
 			}
 		}
 
@@ -135,23 +140,36 @@ public class WorkloadGenTest {
 
 	/**
 	 * generates a List of nbRequest Request.Builders</br>
-	 * searchContent, ComponentId, apiId, reqestId and dataToTransfer are set here</br>
-	 * TODO : add as many settings as possible
-	 * TODO : add querySet!=querySequence
+	 * searchContent, ComponentId, apiId, reqestId and dataToTransfer are set
+	 * here</br>
+	 * TODO : add as many settings as possible TODO : add querySet!=querySequence
 	 */
-	public static List<Request.Builder> buildersRequests(TreeMap<Long, Double> termDist, int nbRequest) {
-		List<Request.Builder> res = new ArrayList<Request.Builder>();
-
-		for (int nR = 0; nR < nbRequest; nR++) {
+	public static List<Request.Builder> buildersRequests(TreeMap<Long, Double> termDist) {
+		// Generating RequestSet and RequestScores
+		List<Request.Builder> requestSet = new ArrayList<Request.Builder>();
+		List<Double> requestScores = new ArrayList<Double>();
+		for (int nR = 0; nR < NB_REQUEST; nR++) {
 			Request.Builder request = Request.newBuilder();
 			request.setSearchContent(randQueryContent(termDist, randNbWord())).setComponentId("1").setApiId("1_1")
 					.setRequestId(nR).setDataToTransfer(1); // ??
 			// request.set...
-			res.add(request);
+			requestSet.add(request);
+			requestScores.add(getScore(request.build()));
 		}
-		return res;
+
+		// Generating distribution
+		FreqD<Request.Builder> dist = new FreqD<Request.Builder>(requestSet, requestScores);
+
+		// Picking requests
+		List<Request.Builder> requestSequence = new ArrayList<Request.Builder>();
+		for (int req = 0; req < NB_REQUEST; req++) {
+			requestSequence.add(dist.sample());
+		}
+
+		return requestSequence;
+
 	}
-	
+
 	/**
 	 * Returns the score of the query</br>
 	 * Change this method to change way of valorising requests.
@@ -173,7 +191,8 @@ public class WorkloadGenTest {
 
 	/**
 	 * Random integer number with a gaussian distribution</br>
-	 * Change parameters or this to have a different distribution of the length of words
+	 * Change parameters or this to have a different distribution of the length of
+	 * words
 	 */
 	public static int randNbWord() {
 		int res = (int) (MOY_NBWORD + STD_NBWORD * new Random().nextGaussian());
@@ -185,7 +204,7 @@ public class WorkloadGenTest {
 	 * Change this method to change the format of the String.</br>
 	 * Change proto file of WorkloadModel to change type of request content. </br>
 	 * 
-	 * Current format : "1-23-5-...-"
+	 * TODO format : "1+23+5+..."
 	 */
 	public static String randQueryContent(TreeMap<Long, Double> termDist, int nbWord) {
 		// Creating distribution
@@ -205,7 +224,8 @@ public class WorkloadGenTest {
 		// Parsing into a formatted String
 		String rep = "";
 		for (long w : content) {
-			rep+=w+"-";
+			int len = (int) (Math.log10(w) + 1);
+			rep = rep + len + w;
 		}
 
 		return rep;
