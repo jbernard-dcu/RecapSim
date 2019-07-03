@@ -35,8 +35,8 @@ public class WorkloadGenTest {
 		}
 
 		/*
-		 * Generating client IDs list and repart of requests between clients TODO :
-		 * allow any distribution
+		 * Generating client IDs list and repart of requests between clients
+		 * TODO : allow any distribution 
 		 */
 		// Creating lists
 		String[] IDs = new String[NB_REQUEST]; // Each index corresponds to one request, the value is the clientID
@@ -137,6 +137,7 @@ public class WorkloadGenTest {
 	 * generates a List of nbRequest Request.Builders</br>
 	 * searchContent, ComponentId, apiId, reqestId and dataToTransfer are set here</br>
 	 * TODO : add as many settings as possible
+	 * TODO : add querySet!=querySequence
 	 */
 	public static List<Request.Builder> buildersRequests(TreeMap<Long, Double> termDist, int nbRequest) {
 		List<Request.Builder> res = new ArrayList<Request.Builder>();
@@ -149,6 +150,25 @@ public class WorkloadGenTest {
 			res.add(request);
 		}
 		return res;
+	}
+	
+	/**
+	 * Returns the score of the query</br>
+	 * Change this method to change way of valorising requests.
+	 */
+	public static double getScore(Request r) {
+		String content = r.getSearchContent();
+		int index = 0;
+		int nbWord = 0;
+		double score = 0.;
+		while (index < content.length()) {
+			int len = Integer.parseInt(content.substring(index, index + 1));
+			long word = Long.parseLong(content.substring(index + 1, index + 1 + len));
+			nbWord += 1;
+			score += 1. / word;
+			index += len + 1;
+		}
+		return score / nbWord;
 	}
 
 	/**
@@ -165,11 +185,7 @@ public class WorkloadGenTest {
 	 * Change this method to change the format of the String.</br>
 	 * Change proto file of WorkloadModel to change type of request content. </br>
 	 * 
-	 * Current format : "123456289"</br>
-	 * 1st digit : length of the number </br>
-	 * following digits : number </br>
-	 * etc... for all numbers </br>
-	 * So here the request is 2-456-89</br>
+	 * Current format : "1-23-5-...-"
 	 */
 	public static String randQueryContent(TreeMap<Long, Double> termDist, int nbWord) {
 		// Creating distribution
@@ -189,8 +205,7 @@ public class WorkloadGenTest {
 		// Parsing into a formatted String
 		String rep = "";
 		for (long w : content) {
-			int len = (int) (Math.log10(w) + 1);
-			rep = rep + len + w;
+			rep+=w+"-";
 		}
 
 		return rep;
