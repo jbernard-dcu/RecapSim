@@ -127,7 +127,9 @@ public class WorkloadGenTest {
 						getScore(request)+"\n");
 			}
 		}
-
+		
+		long endTime = System.currentTimeMillis();
+		System.out.println("Start time:"+startTime+"     End time:"+endTime+"     Generating time:"+(endTime-startTime)/1000.+"s");
 	}
 
 	/**
