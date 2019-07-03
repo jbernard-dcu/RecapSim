@@ -94,7 +94,7 @@ public final class Utilisation {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
                 dataCentres_ = new java.util.ArrayList<eu.recap.sim.models.Utilisation.Infrastructure.DataCentre>();
                 mutable_bitField0_ |= 0x00000002;
               }
@@ -109,7 +109,7 @@ public final class Utilisation {
               break;
             }
             default: {
-              if (!parseUnknownField(
+              if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -123,7 +123,7 @@ public final class Utilisation {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
           dataCentres_ = java.util.Collections.unmodifiableList(dataCentres_);
         }
         this.unknownFields = unknownFields.build();
@@ -259,7 +259,7 @@ public final class Utilisation {
                 done = true;
                 break;
               case 10: {
-                if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
                   nodes_ = new java.util.ArrayList<eu.recap.sim.models.Utilisation.Infrastructure.DataCentre.Node>();
                   mutable_bitField0_ |= 0x00000004;
                 }
@@ -268,7 +268,7 @@ public final class Utilisation {
                 break;
               }
               case 18: {
-                if (!((mutable_bitField0_ & 0x00000008) != 0)) {
+                if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
                   switches_ = new java.util.ArrayList<eu.recap.sim.models.Utilisation.Infrastructure.DataCentre.Switch>();
                   mutable_bitField0_ |= 0x00000008;
                 }
@@ -289,7 +289,7 @@ public final class Utilisation {
                 break;
               }
               default: {
-                if (!parseUnknownField(
+                if (!parseUnknownFieldProto3(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -303,10 +303,10 @@ public final class Utilisation {
           throw new com.google.protobuf.InvalidProtocolBufferException(
               e).setUnfinishedMessage(this);
         } finally {
-          if (((mutable_bitField0_ & 0x00000004) != 0)) {
+          if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
             nodes_ = java.util.Collections.unmodifiableList(nodes_);
           }
-          if (((mutable_bitField0_ & 0x00000008) != 0)) {
+          if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
             switches_ = java.util.Collections.unmodifiableList(switches_);
           }
           this.unknownFields = unknownFields.build();
@@ -395,7 +395,7 @@ public final class Utilisation {
                   done = true;
                   break;
                 case 10: {
-                  if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                  if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
                     links_ = new java.util.ArrayList<eu.recap.sim.models.Utilisation.Infrastructure.DataCentre.Switch.Link>();
                     mutable_bitField0_ |= 0x00000001;
                   }
@@ -404,7 +404,7 @@ public final class Utilisation {
                   break;
                 }
                 default: {
-                  if (!parseUnknownField(
+                  if (!parseUnknownFieldProto3(
                       input, unknownFields, extensionRegistry, tag)) {
                     done = true;
                   }
@@ -418,7 +418,7 @@ public final class Utilisation {
             throw new com.google.protobuf.InvalidProtocolBufferException(
                 e).setUnfinishedMessage(this);
           } finally {
-            if (((mutable_bitField0_ & 0x00000001) != 0)) {
+            if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
               links_ = java.util.Collections.unmodifiableList(links_);
             }
             this.unknownFields = unknownFields.build();
@@ -499,7 +499,7 @@ public final class Utilisation {
                     break;
                   }
                   default: {
-                    if (!parseUnknownField(
+                    if (!parseUnknownFieldProto3(
                         input, unknownFields, extensionRegistry, tag)) {
                       done = true;
                     }
@@ -608,10 +608,11 @@ public final class Utilisation {
             }
             eu.recap.sim.models.Utilisation.Infrastructure.DataCentre.Switch.Link other = (eu.recap.sim.models.Utilisation.Infrastructure.DataCentre.Switch.Link) obj;
 
-            if (!getName()
-                .equals(other.getName())) return false;
-            if (!unknownFields.equals(other.unknownFields)) return false;
-            return true;
+            boolean result = true;
+            result = result && getName()
+                .equals(other.getName());
+            result = result && unknownFields.equals(other.unknownFields);
+            return result;
           }
 
           @java.lang.Override
@@ -791,35 +792,35 @@ public final class Utilisation {
 
             @java.lang.Override
             public Builder clone() {
-              return super.clone();
+              return (Builder) super.clone();
             }
             @java.lang.Override
             public Builder setField(
                 com.google.protobuf.Descriptors.FieldDescriptor field,
                 java.lang.Object value) {
-              return super.setField(field, value);
+              return (Builder) super.setField(field, value);
             }
             @java.lang.Override
             public Builder clearField(
                 com.google.protobuf.Descriptors.FieldDescriptor field) {
-              return super.clearField(field);
+              return (Builder) super.clearField(field);
             }
             @java.lang.Override
             public Builder clearOneof(
                 com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-              return super.clearOneof(oneof);
+              return (Builder) super.clearOneof(oneof);
             }
             @java.lang.Override
             public Builder setRepeatedField(
                 com.google.protobuf.Descriptors.FieldDescriptor field,
                 int index, java.lang.Object value) {
-              return super.setRepeatedField(field, index, value);
+              return (Builder) super.setRepeatedField(field, index, value);
             }
             @java.lang.Override
             public Builder addRepeatedField(
                 com.google.protobuf.Descriptors.FieldDescriptor field,
                 java.lang.Object value) {
-              return super.addRepeatedField(field, value);
+              return (Builder) super.addRepeatedField(field, value);
             }
             @java.lang.Override
             public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -937,7 +938,7 @@ public final class Utilisation {
             @java.lang.Override
             public final Builder setUnknownFields(
                 final com.google.protobuf.UnknownFieldSet unknownFields) {
-              return super.setUnknownFields(unknownFields);
+              return super.setUnknownFieldsProto3(unknownFields);
             }
 
             @java.lang.Override
@@ -1067,10 +1068,11 @@ public final class Utilisation {
           }
           eu.recap.sim.models.Utilisation.Infrastructure.DataCentre.Switch other = (eu.recap.sim.models.Utilisation.Infrastructure.DataCentre.Switch) obj;
 
-          if (!getLinksList()
-              .equals(other.getLinksList())) return false;
-          if (!unknownFields.equals(other.unknownFields)) return false;
-          return true;
+          boolean result = true;
+          result = result && getLinksList()
+              .equals(other.getLinksList());
+          result = result && unknownFields.equals(other.unknownFields);
+          return result;
         }
 
         @java.lang.Override
@@ -1252,7 +1254,7 @@ public final class Utilisation {
             eu.recap.sim.models.Utilisation.Infrastructure.DataCentre.Switch result = new eu.recap.sim.models.Utilisation.Infrastructure.DataCentre.Switch(this);
             int from_bitField0_ = bitField0_;
             if (linksBuilder_ == null) {
-              if (((bitField0_ & 0x00000001) != 0)) {
+              if (((bitField0_ & 0x00000001) == 0x00000001)) {
                 links_ = java.util.Collections.unmodifiableList(links_);
                 bitField0_ = (bitField0_ & ~0x00000001);
               }
@@ -1266,35 +1268,35 @@ public final class Utilisation {
 
           @java.lang.Override
           public Builder clone() {
-            return super.clone();
+            return (Builder) super.clone();
           }
           @java.lang.Override
           public Builder setField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
               java.lang.Object value) {
-            return super.setField(field, value);
+            return (Builder) super.setField(field, value);
           }
           @java.lang.Override
           public Builder clearField(
               com.google.protobuf.Descriptors.FieldDescriptor field) {
-            return super.clearField(field);
+            return (Builder) super.clearField(field);
           }
           @java.lang.Override
           public Builder clearOneof(
               com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-            return super.clearOneof(oneof);
+            return (Builder) super.clearOneof(oneof);
           }
           @java.lang.Override
           public Builder setRepeatedField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
               int index, java.lang.Object value) {
-            return super.setRepeatedField(field, index, value);
+            return (Builder) super.setRepeatedField(field, index, value);
           }
           @java.lang.Override
           public Builder addRepeatedField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
               java.lang.Object value) {
-            return super.addRepeatedField(field, value);
+            return (Builder) super.addRepeatedField(field, value);
           }
           @java.lang.Override
           public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1367,7 +1369,7 @@ public final class Utilisation {
           private java.util.List<eu.recap.sim.models.Utilisation.Infrastructure.DataCentre.Switch.Link> links_ =
             java.util.Collections.emptyList();
           private void ensureLinksIsMutable() {
-            if (!((bitField0_ & 0x00000001) != 0)) {
+            if (!((bitField0_ & 0x00000001) == 0x00000001)) {
               links_ = new java.util.ArrayList<eu.recap.sim.models.Utilisation.Infrastructure.DataCentre.Switch.Link>(links_);
               bitField0_ |= 0x00000001;
              }
@@ -1596,7 +1598,7 @@ public final class Utilisation {
               linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
                   eu.recap.sim.models.Utilisation.Infrastructure.DataCentre.Switch.Link, eu.recap.sim.models.Utilisation.Infrastructure.DataCentre.Switch.Link.Builder, eu.recap.sim.models.Utilisation.Infrastructure.DataCentre.Switch.LinkOrBuilder>(
                       links_,
-                      ((bitField0_ & 0x00000001) != 0),
+                      ((bitField0_ & 0x00000001) == 0x00000001),
                       getParentForChildren(),
                       isClean());
               links_ = null;
@@ -1606,7 +1608,7 @@ public final class Utilisation {
           @java.lang.Override
           public final Builder setUnknownFields(
               final com.google.protobuf.UnknownFieldSet unknownFields) {
-            return super.setUnknownFields(unknownFields);
+            return super.setUnknownFieldsProto3(unknownFields);
           }
 
           @java.lang.Override
@@ -1775,7 +1777,7 @@ public final class Utilisation {
                   done = true;
                   break;
                 case 10: {
-                  if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                  if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
                     cpu_ = new java.util.ArrayList<eu.recap.sim.models.Utilisation.Infrastructure.DataCentre.Node.Cpu>();
                     mutable_bitField0_ |= 0x00000001;
                   }
@@ -1784,7 +1786,7 @@ public final class Utilisation {
                   break;
                 }
                 case 18: {
-                  if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                  if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
                     memoryUtil_ = new java.util.ArrayList<eu.recap.sim.models.Utilisation.Infrastructure.DataCentre.Node.MemoryUtil>();
                     mutable_bitField0_ |= 0x00000002;
                   }
@@ -1793,7 +1795,7 @@ public final class Utilisation {
                   break;
                 }
                 case 26: {
-                  if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                  if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
                     storageUtil_ = new java.util.ArrayList<eu.recap.sim.models.Utilisation.Infrastructure.DataCentre.Node.StorageUtil>();
                     mutable_bitField0_ |= 0x00000004;
                   }
@@ -1802,7 +1804,7 @@ public final class Utilisation {
                   break;
                 }
                 default: {
-                  if (!parseUnknownField(
+                  if (!parseUnknownFieldProto3(
                       input, unknownFields, extensionRegistry, tag)) {
                     done = true;
                   }
@@ -1816,13 +1818,13 @@ public final class Utilisation {
             throw new com.google.protobuf.InvalidProtocolBufferException(
                 e).setUnfinishedMessage(this);
           } finally {
-            if (((mutable_bitField0_ & 0x00000001) != 0)) {
+            if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
               cpu_ = java.util.Collections.unmodifiableList(cpu_);
             }
-            if (((mutable_bitField0_ & 0x00000002) != 0)) {
+            if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
               memoryUtil_ = java.util.Collections.unmodifiableList(memoryUtil_);
             }
-            if (((mutable_bitField0_ & 0x00000004) != 0)) {
+            if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
               storageUtil_ = java.util.Collections.unmodifiableList(storageUtil_);
             }
             this.unknownFields = unknownFields.build();
@@ -1945,7 +1947,7 @@ public final class Utilisation {
                     break;
                   }
                   case 26: {
-                    if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                    if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
                       cores_ = new java.util.ArrayList<eu.recap.sim.models.Utilisation.Infrastructure.DataCentre.Node.Cpu.Core>();
                       mutable_bitField0_ |= 0x00000004;
                     }
@@ -1954,7 +1956,7 @@ public final class Utilisation {
                     break;
                   }
                   default: {
-                    if (!parseUnknownField(
+                    if (!parseUnknownFieldProto3(
                         input, unknownFields, extensionRegistry, tag)) {
                       done = true;
                     }
@@ -1968,7 +1970,7 @@ public final class Utilisation {
               throw new com.google.protobuf.InvalidProtocolBufferException(
                   e).setUnfinishedMessage(this);
             } finally {
-              if (((mutable_bitField0_ & 0x00000004) != 0)) {
+              if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
                 cores_ = java.util.Collections.unmodifiableList(cores_);
               }
               this.unknownFields = unknownFields.build();
@@ -2079,7 +2081,7 @@ public final class Utilisation {
                       done = true;
                       break;
                     case 10: {
-                      if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                      if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
                         utilisation_ = new java.util.ArrayList<eu.recap.sim.models.Utilisation.Infrastructure.DataCentre.Node.Cpu.Core.CoreUtil>();
                         mutable_bitField0_ |= 0x00000004;
                       }
@@ -2100,7 +2102,7 @@ public final class Utilisation {
                       break;
                     }
                     default: {
-                      if (!parseUnknownField(
+                      if (!parseUnknownFieldProto3(
                           input, unknownFields, extensionRegistry, tag)) {
                         done = true;
                       }
@@ -2114,7 +2116,7 @@ public final class Utilisation {
                 throw new com.google.protobuf.InvalidProtocolBufferException(
                     e).setUnfinishedMessage(this);
               } finally {
-                if (((mutable_bitField0_ & 0x00000004) != 0)) {
+                if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
                   utilisation_ = java.util.Collections.unmodifiableList(utilisation_);
                 }
                 this.unknownFields = unknownFields.build();
@@ -2167,6 +2169,7 @@ public final class Utilisation {
               }
               private CoreUtil() {
                 time_ = "";
+                utilisation_ = 0F;
               }
 
               @java.lang.Override
@@ -2205,7 +2208,7 @@ public final class Utilisation {
                         break;
                       }
                       default: {
-                        if (!parseUnknownField(
+                        if (!parseUnknownFieldProto3(
                             input, unknownFields, extensionRegistry, tag)) {
                           done = true;
                         }
@@ -2330,13 +2333,15 @@ public final class Utilisation {
                 }
                 eu.recap.sim.models.Utilisation.Infrastructure.DataCentre.Node.Cpu.Core.CoreUtil other = (eu.recap.sim.models.Utilisation.Infrastructure.DataCentre.Node.Cpu.Core.CoreUtil) obj;
 
-                if (!getTime()
-                    .equals(other.getTime())) return false;
-                if (java.lang.Float.floatToIntBits(getUtilisation())
-                    != java.lang.Float.floatToIntBits(
-                        other.getUtilisation())) return false;
-                if (!unknownFields.equals(other.unknownFields)) return false;
-                return true;
+                boolean result = true;
+                result = result && getTime()
+                    .equals(other.getTime());
+                result = result && (
+                    java.lang.Float.floatToIntBits(getUtilisation())
+                    == java.lang.Float.floatToIntBits(
+                        other.getUtilisation()));
+                result = result && unknownFields.equals(other.unknownFields);
+                return result;
               }
 
               @java.lang.Override
@@ -2522,35 +2527,35 @@ public final class Utilisation {
 
                 @java.lang.Override
                 public Builder clone() {
-                  return super.clone();
+                  return (Builder) super.clone();
                 }
                 @java.lang.Override
                 public Builder setField(
                     com.google.protobuf.Descriptors.FieldDescriptor field,
                     java.lang.Object value) {
-                  return super.setField(field, value);
+                  return (Builder) super.setField(field, value);
                 }
                 @java.lang.Override
                 public Builder clearField(
                     com.google.protobuf.Descriptors.FieldDescriptor field) {
-                  return super.clearField(field);
+                  return (Builder) super.clearField(field);
                 }
                 @java.lang.Override
                 public Builder clearOneof(
                     com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-                  return super.clearOneof(oneof);
+                  return (Builder) super.clearOneof(oneof);
                 }
                 @java.lang.Override
                 public Builder setRepeatedField(
                     com.google.protobuf.Descriptors.FieldDescriptor field,
                     int index, java.lang.Object value) {
-                  return super.setRepeatedField(field, index, value);
+                  return (Builder) super.setRepeatedField(field, index, value);
                 }
                 @java.lang.Override
                 public Builder addRepeatedField(
                     com.google.protobuf.Descriptors.FieldDescriptor field,
                     java.lang.Object value) {
-                  return super.addRepeatedField(field, value);
+                  return (Builder) super.addRepeatedField(field, value);
                 }
                 @java.lang.Override
                 public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2697,7 +2702,7 @@ public final class Utilisation {
                 @java.lang.Override
                 public final Builder setUnknownFields(
                     final com.google.protobuf.UnknownFieldSet unknownFields) {
-                  return super.setUnknownFields(unknownFields);
+                  return super.setUnknownFieldsProto3(unknownFields);
                 }
 
                 @java.lang.Override
@@ -2908,14 +2913,15 @@ public final class Utilisation {
               }
               eu.recap.sim.models.Utilisation.Infrastructure.DataCentre.Node.Cpu.Core other = (eu.recap.sim.models.Utilisation.Infrastructure.DataCentre.Node.Cpu.Core) obj;
 
-              if (!getID()
-                  .equals(other.getID())) return false;
-              if (!getName()
-                  .equals(other.getName())) return false;
-              if (!getUtilisationList()
-                  .equals(other.getUtilisationList())) return false;
-              if (!unknownFields.equals(other.unknownFields)) return false;
-              return true;
+              boolean result = true;
+              result = result && getID()
+                  .equals(other.getID());
+              result = result && getName()
+                  .equals(other.getName());
+              result = result && getUtilisationList()
+                  .equals(other.getUtilisationList());
+              result = result && unknownFields.equals(other.unknownFields);
+              return result;
             }
 
             @java.lang.Override
@@ -3108,7 +3114,7 @@ public final class Utilisation {
                 result.iD_ = iD_;
                 result.name_ = name_;
                 if (utilisationBuilder_ == null) {
-                  if (((bitField0_ & 0x00000004) != 0)) {
+                  if (((bitField0_ & 0x00000004) == 0x00000004)) {
                     utilisation_ = java.util.Collections.unmodifiableList(utilisation_);
                     bitField0_ = (bitField0_ & ~0x00000004);
                   }
@@ -3123,35 +3129,35 @@ public final class Utilisation {
 
               @java.lang.Override
               public Builder clone() {
-                return super.clone();
+                return (Builder) super.clone();
               }
               @java.lang.Override
               public Builder setField(
                   com.google.protobuf.Descriptors.FieldDescriptor field,
                   java.lang.Object value) {
-                return super.setField(field, value);
+                return (Builder) super.setField(field, value);
               }
               @java.lang.Override
               public Builder clearField(
                   com.google.protobuf.Descriptors.FieldDescriptor field) {
-                return super.clearField(field);
+                return (Builder) super.clearField(field);
               }
               @java.lang.Override
               public Builder clearOneof(
                   com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-                return super.clearOneof(oneof);
+                return (Builder) super.clearOneof(oneof);
               }
               @java.lang.Override
               public Builder setRepeatedField(
                   com.google.protobuf.Descriptors.FieldDescriptor field,
                   int index, java.lang.Object value) {
-                return super.setRepeatedField(field, index, value);
+                return (Builder) super.setRepeatedField(field, index, value);
               }
               @java.lang.Override
               public Builder addRepeatedField(
                   com.google.protobuf.Descriptors.FieldDescriptor field,
                   java.lang.Object value) {
-                return super.addRepeatedField(field, value);
+                return (Builder) super.addRepeatedField(field, value);
               }
               @java.lang.Override
               public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3370,7 +3376,7 @@ public final class Utilisation {
               private java.util.List<eu.recap.sim.models.Utilisation.Infrastructure.DataCentre.Node.Cpu.Core.CoreUtil> utilisation_ =
                 java.util.Collections.emptyList();
               private void ensureUtilisationIsMutable() {
-                if (!((bitField0_ & 0x00000004) != 0)) {
+                if (!((bitField0_ & 0x00000004) == 0x00000004)) {
                   utilisation_ = new java.util.ArrayList<eu.recap.sim.models.Utilisation.Infrastructure.DataCentre.Node.Cpu.Core.CoreUtil>(utilisation_);
                   bitField0_ |= 0x00000004;
                  }
@@ -3599,7 +3605,7 @@ public final class Utilisation {
                   utilisationBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
                       eu.recap.sim.models.Utilisation.Infrastructure.DataCentre.Node.Cpu.Core.CoreUtil, eu.recap.sim.models.Utilisation.Infrastructure.DataCentre.Node.Cpu.Core.CoreUtil.Builder, eu.recap.sim.models.Utilisation.Infrastructure.DataCentre.Node.Cpu.Core.CoreUtilOrBuilder>(
                           utilisation_,
-                          ((bitField0_ & 0x00000004) != 0),
+                          ((bitField0_ & 0x00000004) == 0x00000004),
                           getParentForChildren(),
                           isClean());
                   utilisation_ = null;
@@ -3609,7 +3615,7 @@ public final class Utilisation {
               @java.lang.Override
               public final Builder setUnknownFields(
                   final com.google.protobuf.UnknownFieldSet unknownFields) {
-                return super.setUnknownFields(unknownFields);
+                return super.setUnknownFieldsProto3(unknownFields);
               }
 
               @java.lang.Override
@@ -3820,14 +3826,15 @@ public final class Utilisation {
             }
             eu.recap.sim.models.Utilisation.Infrastructure.DataCentre.Node.Cpu other = (eu.recap.sim.models.Utilisation.Infrastructure.DataCentre.Node.Cpu) obj;
 
-            if (!getName()
-                .equals(other.getName())) return false;
-            if (!getID()
-                .equals(other.getID())) return false;
-            if (!getCoresList()
-                .equals(other.getCoresList())) return false;
-            if (!unknownFields.equals(other.unknownFields)) return false;
-            return true;
+            boolean result = true;
+            result = result && getName()
+                .equals(other.getName());
+            result = result && getID()
+                .equals(other.getID());
+            result = result && getCoresList()
+                .equals(other.getCoresList());
+            result = result && unknownFields.equals(other.unknownFields);
+            return result;
           }
 
           @java.lang.Override
@@ -4020,7 +4027,7 @@ public final class Utilisation {
               result.name_ = name_;
               result.iD_ = iD_;
               if (coresBuilder_ == null) {
-                if (((bitField0_ & 0x00000004) != 0)) {
+                if (((bitField0_ & 0x00000004) == 0x00000004)) {
                   cores_ = java.util.Collections.unmodifiableList(cores_);
                   bitField0_ = (bitField0_ & ~0x00000004);
                 }
@@ -4035,35 +4042,35 @@ public final class Utilisation {
 
             @java.lang.Override
             public Builder clone() {
-              return super.clone();
+              return (Builder) super.clone();
             }
             @java.lang.Override
             public Builder setField(
                 com.google.protobuf.Descriptors.FieldDescriptor field,
                 java.lang.Object value) {
-              return super.setField(field, value);
+              return (Builder) super.setField(field, value);
             }
             @java.lang.Override
             public Builder clearField(
                 com.google.protobuf.Descriptors.FieldDescriptor field) {
-              return super.clearField(field);
+              return (Builder) super.clearField(field);
             }
             @java.lang.Override
             public Builder clearOneof(
                 com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-              return super.clearOneof(oneof);
+              return (Builder) super.clearOneof(oneof);
             }
             @java.lang.Override
             public Builder setRepeatedField(
                 com.google.protobuf.Descriptors.FieldDescriptor field,
                 int index, java.lang.Object value) {
-              return super.setRepeatedField(field, index, value);
+              return (Builder) super.setRepeatedField(field, index, value);
             }
             @java.lang.Override
             public Builder addRepeatedField(
                 com.google.protobuf.Descriptors.FieldDescriptor field,
                 java.lang.Object value) {
-              return super.addRepeatedField(field, value);
+              return (Builder) super.addRepeatedField(field, value);
             }
             @java.lang.Override
             public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4282,7 +4289,7 @@ public final class Utilisation {
             private java.util.List<eu.recap.sim.models.Utilisation.Infrastructure.DataCentre.Node.Cpu.Core> cores_ =
               java.util.Collections.emptyList();
             private void ensureCoresIsMutable() {
-              if (!((bitField0_ & 0x00000004) != 0)) {
+              if (!((bitField0_ & 0x00000004) == 0x00000004)) {
                 cores_ = new java.util.ArrayList<eu.recap.sim.models.Utilisation.Infrastructure.DataCentre.Node.Cpu.Core>(cores_);
                 bitField0_ |= 0x00000004;
                }
@@ -4511,7 +4518,7 @@ public final class Utilisation {
                 coresBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
                     eu.recap.sim.models.Utilisation.Infrastructure.DataCentre.Node.Cpu.Core, eu.recap.sim.models.Utilisation.Infrastructure.DataCentre.Node.Cpu.Core.Builder, eu.recap.sim.models.Utilisation.Infrastructure.DataCentre.Node.Cpu.CoreOrBuilder>(
                         cores_,
-                        ((bitField0_ & 0x00000004) != 0),
+                        ((bitField0_ & 0x00000004) == 0x00000004),
                         getParentForChildren(),
                         isClean());
                 cores_ = null;
@@ -4521,7 +4528,7 @@ public final class Utilisation {
             @java.lang.Override
             public final Builder setUnknownFields(
                 final com.google.protobuf.UnknownFieldSet unknownFields) {
-              return super.setUnknownFields(unknownFields);
+              return super.setUnknownFieldsProto3(unknownFields);
             }
 
             @java.lang.Override
@@ -4615,6 +4622,7 @@ public final class Utilisation {
           private MemoryUtil() {
             name_ = "";
             iD_ = "";
+            ram_ = 0;
           }
 
           @java.lang.Override
@@ -4659,7 +4667,7 @@ public final class Utilisation {
                     break;
                   }
                   default: {
-                    if (!parseUnknownField(
+                    if (!parseUnknownFieldProto3(
                         input, unknownFields, extensionRegistry, tag)) {
                       done = true;
                     }
@@ -4824,14 +4832,15 @@ public final class Utilisation {
             }
             eu.recap.sim.models.Utilisation.Infrastructure.DataCentre.Node.MemoryUtil other = (eu.recap.sim.models.Utilisation.Infrastructure.DataCentre.Node.MemoryUtil) obj;
 
-            if (!getName()
-                .equals(other.getName())) return false;
-            if (!getID()
-                .equals(other.getID())) return false;
-            if (getRam()
-                != other.getRam()) return false;
-            if (!unknownFields.equals(other.unknownFields)) return false;
-            return true;
+            boolean result = true;
+            result = result && getName()
+                .equals(other.getName());
+            result = result && getID()
+                .equals(other.getID());
+            result = result && (getRam()
+                == other.getRam());
+            result = result && unknownFields.equals(other.unknownFields);
+            return result;
           }
 
           @java.lang.Override
@@ -5021,35 +5030,35 @@ public final class Utilisation {
 
             @java.lang.Override
             public Builder clone() {
-              return super.clone();
+              return (Builder) super.clone();
             }
             @java.lang.Override
             public Builder setField(
                 com.google.protobuf.Descriptors.FieldDescriptor field,
                 java.lang.Object value) {
-              return super.setField(field, value);
+              return (Builder) super.setField(field, value);
             }
             @java.lang.Override
             public Builder clearField(
                 com.google.protobuf.Descriptors.FieldDescriptor field) {
-              return super.clearField(field);
+              return (Builder) super.clearField(field);
             }
             @java.lang.Override
             public Builder clearOneof(
                 com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-              return super.clearOneof(oneof);
+              return (Builder) super.clearOneof(oneof);
             }
             @java.lang.Override
             public Builder setRepeatedField(
                 com.google.protobuf.Descriptors.FieldDescriptor field,
                 int index, java.lang.Object value) {
-              return super.setRepeatedField(field, index, value);
+              return (Builder) super.setRepeatedField(field, index, value);
             }
             @java.lang.Override
             public Builder addRepeatedField(
                 com.google.protobuf.Descriptors.FieldDescriptor field,
                 java.lang.Object value) {
-              return super.addRepeatedField(field, value);
+              return (Builder) super.addRepeatedField(field, value);
             }
             @java.lang.Override
             public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5269,7 +5278,7 @@ public final class Utilisation {
             @java.lang.Override
             public final Builder setUnknownFields(
                 final com.google.protobuf.UnknownFieldSet unknownFields) {
-              return super.setUnknownFields(unknownFields);
+              return super.setUnknownFieldsProto3(unknownFields);
             }
 
             @java.lang.Override
@@ -5363,6 +5372,7 @@ public final class Utilisation {
           private StorageUtil() {
             name_ = "";
             iD_ = "";
+            storage_ = 0;
           }
 
           @java.lang.Override
@@ -5407,7 +5417,7 @@ public final class Utilisation {
                     break;
                   }
                   default: {
-                    if (!parseUnknownField(
+                    if (!parseUnknownFieldProto3(
                         input, unknownFields, extensionRegistry, tag)) {
                       done = true;
                     }
@@ -5572,14 +5582,15 @@ public final class Utilisation {
             }
             eu.recap.sim.models.Utilisation.Infrastructure.DataCentre.Node.StorageUtil other = (eu.recap.sim.models.Utilisation.Infrastructure.DataCentre.Node.StorageUtil) obj;
 
-            if (!getName()
-                .equals(other.getName())) return false;
-            if (!getID()
-                .equals(other.getID())) return false;
-            if (getStorage()
-                != other.getStorage()) return false;
-            if (!unknownFields.equals(other.unknownFields)) return false;
-            return true;
+            boolean result = true;
+            result = result && getName()
+                .equals(other.getName());
+            result = result && getID()
+                .equals(other.getID());
+            result = result && (getStorage()
+                == other.getStorage());
+            result = result && unknownFields.equals(other.unknownFields);
+            return result;
           }
 
           @java.lang.Override
@@ -5769,35 +5780,35 @@ public final class Utilisation {
 
             @java.lang.Override
             public Builder clone() {
-              return super.clone();
+              return (Builder) super.clone();
             }
             @java.lang.Override
             public Builder setField(
                 com.google.protobuf.Descriptors.FieldDescriptor field,
                 java.lang.Object value) {
-              return super.setField(field, value);
+              return (Builder) super.setField(field, value);
             }
             @java.lang.Override
             public Builder clearField(
                 com.google.protobuf.Descriptors.FieldDescriptor field) {
-              return super.clearField(field);
+              return (Builder) super.clearField(field);
             }
             @java.lang.Override
             public Builder clearOneof(
                 com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-              return super.clearOneof(oneof);
+              return (Builder) super.clearOneof(oneof);
             }
             @java.lang.Override
             public Builder setRepeatedField(
                 com.google.protobuf.Descriptors.FieldDescriptor field,
                 int index, java.lang.Object value) {
-              return super.setRepeatedField(field, index, value);
+              return (Builder) super.setRepeatedField(field, index, value);
             }
             @java.lang.Override
             public Builder addRepeatedField(
                 com.google.protobuf.Descriptors.FieldDescriptor field,
                 java.lang.Object value) {
-              return super.addRepeatedField(field, value);
+              return (Builder) super.addRepeatedField(field, value);
             }
             @java.lang.Override
             public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -6017,7 +6028,7 @@ public final class Utilisation {
             @java.lang.Override
             public final Builder setUnknownFields(
                 final com.google.protobuf.UnknownFieldSet unknownFields) {
-              return super.setUnknownFields(unknownFields);
+              return super.setUnknownFieldsProto3(unknownFields);
             }
 
             @java.lang.Override
@@ -6231,14 +6242,15 @@ public final class Utilisation {
           }
           eu.recap.sim.models.Utilisation.Infrastructure.DataCentre.Node other = (eu.recap.sim.models.Utilisation.Infrastructure.DataCentre.Node) obj;
 
-          if (!getCpuList()
-              .equals(other.getCpuList())) return false;
-          if (!getMemoryUtilList()
-              .equals(other.getMemoryUtilList())) return false;
-          if (!getStorageUtilList()
-              .equals(other.getStorageUtilList())) return false;
-          if (!unknownFields.equals(other.unknownFields)) return false;
-          return true;
+          boolean result = true;
+          result = result && getCpuList()
+              .equals(other.getCpuList());
+          result = result && getMemoryUtilList()
+              .equals(other.getMemoryUtilList());
+          result = result && getStorageUtilList()
+              .equals(other.getStorageUtilList());
+          result = result && unknownFields.equals(other.unknownFields);
+          return result;
         }
 
         @java.lang.Override
@@ -6442,7 +6454,7 @@ public final class Utilisation {
             eu.recap.sim.models.Utilisation.Infrastructure.DataCentre.Node result = new eu.recap.sim.models.Utilisation.Infrastructure.DataCentre.Node(this);
             int from_bitField0_ = bitField0_;
             if (cpuBuilder_ == null) {
-              if (((bitField0_ & 0x00000001) != 0)) {
+              if (((bitField0_ & 0x00000001) == 0x00000001)) {
                 cpu_ = java.util.Collections.unmodifiableList(cpu_);
                 bitField0_ = (bitField0_ & ~0x00000001);
               }
@@ -6451,7 +6463,7 @@ public final class Utilisation {
               result.cpu_ = cpuBuilder_.build();
             }
             if (memoryUtilBuilder_ == null) {
-              if (((bitField0_ & 0x00000002) != 0)) {
+              if (((bitField0_ & 0x00000002) == 0x00000002)) {
                 memoryUtil_ = java.util.Collections.unmodifiableList(memoryUtil_);
                 bitField0_ = (bitField0_ & ~0x00000002);
               }
@@ -6460,7 +6472,7 @@ public final class Utilisation {
               result.memoryUtil_ = memoryUtilBuilder_.build();
             }
             if (storageUtilBuilder_ == null) {
-              if (((bitField0_ & 0x00000004) != 0)) {
+              if (((bitField0_ & 0x00000004) == 0x00000004)) {
                 storageUtil_ = java.util.Collections.unmodifiableList(storageUtil_);
                 bitField0_ = (bitField0_ & ~0x00000004);
               }
@@ -6474,35 +6486,35 @@ public final class Utilisation {
 
           @java.lang.Override
           public Builder clone() {
-            return super.clone();
+            return (Builder) super.clone();
           }
           @java.lang.Override
           public Builder setField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
               java.lang.Object value) {
-            return super.setField(field, value);
+            return (Builder) super.setField(field, value);
           }
           @java.lang.Override
           public Builder clearField(
               com.google.protobuf.Descriptors.FieldDescriptor field) {
-            return super.clearField(field);
+            return (Builder) super.clearField(field);
           }
           @java.lang.Override
           public Builder clearOneof(
               com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-            return super.clearOneof(oneof);
+            return (Builder) super.clearOneof(oneof);
           }
           @java.lang.Override
           public Builder setRepeatedField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
               int index, java.lang.Object value) {
-            return super.setRepeatedField(field, index, value);
+            return (Builder) super.setRepeatedField(field, index, value);
           }
           @java.lang.Override
           public Builder addRepeatedField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
               java.lang.Object value) {
-            return super.addRepeatedField(field, value);
+            return (Builder) super.addRepeatedField(field, value);
           }
           @java.lang.Override
           public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -6627,7 +6639,7 @@ public final class Utilisation {
           private java.util.List<eu.recap.sim.models.Utilisation.Infrastructure.DataCentre.Node.Cpu> cpu_ =
             java.util.Collections.emptyList();
           private void ensureCpuIsMutable() {
-            if (!((bitField0_ & 0x00000001) != 0)) {
+            if (!((bitField0_ & 0x00000001) == 0x00000001)) {
               cpu_ = new java.util.ArrayList<eu.recap.sim.models.Utilisation.Infrastructure.DataCentre.Node.Cpu>(cpu_);
               bitField0_ |= 0x00000001;
              }
@@ -6856,7 +6868,7 @@ public final class Utilisation {
               cpuBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
                   eu.recap.sim.models.Utilisation.Infrastructure.DataCentre.Node.Cpu, eu.recap.sim.models.Utilisation.Infrastructure.DataCentre.Node.Cpu.Builder, eu.recap.sim.models.Utilisation.Infrastructure.DataCentre.Node.CpuOrBuilder>(
                       cpu_,
-                      ((bitField0_ & 0x00000001) != 0),
+                      ((bitField0_ & 0x00000001) == 0x00000001),
                       getParentForChildren(),
                       isClean());
               cpu_ = null;
@@ -6867,7 +6879,7 @@ public final class Utilisation {
           private java.util.List<eu.recap.sim.models.Utilisation.Infrastructure.DataCentre.Node.MemoryUtil> memoryUtil_ =
             java.util.Collections.emptyList();
           private void ensureMemoryUtilIsMutable() {
-            if (!((bitField0_ & 0x00000002) != 0)) {
+            if (!((bitField0_ & 0x00000002) == 0x00000002)) {
               memoryUtil_ = new java.util.ArrayList<eu.recap.sim.models.Utilisation.Infrastructure.DataCentre.Node.MemoryUtil>(memoryUtil_);
               bitField0_ |= 0x00000002;
              }
@@ -7096,7 +7108,7 @@ public final class Utilisation {
               memoryUtilBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
                   eu.recap.sim.models.Utilisation.Infrastructure.DataCentre.Node.MemoryUtil, eu.recap.sim.models.Utilisation.Infrastructure.DataCentre.Node.MemoryUtil.Builder, eu.recap.sim.models.Utilisation.Infrastructure.DataCentre.Node.MemoryUtilOrBuilder>(
                       memoryUtil_,
-                      ((bitField0_ & 0x00000002) != 0),
+                      ((bitField0_ & 0x00000002) == 0x00000002),
                       getParentForChildren(),
                       isClean());
               memoryUtil_ = null;
@@ -7107,7 +7119,7 @@ public final class Utilisation {
           private java.util.List<eu.recap.sim.models.Utilisation.Infrastructure.DataCentre.Node.StorageUtil> storageUtil_ =
             java.util.Collections.emptyList();
           private void ensureStorageUtilIsMutable() {
-            if (!((bitField0_ & 0x00000004) != 0)) {
+            if (!((bitField0_ & 0x00000004) == 0x00000004)) {
               storageUtil_ = new java.util.ArrayList<eu.recap.sim.models.Utilisation.Infrastructure.DataCentre.Node.StorageUtil>(storageUtil_);
               bitField0_ |= 0x00000004;
              }
@@ -7336,7 +7348,7 @@ public final class Utilisation {
               storageUtilBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
                   eu.recap.sim.models.Utilisation.Infrastructure.DataCentre.Node.StorageUtil, eu.recap.sim.models.Utilisation.Infrastructure.DataCentre.Node.StorageUtil.Builder, eu.recap.sim.models.Utilisation.Infrastructure.DataCentre.Node.StorageUtilOrBuilder>(
                       storageUtil_,
-                      ((bitField0_ & 0x00000004) != 0),
+                      ((bitField0_ & 0x00000004) == 0x00000004),
                       getParentForChildren(),
                       isClean());
               storageUtil_ = null;
@@ -7346,7 +7358,7 @@ public final class Utilisation {
           @java.lang.Override
           public final Builder setUnknownFields(
               final com.google.protobuf.UnknownFieldSet unknownFields) {
-            return super.setUnknownFields(unknownFields);
+            return super.setUnknownFieldsProto3(unknownFields);
           }
 
           @java.lang.Override
@@ -7599,16 +7611,17 @@ public final class Utilisation {
         }
         eu.recap.sim.models.Utilisation.Infrastructure.DataCentre other = (eu.recap.sim.models.Utilisation.Infrastructure.DataCentre) obj;
 
-        if (!getName()
-            .equals(other.getName())) return false;
-        if (!getID()
-            .equals(other.getID())) return false;
-        if (!getNodesList()
-            .equals(other.getNodesList())) return false;
-        if (!getSwitchesList()
-            .equals(other.getSwitchesList())) return false;
-        if (!unknownFields.equals(other.unknownFields)) return false;
-        return true;
+        boolean result = true;
+        result = result && getName()
+            .equals(other.getName());
+        result = result && getID()
+            .equals(other.getID());
+        result = result && getNodesList()
+            .equals(other.getNodesList());
+        result = result && getSwitchesList()
+            .equals(other.getSwitchesList());
+        result = result && unknownFields.equals(other.unknownFields);
+        return result;
       }
 
       @java.lang.Override
@@ -7812,7 +7825,7 @@ public final class Utilisation {
           result.name_ = name_;
           result.iD_ = iD_;
           if (nodesBuilder_ == null) {
-            if (((bitField0_ & 0x00000004) != 0)) {
+            if (((bitField0_ & 0x00000004) == 0x00000004)) {
               nodes_ = java.util.Collections.unmodifiableList(nodes_);
               bitField0_ = (bitField0_ & ~0x00000004);
             }
@@ -7821,7 +7834,7 @@ public final class Utilisation {
             result.nodes_ = nodesBuilder_.build();
           }
           if (switchesBuilder_ == null) {
-            if (((bitField0_ & 0x00000008) != 0)) {
+            if (((bitField0_ & 0x00000008) == 0x00000008)) {
               switches_ = java.util.Collections.unmodifiableList(switches_);
               bitField0_ = (bitField0_ & ~0x00000008);
             }
@@ -7836,35 +7849,35 @@ public final class Utilisation {
 
         @java.lang.Override
         public Builder clone() {
-          return super.clone();
+          return (Builder) super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return super.setField(field, value);
+          return (Builder) super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return super.clearField(field);
+          return (Builder) super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return super.clearOneof(oneof);
+          return (Builder) super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return super.setRepeatedField(field, index, value);
+          return (Builder) super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return super.addRepeatedField(field, value);
+          return (Builder) super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -8109,7 +8122,7 @@ public final class Utilisation {
         private java.util.List<eu.recap.sim.models.Utilisation.Infrastructure.DataCentre.Node> nodes_ =
           java.util.Collections.emptyList();
         private void ensureNodesIsMutable() {
-          if (!((bitField0_ & 0x00000004) != 0)) {
+          if (!((bitField0_ & 0x00000004) == 0x00000004)) {
             nodes_ = new java.util.ArrayList<eu.recap.sim.models.Utilisation.Infrastructure.DataCentre.Node>(nodes_);
             bitField0_ |= 0x00000004;
            }
@@ -8338,7 +8351,7 @@ public final class Utilisation {
             nodesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
                 eu.recap.sim.models.Utilisation.Infrastructure.DataCentre.Node, eu.recap.sim.models.Utilisation.Infrastructure.DataCentre.Node.Builder, eu.recap.sim.models.Utilisation.Infrastructure.DataCentre.NodeOrBuilder>(
                     nodes_,
-                    ((bitField0_ & 0x00000004) != 0),
+                    ((bitField0_ & 0x00000004) == 0x00000004),
                     getParentForChildren(),
                     isClean());
             nodes_ = null;
@@ -8349,7 +8362,7 @@ public final class Utilisation {
         private java.util.List<eu.recap.sim.models.Utilisation.Infrastructure.DataCentre.Switch> switches_ =
           java.util.Collections.emptyList();
         private void ensureSwitchesIsMutable() {
-          if (!((bitField0_ & 0x00000008) != 0)) {
+          if (!((bitField0_ & 0x00000008) == 0x00000008)) {
             switches_ = new java.util.ArrayList<eu.recap.sim.models.Utilisation.Infrastructure.DataCentre.Switch>(switches_);
             bitField0_ |= 0x00000008;
            }
@@ -8578,7 +8591,7 @@ public final class Utilisation {
             switchesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
                 eu.recap.sim.models.Utilisation.Infrastructure.DataCentre.Switch, eu.recap.sim.models.Utilisation.Infrastructure.DataCentre.Switch.Builder, eu.recap.sim.models.Utilisation.Infrastructure.DataCentre.SwitchOrBuilder>(
                     switches_,
-                    ((bitField0_ & 0x00000008) != 0),
+                    ((bitField0_ & 0x00000008) == 0x00000008),
                     getParentForChildren(),
                     isClean());
             switches_ = null;
@@ -8588,7 +8601,7 @@ public final class Utilisation {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFields(unknownFields);
+          return super.setUnknownFieldsProto3(unknownFields);
         }
 
         @java.lang.Override
@@ -8759,12 +8772,13 @@ public final class Utilisation {
       }
       eu.recap.sim.models.Utilisation.Infrastructure other = (eu.recap.sim.models.Utilisation.Infrastructure) obj;
 
-      if (!getExperimentId()
-          .equals(other.getExperimentId())) return false;
-      if (!getDataCentresList()
-          .equals(other.getDataCentresList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      boolean result = true;
+      result = result && getExperimentId()
+          .equals(other.getExperimentId());
+      result = result && getDataCentresList()
+          .equals(other.getDataCentresList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
     }
 
     @java.lang.Override
@@ -8952,7 +8966,7 @@ public final class Utilisation {
         int to_bitField0_ = 0;
         result.experimentId_ = experimentId_;
         if (dataCentresBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0)) {
+          if (((bitField0_ & 0x00000002) == 0x00000002)) {
             dataCentres_ = java.util.Collections.unmodifiableList(dataCentres_);
             bitField0_ = (bitField0_ & ~0x00000002);
           }
@@ -8967,35 +8981,35 @@ public final class Utilisation {
 
       @java.lang.Override
       public Builder clone() {
-        return super.clone();
+        return (Builder) super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.setField(field, value);
+        return (Builder) super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
+        return (Builder) super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
+        return (Builder) super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
+        return (Builder) super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.addRepeatedField(field, value);
+        return (Builder) super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -9141,7 +9155,7 @@ public final class Utilisation {
       private java.util.List<eu.recap.sim.models.Utilisation.Infrastructure.DataCentre> dataCentres_ =
         java.util.Collections.emptyList();
       private void ensureDataCentresIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
           dataCentres_ = new java.util.ArrayList<eu.recap.sim.models.Utilisation.Infrastructure.DataCentre>(dataCentres_);
           bitField0_ |= 0x00000002;
          }
@@ -9370,7 +9384,7 @@ public final class Utilisation {
           dataCentresBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               eu.recap.sim.models.Utilisation.Infrastructure.DataCentre, eu.recap.sim.models.Utilisation.Infrastructure.DataCentre.Builder, eu.recap.sim.models.Utilisation.Infrastructure.DataCentreOrBuilder>(
                   dataCentres_,
-                  ((bitField0_ & 0x00000002) != 0),
+                  ((bitField0_ & 0x00000002) == 0x00000002),
                   getParentForChildren(),
                   isClean());
           dataCentres_ = null;
@@ -9380,7 +9394,7 @@ public final class Utilisation {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       @java.lang.Override

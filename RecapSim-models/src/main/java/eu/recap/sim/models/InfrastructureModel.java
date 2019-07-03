@@ -119,7 +119,7 @@ public final class InfrastructureModel {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
                 links_ = new java.util.ArrayList<eu.recap.sim.models.InfrastructureModel.Link>();
                 mutable_bitField0_ |= 0x00000002;
               }
@@ -128,7 +128,7 @@ public final class InfrastructureModel {
               break;
             }
             case 18: {
-              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
                 sites_ = new java.util.ArrayList<eu.recap.sim.models.InfrastructureModel.ResourceSite>();
                 mutable_bitField0_ |= 0x00000004;
               }
@@ -143,7 +143,7 @@ public final class InfrastructureModel {
               break;
             }
             default: {
-              if (!parseUnknownField(
+              if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -157,10 +157,10 @@ public final class InfrastructureModel {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
           links_ = java.util.Collections.unmodifiableList(links_);
         }
-        if (((mutable_bitField0_ & 0x00000004) != 0)) {
+        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
           sites_ = java.util.Collections.unmodifiableList(sites_);
         }
         this.unknownFields = unknownFields.build();
@@ -343,14 +343,15 @@ public final class InfrastructureModel {
       }
       eu.recap.sim.models.InfrastructureModel.Infrastructure other = (eu.recap.sim.models.InfrastructureModel.Infrastructure) obj;
 
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (!getLinksList()
-          .equals(other.getLinksList())) return false;
-      if (!getSitesList()
-          .equals(other.getSitesList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      boolean result = true;
+      result = result && getName()
+          .equals(other.getName());
+      result = result && getLinksList()
+          .equals(other.getLinksList());
+      result = result && getSitesList()
+          .equals(other.getSitesList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
     }
 
     @java.lang.Override
@@ -549,7 +550,7 @@ public final class InfrastructureModel {
         int to_bitField0_ = 0;
         result.name_ = name_;
         if (linksBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0)) {
+          if (((bitField0_ & 0x00000002) == 0x00000002)) {
             links_ = java.util.Collections.unmodifiableList(links_);
             bitField0_ = (bitField0_ & ~0x00000002);
           }
@@ -558,7 +559,7 @@ public final class InfrastructureModel {
           result.links_ = linksBuilder_.build();
         }
         if (sitesBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0)) {
+          if (((bitField0_ & 0x00000004) == 0x00000004)) {
             sites_ = java.util.Collections.unmodifiableList(sites_);
             bitField0_ = (bitField0_ & ~0x00000004);
           }
@@ -573,35 +574,35 @@ public final class InfrastructureModel {
 
       @java.lang.Override
       public Builder clone() {
-        return super.clone();
+        return (Builder) super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.setField(field, value);
+        return (Builder) super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
+        return (Builder) super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
+        return (Builder) super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
+        return (Builder) super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.addRepeatedField(field, value);
+        return (Builder) super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -773,7 +774,7 @@ public final class InfrastructureModel {
       private java.util.List<eu.recap.sim.models.InfrastructureModel.Link> links_ =
         java.util.Collections.emptyList();
       private void ensureLinksIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
           links_ = new java.util.ArrayList<eu.recap.sim.models.InfrastructureModel.Link>(links_);
           bitField0_ |= 0x00000002;
          }
@@ -1002,7 +1003,7 @@ public final class InfrastructureModel {
           linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               eu.recap.sim.models.InfrastructureModel.Link, eu.recap.sim.models.InfrastructureModel.Link.Builder, eu.recap.sim.models.InfrastructureModel.LinkOrBuilder>(
                   links_,
-                  ((bitField0_ & 0x00000002) != 0),
+                  ((bitField0_ & 0x00000002) == 0x00000002),
                   getParentForChildren(),
                   isClean());
           links_ = null;
@@ -1013,7 +1014,7 @@ public final class InfrastructureModel {
       private java.util.List<eu.recap.sim.models.InfrastructureModel.ResourceSite> sites_ =
         java.util.Collections.emptyList();
       private void ensureSitesIsMutable() {
-        if (!((bitField0_ & 0x00000004) != 0)) {
+        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
           sites_ = new java.util.ArrayList<eu.recap.sim.models.InfrastructureModel.ResourceSite>(sites_);
           bitField0_ |= 0x00000004;
          }
@@ -1242,7 +1243,7 @@ public final class InfrastructureModel {
           sitesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               eu.recap.sim.models.InfrastructureModel.ResourceSite, eu.recap.sim.models.InfrastructureModel.ResourceSite.Builder, eu.recap.sim.models.InfrastructureModel.ResourceSiteOrBuilder>(
                   sites_,
-                  ((bitField0_ & 0x00000004) != 0),
+                  ((bitField0_ & 0x00000004) == 0x00000004),
                   getParentForChildren(),
                   isClean());
           sites_ = null;
@@ -1252,7 +1253,7 @@ public final class InfrastructureModel {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       @java.lang.Override
@@ -1441,7 +1442,7 @@ public final class InfrastructureModel {
               break;
             }
             case 34: {
-              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
                 nodes_ = new java.util.ArrayList<eu.recap.sim.models.InfrastructureModel.Node>();
                 mutable_bitField0_ |= 0x00000008;
               }
@@ -1456,7 +1457,7 @@ public final class InfrastructureModel {
               break;
             }
             default: {
-              if (!parseUnknownField(
+              if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1470,7 +1471,7 @@ public final class InfrastructureModel {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000008) != 0)) {
+        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
           nodes_ = java.util.Collections.unmodifiableList(nodes_);
         }
         this.unknownFields = unknownFields.build();
@@ -1819,20 +1820,21 @@ public final class InfrastructureModel {
       }
       eu.recap.sim.models.InfrastructureModel.ResourceSite other = (eu.recap.sim.models.InfrastructureModel.ResourceSite) obj;
 
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (!getId()
-          .equals(other.getId())) return false;
-      if (hasLocation() != other.hasLocation()) return false;
+      boolean result = true;
+      result = result && getName()
+          .equals(other.getName());
+      result = result && getId()
+          .equals(other.getId());
+      result = result && (hasLocation() == other.hasLocation());
       if (hasLocation()) {
-        if (!getLocation()
-            .equals(other.getLocation())) return false;
+        result = result && getLocation()
+            .equals(other.getLocation());
       }
-      if (!getNodesList()
-          .equals(other.getNodesList())) return false;
-      if (hierarchyLevel_ != other.hierarchyLevel_) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      result = result && getNodesList()
+          .equals(other.getNodesList());
+      result = result && hierarchyLevel_ == other.hierarchyLevel_;
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
     }
 
     @java.lang.Override
@@ -2044,7 +2046,7 @@ public final class InfrastructureModel {
           result.location_ = locationBuilder_.build();
         }
         if (nodesBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) != 0)) {
+          if (((bitField0_ & 0x00000008) == 0x00000008)) {
             nodes_ = java.util.Collections.unmodifiableList(nodes_);
             bitField0_ = (bitField0_ & ~0x00000008);
           }
@@ -2060,35 +2062,35 @@ public final class InfrastructureModel {
 
       @java.lang.Override
       public Builder clone() {
-        return super.clone();
+        return (Builder) super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.setField(field, value);
+        return (Builder) super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
+        return (Builder) super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
+        return (Builder) super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
+        return (Builder) super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.addRepeatedField(field, value);
+        return (Builder) super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2310,7 +2312,7 @@ public final class InfrastructureModel {
         return this;
       }
 
-      private eu.recap.sim.models.LocationModel.Location location_;
+      private eu.recap.sim.models.LocationModel.Location location_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           eu.recap.sim.models.LocationModel.Location, eu.recap.sim.models.LocationModel.Location.Builder, eu.recap.sim.models.LocationModel.LocationOrBuilder> locationBuilder_;
       /**
@@ -2430,7 +2432,7 @@ public final class InfrastructureModel {
       private java.util.List<eu.recap.sim.models.InfrastructureModel.Node> nodes_ =
         java.util.Collections.emptyList();
       private void ensureNodesIsMutable() {
-        if (!((bitField0_ & 0x00000008) != 0)) {
+        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
           nodes_ = new java.util.ArrayList<eu.recap.sim.models.InfrastructureModel.Node>(nodes_);
           bitField0_ |= 0x00000008;
          }
@@ -2659,7 +2661,7 @@ public final class InfrastructureModel {
           nodesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               eu.recap.sim.models.InfrastructureModel.Node, eu.recap.sim.models.InfrastructureModel.Node.Builder, eu.recap.sim.models.InfrastructureModel.NodeOrBuilder>(
                   nodes_,
-                  ((bitField0_ & 0x00000008) != 0),
+                  ((bitField0_ & 0x00000008) == 0x00000008),
                   getParentForChildren(),
                   isClean());
           nodes_ = null;
@@ -2714,7 +2716,7 @@ public final class InfrastructureModel {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       @java.lang.Override
@@ -2917,7 +2919,7 @@ public final class InfrastructureModel {
               break;
             }
             case 34: {
-              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
                 processingUnits_ = new java.util.ArrayList<eu.recap.sim.models.InfrastructureModel.Node.CPU>();
                 mutable_bitField0_ |= 0x00000004;
               }
@@ -2926,7 +2928,7 @@ public final class InfrastructureModel {
               break;
             }
             case 42: {
-              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
                 memoryUnits_ = new java.util.ArrayList<eu.recap.sim.models.InfrastructureModel.Node.Memory>();
                 mutable_bitField0_ |= 0x00000008;
               }
@@ -2935,7 +2937,7 @@ public final class InfrastructureModel {
               break;
             }
             case 50: {
-              if (!((mutable_bitField0_ & 0x00000010) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
                 storageUnits_ = new java.util.ArrayList<eu.recap.sim.models.InfrastructureModel.Node.Storage>();
                 mutable_bitField0_ |= 0x00000010;
               }
@@ -2944,7 +2946,7 @@ public final class InfrastructureModel {
               break;
             }
             default: {
-              if (!parseUnknownField(
+              if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2958,13 +2960,13 @@ public final class InfrastructureModel {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000004) != 0)) {
+        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
           processingUnits_ = java.util.Collections.unmodifiableList(processingUnits_);
         }
-        if (((mutable_bitField0_ & 0x00000008) != 0)) {
+        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
           memoryUnits_ = java.util.Collections.unmodifiableList(memoryUnits_);
         }
-        if (((mutable_bitField0_ & 0x00000010) != 0)) {
+        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
           storageUnits_ = java.util.Collections.unmodifiableList(storageUnits_);
         }
         this.unknownFields = unknownFields.build();
@@ -3081,6 +3083,7 @@ public final class InfrastructureModel {
         id_ = "";
         name_ = "";
         make_ = "";
+        frequency_ = 0;
         cpuCores_ = java.util.Collections.emptyList();
         rating_ = "";
       }
@@ -3110,7 +3113,7 @@ public final class InfrastructureModel {
                 done = true;
                 break;
               case 10: {
-                if (!((mutable_bitField0_ & 0x00000010) != 0)) {
+                if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
                   cpuCores_ = new java.util.ArrayList<eu.recap.sim.models.InfrastructureModel.Node.Core>();
                   mutable_bitField0_ |= 0x00000010;
                 }
@@ -3148,7 +3151,7 @@ public final class InfrastructureModel {
                 break;
               }
               default: {
-                if (!parseUnknownField(
+                if (!parseUnknownFieldProto3(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -3162,7 +3165,7 @@ public final class InfrastructureModel {
           throw new com.google.protobuf.InvalidProtocolBufferException(
               e).setUnfinishedMessage(this);
         } finally {
-          if (((mutable_bitField0_ & 0x00000010) != 0)) {
+          if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
             cpuCores_ = java.util.Collections.unmodifiableList(cpuCores_);
           }
           this.unknownFields = unknownFields.build();
@@ -3447,20 +3450,21 @@ public final class InfrastructureModel {
         }
         eu.recap.sim.models.InfrastructureModel.Node.CPU other = (eu.recap.sim.models.InfrastructureModel.Node.CPU) obj;
 
-        if (!getId()
-            .equals(other.getId())) return false;
-        if (!getName()
-            .equals(other.getName())) return false;
-        if (!getMake()
-            .equals(other.getMake())) return false;
-        if (getFrequency()
-            != other.getFrequency()) return false;
-        if (!getCpuCoresList()
-            .equals(other.getCpuCoresList())) return false;
-        if (!getRating()
-            .equals(other.getRating())) return false;
-        if (!unknownFields.equals(other.unknownFields)) return false;
-        return true;
+        boolean result = true;
+        result = result && getId()
+            .equals(other.getId());
+        result = result && getName()
+            .equals(other.getName());
+        result = result && getMake()
+            .equals(other.getMake());
+        result = result && (getFrequency()
+            == other.getFrequency());
+        result = result && getCpuCoresList()
+            .equals(other.getCpuCoresList());
+        result = result && getRating()
+            .equals(other.getRating());
+        result = result && unknownFields.equals(other.unknownFields);
+        return result;
       }
 
       @java.lang.Override
@@ -3667,7 +3671,7 @@ public final class InfrastructureModel {
           result.make_ = make_;
           result.frequency_ = frequency_;
           if (cpuCoresBuilder_ == null) {
-            if (((bitField0_ & 0x00000010) != 0)) {
+            if (((bitField0_ & 0x00000010) == 0x00000010)) {
               cpuCores_ = java.util.Collections.unmodifiableList(cpuCores_);
               bitField0_ = (bitField0_ & ~0x00000010);
             }
@@ -3683,35 +3687,35 @@ public final class InfrastructureModel {
 
         @java.lang.Override
         public Builder clone() {
-          return super.clone();
+          return (Builder) super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return super.setField(field, value);
+          return (Builder) super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return super.clearField(field);
+          return (Builder) super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return super.clearOneof(oneof);
+          return (Builder) super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return super.setRepeatedField(field, index, value);
+          return (Builder) super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return super.addRepeatedField(field, value);
+          return (Builder) super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4036,7 +4040,7 @@ public final class InfrastructureModel {
         private java.util.List<eu.recap.sim.models.InfrastructureModel.Node.Core> cpuCores_ =
           java.util.Collections.emptyList();
         private void ensureCpuCoresIsMutable() {
-          if (!((bitField0_ & 0x00000010) != 0)) {
+          if (!((bitField0_ & 0x00000010) == 0x00000010)) {
             cpuCores_ = new java.util.ArrayList<eu.recap.sim.models.InfrastructureModel.Node.Core>(cpuCores_);
             bitField0_ |= 0x00000010;
            }
@@ -4265,7 +4269,7 @@ public final class InfrastructureModel {
             cpuCoresBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
                 eu.recap.sim.models.InfrastructureModel.Node.Core, eu.recap.sim.models.InfrastructureModel.Node.Core.Builder, eu.recap.sim.models.InfrastructureModel.Node.CoreOrBuilder>(
                     cpuCores_,
-                    ((bitField0_ & 0x00000010) != 0),
+                    ((bitField0_ & 0x00000010) == 0x00000010),
                     getParentForChildren(),
                     isClean());
             cpuCores_ = null;
@@ -4364,7 +4368,7 @@ public final class InfrastructureModel {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFields(unknownFields);
+          return super.setUnknownFieldsProto3(unknownFields);
         }
 
         @java.lang.Override
@@ -4475,7 +4479,7 @@ public final class InfrastructureModel {
                 break;
               }
               default: {
-                if (!parseUnknownField(
+                if (!parseUnknownFieldProto3(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -4584,10 +4588,11 @@ public final class InfrastructureModel {
         }
         eu.recap.sim.models.InfrastructureModel.Node.Core other = (eu.recap.sim.models.InfrastructureModel.Node.Core) obj;
 
-        if (!getId()
-            .equals(other.getId())) return false;
-        if (!unknownFields.equals(other.unknownFields)) return false;
-        return true;
+        boolean result = true;
+        result = result && getId()
+            .equals(other.getId());
+        result = result && unknownFields.equals(other.unknownFields);
+        return result;
       }
 
       @java.lang.Override
@@ -4767,35 +4772,35 @@ public final class InfrastructureModel {
 
         @java.lang.Override
         public Builder clone() {
-          return super.clone();
+          return (Builder) super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return super.setField(field, value);
+          return (Builder) super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return super.clearField(field);
+          return (Builder) super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return super.clearOneof(oneof);
+          return (Builder) super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return super.setRepeatedField(field, index, value);
+          return (Builder) super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return super.addRepeatedField(field, value);
+          return (Builder) super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4913,7 +4918,7 @@ public final class InfrastructureModel {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFields(unknownFields);
+          return super.setUnknownFieldsProto3(unknownFields);
         }
 
         @java.lang.Override
@@ -5000,6 +5005,7 @@ public final class InfrastructureModel {
       }
       private Memory() {
         id_ = "";
+        capacity_ = 0;
       }
 
       @java.lang.Override
@@ -5038,7 +5044,7 @@ public final class InfrastructureModel {
                 break;
               }
               default: {
-                if (!parseUnknownField(
+                if (!parseUnknownFieldProto3(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -5167,12 +5173,13 @@ public final class InfrastructureModel {
         }
         eu.recap.sim.models.InfrastructureModel.Node.Memory other = (eu.recap.sim.models.InfrastructureModel.Node.Memory) obj;
 
-        if (!getId()
-            .equals(other.getId())) return false;
-        if (getCapacity()
-            != other.getCapacity()) return false;
-        if (!unknownFields.equals(other.unknownFields)) return false;
-        return true;
+        boolean result = true;
+        result = result && getId()
+            .equals(other.getId());
+        result = result && (getCapacity()
+            == other.getCapacity());
+        result = result && unknownFields.equals(other.unknownFields);
+        return result;
       }
 
       @java.lang.Override
@@ -5357,35 +5364,35 @@ public final class InfrastructureModel {
 
         @java.lang.Override
         public Builder clone() {
-          return super.clone();
+          return (Builder) super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return super.setField(field, value);
+          return (Builder) super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return super.clearField(field);
+          return (Builder) super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return super.clearOneof(oneof);
+          return (Builder) super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return super.setRepeatedField(field, index, value);
+          return (Builder) super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return super.addRepeatedField(field, value);
+          return (Builder) super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5544,7 +5551,7 @@ public final class InfrastructureModel {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFields(unknownFields);
+          return super.setUnknownFieldsProto3(unknownFields);
         }
 
         @java.lang.Override
@@ -5631,6 +5638,7 @@ public final class InfrastructureModel {
       }
       private Storage() {
         id_ = "";
+        size_ = 0;
       }
 
       @java.lang.Override
@@ -5669,7 +5677,7 @@ public final class InfrastructureModel {
                 break;
               }
               default: {
-                if (!parseUnknownField(
+                if (!parseUnknownFieldProto3(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -5798,12 +5806,13 @@ public final class InfrastructureModel {
         }
         eu.recap.sim.models.InfrastructureModel.Node.Storage other = (eu.recap.sim.models.InfrastructureModel.Node.Storage) obj;
 
-        if (!getId()
-            .equals(other.getId())) return false;
-        if (getSize()
-            != other.getSize()) return false;
-        if (!unknownFields.equals(other.unknownFields)) return false;
-        return true;
+        boolean result = true;
+        result = result && getId()
+            .equals(other.getId());
+        result = result && (getSize()
+            == other.getSize());
+        result = result && unknownFields.equals(other.unknownFields);
+        return result;
       }
 
       @java.lang.Override
@@ -5988,35 +5997,35 @@ public final class InfrastructureModel {
 
         @java.lang.Override
         public Builder clone() {
-          return super.clone();
+          return (Builder) super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return super.setField(field, value);
+          return (Builder) super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return super.clearField(field);
+          return (Builder) super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return super.clearOneof(oneof);
+          return (Builder) super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return super.setRepeatedField(field, index, value);
+          return (Builder) super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return super.addRepeatedField(field, value);
+          return (Builder) super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -6175,7 +6184,7 @@ public final class InfrastructureModel {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFields(unknownFields);
+          return super.setUnknownFieldsProto3(unknownFields);
         }
 
         @java.lang.Override
@@ -6470,18 +6479,19 @@ public final class InfrastructureModel {
       }
       eu.recap.sim.models.InfrastructureModel.Node other = (eu.recap.sim.models.InfrastructureModel.Node) obj;
 
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (!getId()
-          .equals(other.getId())) return false;
-      if (!getProcessingUnitsList()
-          .equals(other.getProcessingUnitsList())) return false;
-      if (!getMemoryUnitsList()
-          .equals(other.getMemoryUnitsList())) return false;
-      if (!getStorageUnitsList()
-          .equals(other.getStorageUnitsList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      boolean result = true;
+      result = result && getName()
+          .equals(other.getName());
+      result = result && getId()
+          .equals(other.getId());
+      result = result && getProcessingUnitsList()
+          .equals(other.getProcessingUnitsList());
+      result = result && getMemoryUnitsList()
+          .equals(other.getMemoryUnitsList());
+      result = result && getStorageUnitsList()
+          .equals(other.getStorageUnitsList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
     }
 
     @java.lang.Override
@@ -6696,7 +6706,7 @@ public final class InfrastructureModel {
         result.name_ = name_;
         result.id_ = id_;
         if (processingUnitsBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0)) {
+          if (((bitField0_ & 0x00000004) == 0x00000004)) {
             processingUnits_ = java.util.Collections.unmodifiableList(processingUnits_);
             bitField0_ = (bitField0_ & ~0x00000004);
           }
@@ -6705,7 +6715,7 @@ public final class InfrastructureModel {
           result.processingUnits_ = processingUnitsBuilder_.build();
         }
         if (memoryUnitsBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) != 0)) {
+          if (((bitField0_ & 0x00000008) == 0x00000008)) {
             memoryUnits_ = java.util.Collections.unmodifiableList(memoryUnits_);
             bitField0_ = (bitField0_ & ~0x00000008);
           }
@@ -6714,7 +6724,7 @@ public final class InfrastructureModel {
           result.memoryUnits_ = memoryUnitsBuilder_.build();
         }
         if (storageUnitsBuilder_ == null) {
-          if (((bitField0_ & 0x00000010) != 0)) {
+          if (((bitField0_ & 0x00000010) == 0x00000010)) {
             storageUnits_ = java.util.Collections.unmodifiableList(storageUnits_);
             bitField0_ = (bitField0_ & ~0x00000010);
           }
@@ -6729,35 +6739,35 @@ public final class InfrastructureModel {
 
       @java.lang.Override
       public Builder clone() {
-        return super.clone();
+        return (Builder) super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.setField(field, value);
+        return (Builder) super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
+        return (Builder) super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
+        return (Builder) super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
+        return (Builder) super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.addRepeatedField(field, value);
+        return (Builder) super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7028,7 +7038,7 @@ public final class InfrastructureModel {
       private java.util.List<eu.recap.sim.models.InfrastructureModel.Node.CPU> processingUnits_ =
         java.util.Collections.emptyList();
       private void ensureProcessingUnitsIsMutable() {
-        if (!((bitField0_ & 0x00000004) != 0)) {
+        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
           processingUnits_ = new java.util.ArrayList<eu.recap.sim.models.InfrastructureModel.Node.CPU>(processingUnits_);
           bitField0_ |= 0x00000004;
          }
@@ -7257,7 +7267,7 @@ public final class InfrastructureModel {
           processingUnitsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               eu.recap.sim.models.InfrastructureModel.Node.CPU, eu.recap.sim.models.InfrastructureModel.Node.CPU.Builder, eu.recap.sim.models.InfrastructureModel.Node.CPUOrBuilder>(
                   processingUnits_,
-                  ((bitField0_ & 0x00000004) != 0),
+                  ((bitField0_ & 0x00000004) == 0x00000004),
                   getParentForChildren(),
                   isClean());
           processingUnits_ = null;
@@ -7268,7 +7278,7 @@ public final class InfrastructureModel {
       private java.util.List<eu.recap.sim.models.InfrastructureModel.Node.Memory> memoryUnits_ =
         java.util.Collections.emptyList();
       private void ensureMemoryUnitsIsMutable() {
-        if (!((bitField0_ & 0x00000008) != 0)) {
+        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
           memoryUnits_ = new java.util.ArrayList<eu.recap.sim.models.InfrastructureModel.Node.Memory>(memoryUnits_);
           bitField0_ |= 0x00000008;
          }
@@ -7497,7 +7507,7 @@ public final class InfrastructureModel {
           memoryUnitsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               eu.recap.sim.models.InfrastructureModel.Node.Memory, eu.recap.sim.models.InfrastructureModel.Node.Memory.Builder, eu.recap.sim.models.InfrastructureModel.Node.MemoryOrBuilder>(
                   memoryUnits_,
-                  ((bitField0_ & 0x00000008) != 0),
+                  ((bitField0_ & 0x00000008) == 0x00000008),
                   getParentForChildren(),
                   isClean());
           memoryUnits_ = null;
@@ -7508,7 +7518,7 @@ public final class InfrastructureModel {
       private java.util.List<eu.recap.sim.models.InfrastructureModel.Node.Storage> storageUnits_ =
         java.util.Collections.emptyList();
       private void ensureStorageUnitsIsMutable() {
-        if (!((bitField0_ & 0x00000010) != 0)) {
+        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
           storageUnits_ = new java.util.ArrayList<eu.recap.sim.models.InfrastructureModel.Node.Storage>(storageUnits_);
           bitField0_ |= 0x00000010;
          }
@@ -7737,7 +7747,7 @@ public final class InfrastructureModel {
           storageUnitsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               eu.recap.sim.models.InfrastructureModel.Node.Storage, eu.recap.sim.models.InfrastructureModel.Node.Storage.Builder, eu.recap.sim.models.InfrastructureModel.Node.StorageOrBuilder>(
                   storageUnits_,
-                  ((bitField0_ & 0x00000010) != 0),
+                  ((bitField0_ & 0x00000010) == 0x00000010),
                   getParentForChildren(),
                   isClean());
           storageUnits_ = null;
@@ -7747,7 +7757,7 @@ public final class InfrastructureModel {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       @java.lang.Override
@@ -7858,6 +7868,7 @@ public final class InfrastructureModel {
     }
     private Link() {
       id_ = "";
+      bandwith_ = 0;
       connectedSites_ = java.util.Collections.emptyList();
     }
 
@@ -7897,7 +7908,7 @@ public final class InfrastructureModel {
               break;
             }
             case 34: {
-              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
                 connectedSites_ = new java.util.ArrayList<eu.recap.sim.models.InfrastructureModel.ResourceSite>();
                 mutable_bitField0_ |= 0x00000004;
               }
@@ -7906,7 +7917,7 @@ public final class InfrastructureModel {
               break;
             }
             default: {
-              if (!parseUnknownField(
+              if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -7920,7 +7931,7 @@ public final class InfrastructureModel {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000004) != 0)) {
+        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
           connectedSites_ = java.util.Collections.unmodifiableList(connectedSites_);
         }
         this.unknownFields = unknownFields.build();
@@ -8081,14 +8092,15 @@ public final class InfrastructureModel {
       }
       eu.recap.sim.models.InfrastructureModel.Link other = (eu.recap.sim.models.InfrastructureModel.Link) obj;
 
-      if (!getId()
-          .equals(other.getId())) return false;
-      if (getBandwith()
-          != other.getBandwith()) return false;
-      if (!getConnectedSitesList()
-          .equals(other.getConnectedSitesList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      boolean result = true;
+      result = result && getId()
+          .equals(other.getId());
+      result = result && (getBandwith()
+          == other.getBandwith());
+      result = result && getConnectedSitesList()
+          .equals(other.getConnectedSitesList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
     }
 
     @java.lang.Override
@@ -8281,7 +8293,7 @@ public final class InfrastructureModel {
         result.id_ = id_;
         result.bandwith_ = bandwith_;
         if (connectedSitesBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0)) {
+          if (((bitField0_ & 0x00000004) == 0x00000004)) {
             connectedSites_ = java.util.Collections.unmodifiableList(connectedSites_);
             bitField0_ = (bitField0_ & ~0x00000004);
           }
@@ -8296,35 +8308,35 @@ public final class InfrastructureModel {
 
       @java.lang.Override
       public Builder clone() {
-        return super.clone();
+        return (Builder) super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.setField(field, value);
+        return (Builder) super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
+        return (Builder) super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
+        return (Builder) super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
+        return (Builder) super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.addRepeatedField(field, value);
+        return (Builder) super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -8511,7 +8523,7 @@ public final class InfrastructureModel {
       private java.util.List<eu.recap.sim.models.InfrastructureModel.ResourceSite> connectedSites_ =
         java.util.Collections.emptyList();
       private void ensureConnectedSitesIsMutable() {
-        if (!((bitField0_ & 0x00000004) != 0)) {
+        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
           connectedSites_ = new java.util.ArrayList<eu.recap.sim.models.InfrastructureModel.ResourceSite>(connectedSites_);
           bitField0_ |= 0x00000004;
          }
@@ -8740,7 +8752,7 @@ public final class InfrastructureModel {
           connectedSitesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               eu.recap.sim.models.InfrastructureModel.ResourceSite, eu.recap.sim.models.InfrastructureModel.ResourceSite.Builder, eu.recap.sim.models.InfrastructureModel.ResourceSiteOrBuilder>(
                   connectedSites_,
-                  ((bitField0_ & 0x00000004) != 0),
+                  ((bitField0_ & 0x00000004) == 0x00000004),
                   getParentForChildren(),
                   isClean());
           connectedSites_ = null;
@@ -8750,7 +8762,7 @@ public final class InfrastructureModel {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       @java.lang.Override

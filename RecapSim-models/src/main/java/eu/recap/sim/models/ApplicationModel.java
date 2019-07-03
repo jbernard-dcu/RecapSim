@@ -94,7 +94,7 @@ public final class ApplicationModel {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
                 applications_ = new java.util.ArrayList<eu.recap.sim.models.ApplicationModel.Application>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -109,7 +109,7 @@ public final class ApplicationModel {
               break;
             }
             default: {
-              if (!parseUnknownField(
+              if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -123,7 +123,7 @@ public final class ApplicationModel {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
           applications_ = java.util.Collections.unmodifiableList(applications_);
         }
         this.unknownFields = unknownFields.build();
@@ -264,12 +264,13 @@ public final class ApplicationModel {
       }
       eu.recap.sim.models.ApplicationModel.ApplicationLandscape other = (eu.recap.sim.models.ApplicationModel.ApplicationLandscape) obj;
 
-      if (!getApplicationsList()
-          .equals(other.getApplicationsList())) return false;
-      if (!getNotes()
-          .equals(other.getNotes())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      boolean result = true;
+      result = result && getApplicationsList()
+          .equals(other.getApplicationsList());
+      result = result && getNotes()
+          .equals(other.getNotes());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
     }
 
     @java.lang.Override
@@ -456,7 +457,7 @@ public final class ApplicationModel {
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (applicationsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
             applications_ = java.util.Collections.unmodifiableList(applications_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -472,35 +473,35 @@ public final class ApplicationModel {
 
       @java.lang.Override
       public Builder clone() {
-        return super.clone();
+        return (Builder) super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.setField(field, value);
+        return (Builder) super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
+        return (Builder) super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
+        return (Builder) super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
+        return (Builder) super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.addRepeatedField(field, value);
+        return (Builder) super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -577,7 +578,7 @@ public final class ApplicationModel {
       private java.util.List<eu.recap.sim.models.ApplicationModel.Application> applications_ =
         java.util.Collections.emptyList();
       private void ensureApplicationsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
           applications_ = new java.util.ArrayList<eu.recap.sim.models.ApplicationModel.Application>(applications_);
           bitField0_ |= 0x00000001;
          }
@@ -806,7 +807,7 @@ public final class ApplicationModel {
           applicationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               eu.recap.sim.models.ApplicationModel.Application, eu.recap.sim.models.ApplicationModel.Application.Builder, eu.recap.sim.models.ApplicationModel.ApplicationOrBuilder>(
                   applications_,
-                  ((bitField0_ & 0x00000001) != 0),
+                  ((bitField0_ & 0x00000001) == 0x00000001),
                   getParentForChildren(),
                   isClean());
           applications_ = null;
@@ -885,7 +886,7 @@ public final class ApplicationModel {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       @java.lang.Override
@@ -1026,7 +1027,7 @@ public final class ApplicationModel {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
                 components_ = new java.util.ArrayList<eu.recap.sim.models.ApplicationModel.Application.Component>();
                 mutable_bitField0_ |= 0x00000004;
               }
@@ -1047,7 +1048,7 @@ public final class ApplicationModel {
               break;
             }
             default: {
-              if (!parseUnknownField(
+              if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1061,7 +1062,7 @@ public final class ApplicationModel {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000004) != 0)) {
+        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
           components_ = java.util.Collections.unmodifiableList(components_);
         }
         this.unknownFields = unknownFields.build();
@@ -1195,6 +1196,7 @@ public final class ApplicationModel {
         componentName_ = "";
         componentId_ = "";
         vmIdDeployedOn_ = "";
+        isLoadbalanced_ = false;
         componentType_ = 0;
         apis_ = java.util.Collections.emptyList();
       }
@@ -1224,7 +1226,7 @@ public final class ApplicationModel {
                 done = true;
                 break;
               case 10: {
-                if (!((mutable_bitField0_ & 0x00000080) != 0)) {
+                if (!((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
                   apis_ = new java.util.ArrayList<eu.recap.sim.models.ApplicationModel.Application.Component.Api>();
                   mutable_bitField0_ |= 0x00000080;
                 }
@@ -1288,7 +1290,7 @@ public final class ApplicationModel {
                 break;
               }
               default: {
-                if (!parseUnknownField(
+                if (!parseUnknownFieldProto3(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -1302,7 +1304,7 @@ public final class ApplicationModel {
           throw new com.google.protobuf.InvalidProtocolBufferException(
               e).setUnfinishedMessage(this);
         } finally {
-          if (((mutable_bitField0_ & 0x00000080) != 0)) {
+          if (((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
             apis_ = java.util.Collections.unmodifiableList(apis_);
           }
           this.unknownFields = unknownFields.build();
@@ -1579,6 +1581,11 @@ public final class ApplicationModel {
         private Api() {
           apiName_ = "";
           apiId_ = "";
+          mips_ = 0;
+          iops_ = 0;
+          ram_ = 0;
+          noSplittedApis_ = 0;
+          dataToTransfer_ = 0L;
           nextComponentId_ = com.google.protobuf.LazyStringArrayList.EMPTY;
           nextApiId_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         }
@@ -1646,7 +1653,7 @@ public final class ApplicationModel {
                 }
                 case 66: {
                   java.lang.String s = input.readStringRequireUtf8();
-                  if (!((mutable_bitField0_ & 0x00000080) != 0)) {
+                  if (!((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
                     nextComponentId_ = new com.google.protobuf.LazyStringArrayList();
                     mutable_bitField0_ |= 0x00000080;
                   }
@@ -1655,7 +1662,7 @@ public final class ApplicationModel {
                 }
                 case 74: {
                   java.lang.String s = input.readStringRequireUtf8();
-                  if (!((mutable_bitField0_ & 0x00000100) != 0)) {
+                  if (!((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
                     nextApiId_ = new com.google.protobuf.LazyStringArrayList();
                     mutable_bitField0_ |= 0x00000100;
                   }
@@ -1663,7 +1670,7 @@ public final class ApplicationModel {
                   break;
                 }
                 default: {
-                  if (!parseUnknownField(
+                  if (!parseUnknownFieldProto3(
                       input, unknownFields, extensionRegistry, tag)) {
                     done = true;
                   }
@@ -1677,10 +1684,10 @@ public final class ApplicationModel {
             throw new com.google.protobuf.InvalidProtocolBufferException(
                 e).setUnfinishedMessage(this);
           } finally {
-            if (((mutable_bitField0_ & 0x00000080) != 0)) {
+            if (((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
               nextComponentId_ = nextComponentId_.getUnmodifiableView();
             }
-            if (((mutable_bitField0_ & 0x00000100) != 0)) {
+            if (((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
               nextApiId_ = nextApiId_.getUnmodifiableView();
             }
             this.unknownFields = unknownFields.build();
@@ -2027,26 +2034,27 @@ public final class ApplicationModel {
           }
           eu.recap.sim.models.ApplicationModel.Application.Component.Api other = (eu.recap.sim.models.ApplicationModel.Application.Component.Api) obj;
 
-          if (!getApiName()
-              .equals(other.getApiName())) return false;
-          if (!getApiId()
-              .equals(other.getApiId())) return false;
-          if (getMips()
-              != other.getMips()) return false;
-          if (getIops()
-              != other.getIops()) return false;
-          if (getRam()
-              != other.getRam()) return false;
-          if (getNoSplittedApis()
-              != other.getNoSplittedApis()) return false;
-          if (getDataToTransfer()
-              != other.getDataToTransfer()) return false;
-          if (!getNextComponentIdList()
-              .equals(other.getNextComponentIdList())) return false;
-          if (!getNextApiIdList()
-              .equals(other.getNextApiIdList())) return false;
-          if (!unknownFields.equals(other.unknownFields)) return false;
-          return true;
+          boolean result = true;
+          result = result && getApiName()
+              .equals(other.getApiName());
+          result = result && getApiId()
+              .equals(other.getApiId());
+          result = result && (getMips()
+              == other.getMips());
+          result = result && (getIops()
+              == other.getIops());
+          result = result && (getRam()
+              == other.getRam());
+          result = result && (getNoSplittedApis()
+              == other.getNoSplittedApis());
+          result = result && (getDataToTransfer()
+              == other.getDataToTransfer());
+          result = result && getNextComponentIdList()
+              .equals(other.getNextComponentIdList());
+          result = result && getNextApiIdList()
+              .equals(other.getNextApiIdList());
+          result = result && unknownFields.equals(other.unknownFields);
+          return result;
         }
 
         @java.lang.Override
@@ -2265,12 +2273,12 @@ public final class ApplicationModel {
             result.ram_ = ram_;
             result.noSplittedApis_ = noSplittedApis_;
             result.dataToTransfer_ = dataToTransfer_;
-            if (((bitField0_ & 0x00000080) != 0)) {
+            if (((bitField0_ & 0x00000080) == 0x00000080)) {
               nextComponentId_ = nextComponentId_.getUnmodifiableView();
               bitField0_ = (bitField0_ & ~0x00000080);
             }
             result.nextComponentId_ = nextComponentId_;
-            if (((bitField0_ & 0x00000100) != 0)) {
+            if (((bitField0_ & 0x00000100) == 0x00000100)) {
               nextApiId_ = nextApiId_.getUnmodifiableView();
               bitField0_ = (bitField0_ & ~0x00000100);
             }
@@ -2282,35 +2290,35 @@ public final class ApplicationModel {
 
           @java.lang.Override
           public Builder clone() {
-            return super.clone();
+            return (Builder) super.clone();
           }
           @java.lang.Override
           public Builder setField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
               java.lang.Object value) {
-            return super.setField(field, value);
+            return (Builder) super.setField(field, value);
           }
           @java.lang.Override
           public Builder clearField(
               com.google.protobuf.Descriptors.FieldDescriptor field) {
-            return super.clearField(field);
+            return (Builder) super.clearField(field);
           }
           @java.lang.Override
           public Builder clearOneof(
               com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-            return super.clearOneof(oneof);
+            return (Builder) super.clearOneof(oneof);
           }
           @java.lang.Override
           public Builder setRepeatedField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
               int index, java.lang.Object value) {
-            return super.setRepeatedField(field, index, value);
+            return (Builder) super.setRepeatedField(field, index, value);
           }
           @java.lang.Override
           public Builder addRepeatedField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
               java.lang.Object value) {
-            return super.addRepeatedField(field, value);
+            return (Builder) super.addRepeatedField(field, value);
           }
           @java.lang.Override
           public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2715,7 +2723,7 @@ public final class ApplicationModel {
 
           private com.google.protobuf.LazyStringList nextComponentId_ = com.google.protobuf.LazyStringArrayList.EMPTY;
           private void ensureNextComponentIdIsMutable() {
-            if (!((bitField0_ & 0x00000080) != 0)) {
+            if (!((bitField0_ & 0x00000080) == 0x00000080)) {
               nextComponentId_ = new com.google.protobuf.LazyStringArrayList(nextComponentId_);
               bitField0_ |= 0x00000080;
              }
@@ -2845,7 +2853,7 @@ public final class ApplicationModel {
 
           private com.google.protobuf.LazyStringList nextApiId_ = com.google.protobuf.LazyStringArrayList.EMPTY;
           private void ensureNextApiIdIsMutable() {
-            if (!((bitField0_ & 0x00000100) != 0)) {
+            if (!((bitField0_ & 0x00000100) == 0x00000100)) {
               nextApiId_ = new com.google.protobuf.LazyStringArrayList(nextApiId_);
               bitField0_ |= 0x00000100;
              }
@@ -2975,7 +2983,7 @@ public final class ApplicationModel {
           @java.lang.Override
           public final Builder setUnknownFields(
               final com.google.protobuf.UnknownFieldSet unknownFields) {
-            return super.setUnknownFields(unknownFields);
+            return super.setUnknownFieldsProto3(unknownFields);
           }
 
           @java.lang.Override
@@ -3322,29 +3330,30 @@ public final class ApplicationModel {
         }
         eu.recap.sim.models.ApplicationModel.Application.Component other = (eu.recap.sim.models.ApplicationModel.Application.Component) obj;
 
-        if (!getComponentName()
-            .equals(other.getComponentName())) return false;
-        if (!getComponentId()
-            .equals(other.getComponentId())) return false;
-        if (!getVmIdDeployedOn()
-            .equals(other.getVmIdDeployedOn())) return false;
-        if (getIsLoadbalanced()
-            != other.getIsLoadbalanced()) return false;
-        if (componentType_ != other.componentType_) return false;
-        if (hasFlavour() != other.hasFlavour()) return false;
+        boolean result = true;
+        result = result && getComponentName()
+            .equals(other.getComponentName());
+        result = result && getComponentId()
+            .equals(other.getComponentId());
+        result = result && getVmIdDeployedOn()
+            .equals(other.getVmIdDeployedOn());
+        result = result && (getIsLoadbalanced()
+            == other.getIsLoadbalanced());
+        result = result && componentType_ == other.componentType_;
+        result = result && (hasFlavour() == other.hasFlavour());
         if (hasFlavour()) {
-          if (!getFlavour()
-              .equals(other.getFlavour())) return false;
+          result = result && getFlavour()
+              .equals(other.getFlavour());
         }
-        if (hasDeployment() != other.hasDeployment()) return false;
+        result = result && (hasDeployment() == other.hasDeployment());
         if (hasDeployment()) {
-          if (!getDeployment()
-              .equals(other.getDeployment())) return false;
+          result = result && getDeployment()
+              .equals(other.getDeployment());
         }
-        if (!getApisList()
-            .equals(other.getApisList())) return false;
-        if (!unknownFields.equals(other.unknownFields)) return false;
-        return true;
+        result = result && getApisList()
+            .equals(other.getApisList());
+        result = result && unknownFields.equals(other.unknownFields);
+        return result;
       }
 
       @java.lang.Override
@@ -3583,7 +3592,7 @@ public final class ApplicationModel {
             result.deployment_ = deploymentBuilder_.build();
           }
           if (apisBuilder_ == null) {
-            if (((bitField0_ & 0x00000080) != 0)) {
+            if (((bitField0_ & 0x00000080) == 0x00000080)) {
               apis_ = java.util.Collections.unmodifiableList(apis_);
               bitField0_ = (bitField0_ & ~0x00000080);
             }
@@ -3598,35 +3607,35 @@ public final class ApplicationModel {
 
         @java.lang.Override
         public Builder clone() {
-          return super.clone();
+          return (Builder) super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return super.setField(field, value);
+          return (Builder) super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return super.clearField(field);
+          return (Builder) super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return super.clearOneof(oneof);
+          return (Builder) super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return super.setRepeatedField(field, index, value);
+          return (Builder) super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return super.addRepeatedField(field, value);
+          return (Builder) super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3998,7 +4007,7 @@ public final class ApplicationModel {
           return this;
         }
 
-        private eu.recap.sim.models.ApplicationModel.VeFlavour flavour_;
+        private eu.recap.sim.models.ApplicationModel.VeFlavour flavour_ = null;
         private com.google.protobuf.SingleFieldBuilderV3<
             eu.recap.sim.models.ApplicationModel.VeFlavour, eu.recap.sim.models.ApplicationModel.VeFlavour.Builder, eu.recap.sim.models.ApplicationModel.VeFlavourOrBuilder> flavourBuilder_;
         /**
@@ -4115,7 +4124,7 @@ public final class ApplicationModel {
           return flavourBuilder_;
         }
 
-        private eu.recap.sim.models.ApplicationModel.Deployment deployment_;
+        private eu.recap.sim.models.ApplicationModel.Deployment deployment_ = null;
         private com.google.protobuf.SingleFieldBuilderV3<
             eu.recap.sim.models.ApplicationModel.Deployment, eu.recap.sim.models.ApplicationModel.Deployment.Builder, eu.recap.sim.models.ApplicationModel.DeploymentOrBuilder> deploymentBuilder_;
         /**
@@ -4235,7 +4244,7 @@ public final class ApplicationModel {
         private java.util.List<eu.recap.sim.models.ApplicationModel.Application.Component.Api> apis_ =
           java.util.Collections.emptyList();
         private void ensureApisIsMutable() {
-          if (!((bitField0_ & 0x00000080) != 0)) {
+          if (!((bitField0_ & 0x00000080) == 0x00000080)) {
             apis_ = new java.util.ArrayList<eu.recap.sim.models.ApplicationModel.Application.Component.Api>(apis_);
             bitField0_ |= 0x00000080;
            }
@@ -4464,7 +4473,7 @@ public final class ApplicationModel {
             apisBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
                 eu.recap.sim.models.ApplicationModel.Application.Component.Api, eu.recap.sim.models.ApplicationModel.Application.Component.Api.Builder, eu.recap.sim.models.ApplicationModel.Application.Component.ApiOrBuilder>(
                     apis_,
-                    ((bitField0_ & 0x00000080) != 0),
+                    ((bitField0_ & 0x00000080) == 0x00000080),
                     getParentForChildren(),
                     isClean());
             apis_ = null;
@@ -4474,7 +4483,7 @@ public final class ApplicationModel {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFields(unknownFields);
+          return super.setUnknownFieldsProto3(unknownFields);
         }
 
         @java.lang.Override
@@ -4685,14 +4694,15 @@ public final class ApplicationModel {
       }
       eu.recap.sim.models.ApplicationModel.Application other = (eu.recap.sim.models.ApplicationModel.Application) obj;
 
-      if (!getApplicationName()
-          .equals(other.getApplicationName())) return false;
-      if (!getApplicationId()
-          .equals(other.getApplicationId())) return false;
-      if (!getComponentsList()
-          .equals(other.getComponentsList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      boolean result = true;
+      result = result && getApplicationName()
+          .equals(other.getApplicationName());
+      result = result && getApplicationId()
+          .equals(other.getApplicationId());
+      result = result && getComponentsList()
+          .equals(other.getComponentsList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
     }
 
     @java.lang.Override
@@ -4885,7 +4895,7 @@ public final class ApplicationModel {
         result.applicationName_ = applicationName_;
         result.applicationId_ = applicationId_;
         if (componentsBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0)) {
+          if (((bitField0_ & 0x00000004) == 0x00000004)) {
             components_ = java.util.Collections.unmodifiableList(components_);
             bitField0_ = (bitField0_ & ~0x00000004);
           }
@@ -4900,35 +4910,35 @@ public final class ApplicationModel {
 
       @java.lang.Override
       public Builder clone() {
-        return super.clone();
+        return (Builder) super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.setField(field, value);
+        return (Builder) super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
+        return (Builder) super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
+        return (Builder) super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
+        return (Builder) super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.addRepeatedField(field, value);
+        return (Builder) super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5147,7 +5157,7 @@ public final class ApplicationModel {
       private java.util.List<eu.recap.sim.models.ApplicationModel.Application.Component> components_ =
         java.util.Collections.emptyList();
       private void ensureComponentsIsMutable() {
-        if (!((bitField0_ & 0x00000004) != 0)) {
+        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
           components_ = new java.util.ArrayList<eu.recap.sim.models.ApplicationModel.Application.Component>(components_);
           bitField0_ |= 0x00000004;
          }
@@ -5376,7 +5386,7 @@ public final class ApplicationModel {
           componentsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               eu.recap.sim.models.ApplicationModel.Application.Component, eu.recap.sim.models.ApplicationModel.Application.Component.Builder, eu.recap.sim.models.ApplicationModel.Application.ComponentOrBuilder>(
                   components_,
-                  ((bitField0_ & 0x00000004) != 0),
+                  ((bitField0_ & 0x00000004) == 0x00000004),
                   getParentForChildren(),
                   isClean());
           components_ = null;
@@ -5386,7 +5396,7 @@ public final class ApplicationModel {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       @java.lang.Override
@@ -5505,7 +5515,7 @@ public final class ApplicationModel {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
                 flavours_ = new java.util.ArrayList<eu.recap.sim.models.ApplicationModel.VeFlavour>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -5514,7 +5524,7 @@ public final class ApplicationModel {
               break;
             }
             default: {
-              if (!parseUnknownField(
+              if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -5528,7 +5538,7 @@ public final class ApplicationModel {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
           flavours_ = java.util.Collections.unmodifiableList(flavours_);
         }
         this.unknownFields = unknownFields.build();
@@ -5628,10 +5638,11 @@ public final class ApplicationModel {
       }
       eu.recap.sim.models.ApplicationModel.VeFlavourRepository other = (eu.recap.sim.models.ApplicationModel.VeFlavourRepository) obj;
 
-      if (!getFlavoursList()
-          .equals(other.getFlavoursList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      boolean result = true;
+      result = result && getFlavoursList()
+          .equals(other.getFlavoursList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
     }
 
     @java.lang.Override
@@ -5813,7 +5824,7 @@ public final class ApplicationModel {
         eu.recap.sim.models.ApplicationModel.VeFlavourRepository result = new eu.recap.sim.models.ApplicationModel.VeFlavourRepository(this);
         int from_bitField0_ = bitField0_;
         if (flavoursBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
             flavours_ = java.util.Collections.unmodifiableList(flavours_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -5827,35 +5838,35 @@ public final class ApplicationModel {
 
       @java.lang.Override
       public Builder clone() {
-        return super.clone();
+        return (Builder) super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.setField(field, value);
+        return (Builder) super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
+        return (Builder) super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
+        return (Builder) super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
+        return (Builder) super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.addRepeatedField(field, value);
+        return (Builder) super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5928,7 +5939,7 @@ public final class ApplicationModel {
       private java.util.List<eu.recap.sim.models.ApplicationModel.VeFlavour> flavours_ =
         java.util.Collections.emptyList();
       private void ensureFlavoursIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
           flavours_ = new java.util.ArrayList<eu.recap.sim.models.ApplicationModel.VeFlavour>(flavours_);
           bitField0_ |= 0x00000001;
          }
@@ -6157,7 +6168,7 @@ public final class ApplicationModel {
           flavoursBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               eu.recap.sim.models.ApplicationModel.VeFlavour, eu.recap.sim.models.ApplicationModel.VeFlavour.Builder, eu.recap.sim.models.ApplicationModel.VeFlavourOrBuilder>(
                   flavours_,
-                  ((bitField0_ & 0x00000001) != 0),
+                  ((bitField0_ & 0x00000001) == 0x00000001),
                   getParentForChildren(),
                   isClean());
           flavours_ = null;
@@ -6167,7 +6178,7 @@ public final class ApplicationModel {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       @java.lang.Override
@@ -6249,6 +6260,9 @@ public final class ApplicationModel {
       super(builder);
     }
     private VeFlavour() {
+      cores_ = 0;
+      memory_ = 0L;
+      storage_ = 0L;
     }
 
     @java.lang.Override
@@ -6291,7 +6305,7 @@ public final class ApplicationModel {
               break;
             }
             default: {
-              if (!parseUnknownField(
+              if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -6408,14 +6422,15 @@ public final class ApplicationModel {
       }
       eu.recap.sim.models.ApplicationModel.VeFlavour other = (eu.recap.sim.models.ApplicationModel.VeFlavour) obj;
 
-      if (getCores()
-          != other.getCores()) return false;
-      if (getMemory()
-          != other.getMemory()) return false;
-      if (getStorage()
-          != other.getStorage()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      boolean result = true;
+      result = result && (getCores()
+          == other.getCores());
+      result = result && (getMemory()
+          == other.getMemory());
+      result = result && (getStorage()
+          == other.getStorage());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
     }
 
     @java.lang.Override
@@ -6607,35 +6622,35 @@ public final class ApplicationModel {
 
       @java.lang.Override
       public Builder clone() {
-        return super.clone();
+        return (Builder) super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.setField(field, value);
+        return (Builder) super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
+        return (Builder) super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
+        return (Builder) super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
+        return (Builder) super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.addRepeatedField(field, value);
+        return (Builder) super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -6767,7 +6782,7 @@ public final class ApplicationModel {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       @java.lang.Override
@@ -6872,6 +6887,7 @@ public final class ApplicationModel {
       super(builder);
     }
     private Deployment() {
+      time_ = 0L;
       nodeId_ = "";
       siteId_ = "";
       tier_ = 0;
@@ -6925,7 +6941,7 @@ public final class ApplicationModel {
               break;
             }
             default: {
-              if (!parseUnknownField(
+              if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -7234,15 +7250,16 @@ public final class ApplicationModel {
       }
       eu.recap.sim.models.ApplicationModel.Deployment other = (eu.recap.sim.models.ApplicationModel.Deployment) obj;
 
-      if (getTime()
-          != other.getTime()) return false;
-      if (!getNodeId()
-          .equals(other.getNodeId())) return false;
-      if (!getSiteId()
-          .equals(other.getSiteId())) return false;
-      if (tier_ != other.tier_) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
+      boolean result = true;
+      result = result && (getTime()
+          == other.getTime());
+      result = result && getNodeId()
+          .equals(other.getNodeId());
+      result = result && getSiteId()
+          .equals(other.getSiteId());
+      result = result && tier_ == other.tier_;
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
     }
 
     @java.lang.Override
@@ -7438,35 +7455,35 @@ public final class ApplicationModel {
 
       @java.lang.Override
       public Builder clone() {
-        return super.clone();
+        return (Builder) super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.setField(field, value);
+        return (Builder) super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
+        return (Builder) super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
+        return (Builder) super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
+        return (Builder) super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return super.addRepeatedField(field, value);
+        return (Builder) super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7746,7 +7763,7 @@ public final class ApplicationModel {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
+        return super.setUnknownFieldsProto3(unknownFields);
       }
 
       @java.lang.Override
