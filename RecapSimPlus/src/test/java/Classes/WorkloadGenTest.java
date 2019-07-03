@@ -1,11 +1,10 @@
 package Classes;
 
 import java.util.ArrayList;
-import java.util.Collection;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.Random;
 import java.util.TreeMap;
 
@@ -36,21 +35,33 @@ public class WorkloadGenTest {
 		}
 
 		/*
-		 * Generating client IDs list TODO : change method of filling to be faster
+		 * Generating client IDs list and repart of requests between clients TODO :
+		 * allow any distribution
 		 */
-		int fill = 0;
+		// Creating lists
+		String[] IDs = new String[NB_REQUEST]; // Each index corresponds to one request, the value is the clientID
+												// corresponding
+		List<Integer> freeSpace = new ArrayList<Integer>();
+		for (int i = 0; i < NB_REQUEST; i++) {
+			freeSpace.add(i);
+		}
 		String clientID;
-		List<String> IDS = new ArrayList<String>(NB_REQUEST);
-		while (fill <= NB_REQUEST) {
-			// generate new ID
-			clientID = new ID().createID();
-			// run one loop with for example exponential distribution to choose which
-			// requests the client has
-			for (int r = 0; r < NB_REQUEST; r = r + (int) (new ExpD(1).sample())) {
-				if (IDS.get(r) == null) {
-					IDS.set(r, clientID);
-					fill++;
-				}
+
+		// Creating Exp law
+		double lambda = 10. / NB_REQUEST;
+		ExpD exp = new ExpD(lambda);
+
+		// Creating ID generator
+		IDGenerator idGen = new IDGenerator();
+
+		while (!freeSpace.isEmpty()) {
+			int space = freeSpace.get(0);
+			clientID = idGen.createID();
+
+			while (space < NB_REQUEST) {
+				IDs[space] = clientID;
+				freeSpace.remove((Integer) space);
+				space = space + (int) exp.sample();
 			}
 		}
 
@@ -65,6 +76,8 @@ public class WorkloadGenTest {
 
 			// TODO : setting all possible parameters here
 			requests.add(request.build());
+			
+			i++;
 		}
 
 		/*
@@ -74,7 +87,7 @@ public class WorkloadGenTest {
 		// creating devices list
 		int deviceQty = 0;
 		HashMap<String, Device.Builder> devices = new HashMap<String, Device.Builder>();
-		for (String id : IDS) {
+		for (String id : IDs) {
 			if (!devices.containsKey(id)) {
 				Device.Builder device = Device.newBuilder();
 				device.setDeviceId(deviceQty + "");
@@ -85,7 +98,7 @@ public class WorkloadGenTest {
 		}
 		// adding requests to each device
 		for (int req = 0; req < NB_REQUEST; req++) {
-			devices.get(IDS.get(req)).addRequests(requests.get(req));
+			devices.get(IDs[req]).addRequests(requests.get(req));
 		}
 
 		/*
@@ -97,16 +110,16 @@ public class WorkloadGenTest {
 		}
 		Workload workload = workloadBuilder.build();
 
-		printResults(workload);
+		printResults(workload, startTime);
 
 	}
 
-	private static void printResults(Workload workload) {
+	private static void printResults(Workload workload, long startTime) {
 		System.out.println("   Request   |   Time   |   Device   ");
 		for (Device device : workload.getDevicesList()) {
 			for (Request request : device.getRequestsList()) {
-				System.out.println(request.getSearchContent().toString() + " | " + request.getTime() + " | "
-						+ device.getDeviceId());
+				System.out.println(request.getSearchContent().toString() + " | " + (request.getTime() - startTime)
+						+ " | " + device.getDeviceId());
 			}
 		}
 
@@ -151,23 +164,20 @@ public class WorkloadGenTest {
 	}
 
 	/**
-	 * Creates a formatted String giving the contents of a Request. Change this method to change the 
-	 * format of the String.
+	 * Creates a formatted String giving the contents of a Request. Change this
+	 * method to change the format of the String.
 	 * 
-	 * Current format : 123456289
-	 * 1st digit : length of the number
-	 * following digits : number
-	 * etc... for all numbers
-	 * So here the request is 2-456-89
+	 * Current format : 123456289 1st digit : length of the number following digits
+	 * : number etc... for all numbers So here the request is 2-456-89
 	 * 
 	 * @param termDist
 	 * @param nbWord
 	 * @return
 	 */
 	public static String randQueryContent(TreeMap<Long, Double> termDist, int nbWord) {
-		//Creating distribution
-		FreqD<Long> dist=new FreqD<Long>(termDist);
-		
+		// Creating distribution
+		FreqD<Long> dist = new FreqD<Long>(termDist);
+
 		// Creating list of content
 		List<Long> content = new ArrayList<Long>();
 		int word = 0;

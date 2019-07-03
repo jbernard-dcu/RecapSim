@@ -1,6 +1,7 @@
 package Classes;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 import java.util.TreeMap;
@@ -10,7 +11,17 @@ import eu.recap.sim.models.InfrastructureModel.Node.*;
 import eu.recap.sim.models.InfrastructureModel.ResourceSite.SiteLevel;
 import eu.recap.sim.models.LocationModel.Location;
 
+
 public class Test {
+	
+	public static void main(String[] args) {
+		
+		
+		
+		
+		
+		
+	}
 
 	/**
 	 * Creates test Infrastructure model for tieto usecase @ ExoerimentHelpers for
@@ -110,15 +121,16 @@ public class Test {
 
 }
 
-class ID {
+class IDGenerator {
 	private long id;
 
-	public ID() {
+	public IDGenerator() {
 		this.id = 0;
 	}
 
 	public String createID() {
-		return Long.toString(this.id++);
+		this.id++;
+		return Long.toString(this.id);
 	}
 }
 
@@ -133,6 +145,9 @@ class FreqD<T> {
 	}
 
 	public FreqD(TreeMap<T, Double> termDist) {
+		this.dataset=new ArrayList<T>();
+		this.freq=new ArrayList<Double>();
+		
 		this.dataset.addAll(termDist.keySet());
 		this.freq.addAll(termDist.values());
 	}
