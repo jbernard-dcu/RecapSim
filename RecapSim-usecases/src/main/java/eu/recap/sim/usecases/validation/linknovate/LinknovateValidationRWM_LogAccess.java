@@ -229,7 +229,7 @@ public class LinknovateValidationRWM_LogAccess {
 			request.setTime(time*timeUnits);
 			request.setRequestId(counter);
 			request.setExpectedDuration((int)Math.ceil((int)logRequest.get(14)/1000) ); //divide by 1000 as original file in nanosecond, convert into milisecond
-			//@TODO: calculate the number of MIPS in data nodes to get the right exec time
+			//TODO: calculate the number of MIPS in data nodes to get the right exec time
 			double Clients_CpuFrequency = 3000.0;
 			double requestTimeInSecond=(int)logRequest.get(14)*(Clients_CpuFrequency/1000000);
 			

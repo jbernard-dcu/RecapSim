@@ -29,5 +29,5 @@ message Request {
     int32 requestId = 7; // added By Malika: the id of the request (will identify the cloudlets)
     int32 expectedDuration = 8; // added By Malika: time ine second that request took in real life
     repeated int32 dataNodes = 9; // added By Malika: what data nodes to use for this request
-    string searchContent = 10; // added by Joseph: the contents of the request
+    string searchContent = 10; // added by Joseph: the contents of the request parsed in a string
 }
