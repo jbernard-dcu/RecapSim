@@ -38,6 +38,7 @@ message Node{
 	repeated CPU processingUnits = 4;
 	repeated Memory memoryUnits = 5;
 	repeated Storage storageUnits = 6;
+	repeated Shard shard = 7;
 
 		message CPU{
 		string id =4;

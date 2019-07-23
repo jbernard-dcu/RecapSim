@@ -3,7 +3,6 @@
  */
 package eu.recap.sim.helpers;
 
-
 import java.util.List;
 import eu.recap.sim.models.ApplicationModel.Application;
 import eu.recap.sim.models.ApplicationModel.Application.Component;
@@ -20,7 +19,7 @@ import eu.recap.sim.models.WorkloadModel.Workload;
  *
  */
 public class ModelHelpers {
-	
+
 	/**
 	 * Method finds a link to use between sites when sending a cloudlet between them
 	 * 
@@ -30,43 +29,42 @@ public class ModelHelpers {
 	 * @return
 	 */
 	public static Link getNetworkLink(Infrastructure rim, String sourceSiteId, String destinationSiteId) {
-		
-		List<Link> linksList = rim.getLinksList();
-		boolean sourceSiteIdMatch=false;
-		boolean destinationSiteIdMatch =false;
-		
-		for(Link link:linksList){
 
-			
-			//check if both sites 
-			for (ResourceSite site:link.getConnectedSitesList()){
-				
-				if(site.getName().equals(sourceSiteId)){
+		List<Link> linksList = rim.getLinksList();
+		boolean sourceSiteIdMatch = false;
+		boolean destinationSiteIdMatch = false;
+
+		for (Link link : linksList) {
+
+			// check if both sites
+			for (ResourceSite site : link.getConnectedSitesList()) {
+
+				if (site.getName().equals(sourceSiteId)) {
 					sourceSiteIdMatch = true;
 				}
-				if(site.getName().equals(destinationSiteId)){
+				if (site.getName().equals(destinationSiteId)) {
 					destinationSiteIdMatch = true;
 				}
-				
-			}
-			
-			//match found
-			if(sourceSiteIdMatch&&destinationSiteIdMatch){
-				return link;
-			}else{
-				//match not found resetting counters
-				sourceSiteIdMatch=false;
-				destinationSiteIdMatch=false;
-			}
-			
-			
-		}
-		
-		System.out.printf("Fatal error: no connection found between Site %s and Site %s . Stopping simulation.",sourceSiteId,destinationSiteId);
-		throw new RuntimeException("Fatal error: no connection found between Site"+sourceSiteId+" and Site "+destinationSiteId+" . Stopping simulation.");
-		
-	}
 
+			}
+
+			// match found
+			if (sourceSiteIdMatch && destinationSiteIdMatch) {
+				return link;
+			} else {
+				// match not found resetting counters
+				sourceSiteIdMatch = false;
+				destinationSiteIdMatch = false;
+			}
+
+		}
+
+		System.out.printf("Fatal error: no connection found between Site %s and Site %s . Stopping simulation.",
+				sourceSiteId, destinationSiteId);
+		throw new RuntimeException("Fatal error: no connection found between Site" + sourceSiteId + " and Site "
+				+ destinationSiteId + " . Stopping simulation.");
+
+	}
 
 	/**
 	 * Iterates through list of applications to find the required API
@@ -80,15 +78,14 @@ public class ModelHelpers {
 			String apiId) {
 
 		for (Application application : applications) {
+
 			if (application.getApplicationId().equals(applicationId)) {
 				for (Component component : application.getComponentsList()) {
 
 					if (component.getComponentId().equals(componentId)) {
-
 						for (Api api : component.getApisList()) {
 
 							if (api.getApiId().equals(apiId)) {
-
 								return api;
 							}
 
@@ -105,8 +102,7 @@ public class ModelHelpers {
 		return null;
 
 	}
-	
-	
+
 	/**
 	 * Iterates through list of requests to find the required request
 	 * 
@@ -119,11 +115,11 @@ public class ModelHelpers {
 
 		for (Device device : devices) {
 			if (device.getDeviceId().equals(deviceId)) {
-				for (Request request :device.getRequestsList()) {
+				for (Request request : device.getRequestsList()) {
 
 					if (request.getRequestId() == requestId) {
 
-								return request;
+						return request;
 					}
 
 				}
@@ -131,7 +127,6 @@ public class ModelHelpers {
 			}
 
 		}
-		
 
 		// if no results found return null
 		return null;

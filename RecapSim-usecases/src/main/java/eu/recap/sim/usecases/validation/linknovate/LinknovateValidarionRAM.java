@@ -48,7 +48,7 @@ public class LinknovateValidarionRAM {
 		//All VMs are the same
 		int vmCores = 8;
 		int vmMemory = 28_000;
-		int vmStorage = 1_081_000;
+		int vmStorage = 181_000;
 		
 		/////////////////////
 		///// Cloudlets default values
