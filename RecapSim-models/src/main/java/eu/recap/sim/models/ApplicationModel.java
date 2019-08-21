@@ -1474,9 +1474,9 @@ public final class ApplicationModel {
          * updated By Malika
          * </pre>
          *
-         * <code>int32 ram = 5;</code>
+         * <code>double ram = 5;</code>
          */
-        int getRam();
+        double getRam();
 
         /**
          * <pre>
@@ -1583,7 +1583,7 @@ public final class ApplicationModel {
           apiId_ = "";
           mips_ = 0;
           iops_ = 0;
-          ram_ = 0;
+          ram_ = 0D;
           noSplittedApis_ = 0;
           dataToTransfer_ = 0L;
           nextComponentId_ = com.google.protobuf.LazyStringArrayList.EMPTY;
@@ -1636,9 +1636,9 @@ public final class ApplicationModel {
                   iops_ = input.readInt32();
                   break;
                 }
-                case 40: {
+                case 41: {
 
-                  ram_ = input.readInt32();
+                  ram_ = input.readDouble();
                   break;
                 }
                 case 48: {
@@ -1799,15 +1799,15 @@ public final class ApplicationModel {
         }
 
         public static final int RAM_FIELD_NUMBER = 5;
-        private int ram_;
+        private double ram_;
         /**
          * <pre>
          * updated By Malika
          * </pre>
          *
-         * <code>int32 ram = 5;</code>
+         * <code>double ram = 5;</code>
          */
-        public int getRam() {
+        public double getRam() {
           return ram_;
         }
 
@@ -1953,8 +1953,8 @@ public final class ApplicationModel {
           if (iops_ != 0) {
             output.writeInt32(4, iops_);
           }
-          if (ram_ != 0) {
-            output.writeInt32(5, ram_);
+          if (ram_ != 0D) {
+            output.writeDouble(5, ram_);
           }
           if (noSplittedApis_ != 0) {
             output.writeInt32(6, noSplittedApis_);
@@ -1991,9 +1991,9 @@ public final class ApplicationModel {
             size += com.google.protobuf.CodedOutputStream
               .computeInt32Size(4, iops_);
           }
-          if (ram_ != 0) {
+          if (ram_ != 0D) {
             size += com.google.protobuf.CodedOutputStream
-              .computeInt32Size(5, ram_);
+              .computeDoubleSize(5, ram_);
           }
           if (noSplittedApis_ != 0) {
             size += com.google.protobuf.CodedOutputStream
@@ -2043,8 +2043,10 @@ public final class ApplicationModel {
               == other.getMips());
           result = result && (getIops()
               == other.getIops());
-          result = result && (getRam()
-              == other.getRam());
+          result = result && (
+              java.lang.Double.doubleToLongBits(getRam())
+              == java.lang.Double.doubleToLongBits(
+                  other.getRam()));
           result = result && (getNoSplittedApis()
               == other.getNoSplittedApis());
           result = result && (getDataToTransfer()
@@ -2073,7 +2075,8 @@ public final class ApplicationModel {
           hash = (37 * hash) + IOPS_FIELD_NUMBER;
           hash = (53 * hash) + getIops();
           hash = (37 * hash) + RAM_FIELD_NUMBER;
-          hash = (53 * hash) + getRam();
+          hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+              java.lang.Double.doubleToLongBits(getRam()));
           hash = (37 * hash) + NOSPLITTEDAPIS_FIELD_NUMBER;
           hash = (53 * hash) + getNoSplittedApis();
           hash = (37 * hash) + DATATOTRANSFER_FIELD_NUMBER;
@@ -2228,7 +2231,7 @@ public final class ApplicationModel {
 
             iops_ = 0;
 
-            ram_ = 0;
+            ram_ = 0D;
 
             noSplittedApis_ = 0;
 
@@ -2346,7 +2349,7 @@ public final class ApplicationModel {
             if (other.getIops() != 0) {
               setIops(other.getIops());
             }
-            if (other.getRam() != 0) {
+            if (other.getRam() != 0D) {
               setRam(other.getRam());
             }
             if (other.getNoSplittedApis() != 0) {
@@ -2607,15 +2610,15 @@ public final class ApplicationModel {
             return this;
           }
 
-          private int ram_ ;
+          private double ram_ ;
           /**
            * <pre>
            * updated By Malika
            * </pre>
            *
-           * <code>int32 ram = 5;</code>
+           * <code>double ram = 5;</code>
            */
-          public int getRam() {
+          public double getRam() {
             return ram_;
           }
           /**
@@ -2623,9 +2626,9 @@ public final class ApplicationModel {
            * updated By Malika
            * </pre>
            *
-           * <code>int32 ram = 5;</code>
+           * <code>double ram = 5;</code>
            */
-          public Builder setRam(int value) {
+          public Builder setRam(double value) {
             
             ram_ = value;
             onChanged();
@@ -2636,11 +2639,11 @@ public final class ApplicationModel {
            * updated By Malika
            * </pre>
            *
-           * <code>int32 ram = 5;</code>
+           * <code>double ram = 5;</code>
            */
           public Builder clearRam() {
             
-            ram_ = 0;
+            ram_ = 0D;
             onChanged();
             return this;
           }
@@ -7872,7 +7875,7 @@ public final class ApplicationModel {
       "\022/\n\004apis\030\001 \003(\0132!.models.Application.Comp" +
       "onent.Api\032\252\001\n\003Api\022\017\n\007apiName\030\002 \001(\t\022\r\n\005ap" +
       "iId\030\001 \001(\t\022\014\n\004mips\030\003 \001(\005\022\014\n\004iops\030\004 \001(\005\022\013\n" +
-      "\003ram\030\005 \001(\005\022\026\n\016noSplittedApis\030\006 \001(\005\022\026\n\016da" +
+      "\003ram\030\005 \001(\001\022\026\n\016noSplittedApis\030\006 \001(\005\022\026\n\016da" +
       "taToTransfer\030\007 \001(\003\022\027\n\017nextComponentId\030\010 " +
       "\003(\t\022\021\n\tnextApiId\030\t \003(\t\"9\n\016ComponentTypes" +
       "\022\016\n\nWebService\020\000\022\016\n\nCDNStorage\020\001\022\007\n\003VNF\020" +

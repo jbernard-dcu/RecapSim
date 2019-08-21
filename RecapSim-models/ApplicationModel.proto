@@ -31,7 +31,7 @@ message Application {
 			//resource demand
 			int32 mips = 3;
 			int32 iops = 4;
-            int32 ram = 5; // updated By Malika
+            double ram = 5; // updated By Malika
             int32 noSplittedApis = 6; // added by malika: How many Apis are doing the same task (used to collect results from data nodes)
 			//link to next
 			int64 dataToTransfer = 7; //send data over the network to another component or back to user

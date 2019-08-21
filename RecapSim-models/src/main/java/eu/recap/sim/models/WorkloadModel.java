@@ -2464,7 +2464,7 @@ public final class WorkloadModel {
 
     /**
      * <pre>
-     * added by Joseph: the contents of the request
+     * added by Joseph: the contents of the request parsed in a string
      * </pre>
      *
      * <code>string searchContent = 10;</code>
@@ -2472,13 +2472,31 @@ public final class WorkloadModel {
     java.lang.String getSearchContent();
     /**
      * <pre>
-     * added by Joseph: the contents of the request
+     * added by Joseph: the contents of the request parsed in a string
      * </pre>
      *
      * <code>string searchContent = 10;</code>
      */
     com.google.protobuf.ByteString
         getSearchContentBytes();
+
+    /**
+     * <pre>
+     * added by Joseph : the ycsb type of the request
+     * </pre>
+     *
+     * <code>string type = 11;</code>
+     */
+    java.lang.String getType();
+    /**
+     * <pre>
+     * added by Joseph : the ycsb type of the request
+     * </pre>
+     *
+     * <code>string type = 11;</code>
+     */
+    com.google.protobuf.ByteString
+        getTypeBytes();
   }
   /**
    * Protobuf type {@code models.Request}
@@ -2503,6 +2521,7 @@ public final class WorkloadModel {
       expectedDuration_ = 0;
       dataNodes_ = java.util.Collections.emptyList();
       searchContent_ = "";
+      type_ = "";
     }
 
     @java.lang.Override
@@ -2597,6 +2616,12 @@ public final class WorkloadModel {
               java.lang.String s = input.readStringRequireUtf8();
 
               searchContent_ = s;
+              break;
+            }
+            case 90: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              type_ = s;
               break;
             }
             default: {
@@ -2837,7 +2862,7 @@ public final class WorkloadModel {
     private volatile java.lang.Object searchContent_;
     /**
      * <pre>
-     * added by Joseph: the contents of the request
+     * added by Joseph: the contents of the request parsed in a string
      * </pre>
      *
      * <code>string searchContent = 10;</code>
@@ -2856,7 +2881,7 @@ public final class WorkloadModel {
     }
     /**
      * <pre>
-     * added by Joseph: the contents of the request
+     * added by Joseph: the contents of the request parsed in a string
      * </pre>
      *
      * <code>string searchContent = 10;</code>
@@ -2869,6 +2894,48 @@ public final class WorkloadModel {
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         searchContent_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TYPE_FIELD_NUMBER = 11;
+    private volatile java.lang.Object type_;
+    /**
+     * <pre>
+     * added by Joseph : the ycsb type of the request
+     * </pre>
+     *
+     * <code>string type = 11;</code>
+     */
+    public java.lang.String getType() {
+      java.lang.Object ref = type_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        type_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * added by Joseph : the ycsb type of the request
+     * </pre>
+     *
+     * <code>string type = 11;</code>
+     */
+    public com.google.protobuf.ByteString
+        getTypeBytes() {
+      java.lang.Object ref = type_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        type_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -2923,6 +2990,9 @@ public final class WorkloadModel {
       }
       if (!getSearchContentBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 10, searchContent_);
+      }
+      if (!getTypeBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 11, type_);
       }
       unknownFields.writeTo(output);
     }
@@ -2979,6 +3049,9 @@ public final class WorkloadModel {
       if (!getSearchContentBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, searchContent_);
       }
+      if (!getTypeBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, type_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -3015,6 +3088,8 @@ public final class WorkloadModel {
           .equals(other.getDataNodesList());
       result = result && getSearchContent()
           .equals(other.getSearchContent());
+      result = result && getType()
+          .equals(other.getType());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -3050,6 +3125,8 @@ public final class WorkloadModel {
       }
       hash = (37 * hash) + SEARCHCONTENT_FIELD_NUMBER;
       hash = (53 * hash) + getSearchContent().hashCode();
+      hash = (37 * hash) + TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getType().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3203,6 +3280,8 @@ public final class WorkloadModel {
         bitField0_ = (bitField0_ & ~0x00000100);
         searchContent_ = "";
 
+        type_ = "";
+
         return this;
       }
 
@@ -3245,6 +3324,7 @@ public final class WorkloadModel {
         }
         result.dataNodes_ = dataNodes_;
         result.searchContent_ = searchContent_;
+        result.type_ = type_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -3333,6 +3413,10 @@ public final class WorkloadModel {
         }
         if (!other.getSearchContent().isEmpty()) {
           searchContent_ = other.searchContent_;
+          onChanged();
+        }
+        if (!other.getType().isEmpty()) {
+          type_ = other.type_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -3847,7 +3931,7 @@ public final class WorkloadModel {
       private java.lang.Object searchContent_ = "";
       /**
        * <pre>
-       * added by Joseph: the contents of the request
+       * added by Joseph: the contents of the request parsed in a string
        * </pre>
        *
        * <code>string searchContent = 10;</code>
@@ -3866,7 +3950,7 @@ public final class WorkloadModel {
       }
       /**
        * <pre>
-       * added by Joseph: the contents of the request
+       * added by Joseph: the contents of the request parsed in a string
        * </pre>
        *
        * <code>string searchContent = 10;</code>
@@ -3886,7 +3970,7 @@ public final class WorkloadModel {
       }
       /**
        * <pre>
-       * added by Joseph: the contents of the request
+       * added by Joseph: the contents of the request parsed in a string
        * </pre>
        *
        * <code>string searchContent = 10;</code>
@@ -3903,7 +3987,7 @@ public final class WorkloadModel {
       }
       /**
        * <pre>
-       * added by Joseph: the contents of the request
+       * added by Joseph: the contents of the request parsed in a string
        * </pre>
        *
        * <code>string searchContent = 10;</code>
@@ -3916,7 +4000,7 @@ public final class WorkloadModel {
       }
       /**
        * <pre>
-       * added by Joseph: the contents of the request
+       * added by Joseph: the contents of the request parsed in a string
        * </pre>
        *
        * <code>string searchContent = 10;</code>
@@ -3929,6 +4013,95 @@ public final class WorkloadModel {
   checkByteStringIsUtf8(value);
         
         searchContent_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object type_ = "";
+      /**
+       * <pre>
+       * added by Joseph : the ycsb type of the request
+       * </pre>
+       *
+       * <code>string type = 11;</code>
+       */
+      public java.lang.String getType() {
+        java.lang.Object ref = type_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          type_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * added by Joseph : the ycsb type of the request
+       * </pre>
+       *
+       * <code>string type = 11;</code>
+       */
+      public com.google.protobuf.ByteString
+          getTypeBytes() {
+        java.lang.Object ref = type_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          type_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * added by Joseph : the ycsb type of the request
+       * </pre>
+       *
+       * <code>string type = 11;</code>
+       */
+      public Builder setType(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        type_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * added by Joseph : the ycsb type of the request
+       * </pre>
+       *
+       * <code>string type = 11;</code>
+       */
+      public Builder clearType() {
+        
+        type_ = getDefaultInstance().getType();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * added by Joseph : the ycsb type of the request
+       * </pre>
+       *
+       * <code>string type = 11;</code>
+       */
+      public Builder setTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        type_ = value;
         onChanged();
         return this;
       }
@@ -4014,14 +4187,14 @@ public final class WorkloadModel {
       "\016.models.Device\022\r\n\005notes\030\002 \001(\t\"v\n\006Device" +
       "\022\020\n\010deviceId\030\003 \001(\t\022\022\n\ndeviceName\030\004 \001(\t\022#" +
       "\n\tlocations\030\002 \003(\0132\020.models.Location\022!\n\010r" +
-      "equests\030\001 \003(\0132\017.models.Request\"\330\001\n\007Reque" +
+      "equests\030\001 \003(\0132\017.models.Request\"\346\001\n\007Reque" +
       "st\022\014\n\004time\030\001 \001(\003\022\025\n\rapplicationId\030\002 \001(\t\022" +
       "\023\n\013componentId\030\003 \001(\t\022\r\n\005apiId\030\004 \001(\t\022\026\n\016d" +
       "ataToTransfer\030\006 \001(\003\022\025\n\rmipsDataNodes\030\005 \001" +
       "(\005\022\021\n\trequestId\030\007 \001(\005\022\030\n\020expectedDuratio" +
       "n\030\010 \001(\005\022\021\n\tdataNodes\030\t \003(\005\022\025\n\rsearchCont" +
-      "ent\030\n \001(\tB$\n\023eu.recap.sim.modelsB\rWorklo" +
-      "adModelb\006proto3"
+      "ent\030\n \001(\t\022\014\n\004type\030\013 \001(\tB$\n\023eu.recap.sim." +
+      "modelsB\rWorkloadModelb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -4053,7 +4226,7 @@ public final class WorkloadModel {
     internal_static_models_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_models_Request_descriptor,
-        new java.lang.String[] { "Time", "ApplicationId", "ComponentId", "ApiId", "DataToTransfer", "MipsDataNodes", "RequestId", "ExpectedDuration", "DataNodes", "SearchContent", });
+        new java.lang.String[] { "Time", "ApplicationId", "ComponentId", "ApiId", "DataToTransfer", "MipsDataNodes", "RequestId", "ExpectedDuration", "DataNodes", "SearchContent", "Type", });
     eu.recap.sim.models.LocationModel.getDescriptor();
   }
 
