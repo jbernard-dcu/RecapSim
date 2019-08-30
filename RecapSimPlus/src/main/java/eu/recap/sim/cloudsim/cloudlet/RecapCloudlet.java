@@ -3,9 +3,8 @@ package eu.recap.sim.cloudsim.cloudlet;
 import org.cloudbus.cloudsim.cloudlets.Cloudlet;
 import org.cloudbus.cloudsim.cloudlets.CloudletSimple;
 
+public class RecapCloudlet extends CloudletSimple implements IRecapCloudlet {
 
-public class RecapCloudlet extends CloudletSimple implements IRecapCloudlet{
-	
 	String applicationId;
 	String componentId;
 	String apiId;
@@ -15,20 +14,18 @@ public class RecapCloudlet extends CloudletSimple implements IRecapCloudlet{
 	int requestId;
 	String originDeviceId;
 
-
-	public RecapCloudlet(final int id,  final long cloudletLength,  final int pesNumber){
+	public RecapCloudlet(final int id, final long cloudletLength, final int pesNumber) {
 		super(id, cloudletLength, pesNumber);
-		
-		
+
 	}
 
-	/* 
+	/*
 	 * Not sure what is this doing but we just going with this
 	 */
 	@Override
 	public int compareTo(Cloudlet cloudlet) {
 		return Double.compare(getLength(), cloudlet.getLength());
-		
+
 	}
 
 	@Override
@@ -40,57 +37,55 @@ public class RecapCloudlet extends CloudletSimple implements IRecapCloudlet{
 	@Override
 	public IRecapCloudlet setApplicationId(String applicationId) {
 		this.applicationId = applicationId;
-		
+
 		return this;
 	}
-	
-	
+
 	@Override
 	public int getRequestId() {
 
 		return this.requestId;
 	}
-	
+
 	@Override
 	public void setRequestId(int requestId) {
 		this.requestId = requestId;
 	}
-	
+
 	@Override
 	public String getOriginDeviceId() {
 
 		return this.originDeviceId;
 	}
-	
+
 	@Override
 	public void setOriginDeviceId(String originDeviceId) {
 		this.originDeviceId = originDeviceId;
 	}
-	
 
 	@Override
 	public String getApplicationComponentId() {
-		
+
 		return this.componentId;
 	}
 
 	@Override
 	public IRecapCloudlet setApplicationComponentId(String applicationComponentId) {
 		this.componentId = applicationComponentId;
-		
+
 		return this;
 	}
 
 	@Override
 	public String getApiId() {
-		
+
 		return this.apiId;
 	}
 
 	@Override
 	public IRecapCloudlet setApiId(String apiId) {
 		this.apiId = apiId;
-		
+
 		return this;
 	}
 
@@ -114,7 +109,7 @@ public class RecapCloudlet extends CloudletSimple implements IRecapCloudlet{
 
 	@Override
 	public IRecapCloudlet setBwUpdateTime(double bwUpdateTime) {
-		this.bwUpdateTime=bwUpdateTime;
+		this.bwUpdateTime = bwUpdateTime;
 		return this;
 	}
 
@@ -129,11 +124,5 @@ public class RecapCloudlet extends CloudletSimple implements IRecapCloudlet{
 		this.transferredBytes = transferredBytes;
 		return this;
 	}
-	
-	
-	
-	
-	
-	
-	
+
 }
